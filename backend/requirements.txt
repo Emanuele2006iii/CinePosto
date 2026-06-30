@@ -1,0 +1,39 @@
+# CinePosto backend — Python dependencies
+#
+# ⚠️  Python 3.12 REQUIRED (NON 3.13, NON 3.14):
+#   pydantic-core 2.27 usa PyO3 0.22 che supporta solo fino a Python 3.13.
+#   Su Mac con Python 3.14 di default, creare il venv esplicitamente:
+#     python3.12 -m venv venv && source venv/bin/activate && pip install -r requirements.txt
+#   Se manca: brew install python@3.12
+#
+# Installazione: pip install -r requirements.txt
+
+# Web framework
+fastapi==0.115.0
+uvicorn[standard]==0.32.0
+
+# Database
+sqlalchemy==2.0.36
+alembic==1.14.0
+# SQLite (Python stdlib) usato sia in dev che in prod — decisione D4.
+
+# Validation & settings
+pydantic==2.10.0
+pydantic-settings==2.6.0
+python-dotenv==1.0.1
+
+# HTTP client (per eventuali integrazioni esterne future; oggi non richiesto a runtime)
+httpx==0.28.0
+
+# Testing
+pytest==8.3.3
+pytest-asyncio==0.24.0
+
+# Dev tools
+ruff==0.8.0
+
+# ─── Rimosse il 2026-06-30 (vedi docs/CONTINUAZIONE-PROGETTUALE.md §4) ───
+# apscheduler             → D2: scraping è solo nello scraper standalone (systemd timer).
+# beautifulsoup4 / lxml   → non servono al backend (lo scraping vive fuori).
+# TMDB / requests         → D1: arricchimento già fatto dallo scraper via Wikidata.
+# black                   → ruff format copre già la formattazione.

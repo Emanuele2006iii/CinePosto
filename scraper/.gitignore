@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.venv/
+
+# Scraper runtime data
+.wikidata_cache.json
+scraper.log
+*.log
+
+# Output dello scraper: committiamo i JSON principali (servono al backend per il seed),
+# ignoriamo solo cache e history che cambiano ogni giorno.
+output/cache/
+output/history/
+
+# OS
+.DS_Store

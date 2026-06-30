@@ -1,0 +1,12 @@
+# Logrotate config per CinePosto scraper.
+# Install: sudo cp cineposto-scraper-logrotate /etc/logrotate.d/cineposto-scraper
+# Il path deve corrispondere a SCRAPER_LOG in config.py (BASE_DIR / "scraper.log").
+/home/ubuntu/cineposto/scraper/scraper.log {
+    daily
+    rotate 7
+    compress
+    delaycompress
+    missingok
+    notifempty
+    copytruncate
+}

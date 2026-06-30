@@ -1,0 +1,15 @@
+[Unit]
+Description=CinePosto Scraper — single run (lanciato dal timer)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=ubuntu
+WorkingDirectory=/home/ubuntu/cineposto/scraper
+# .venv creato con: python3 -m venv .venv && source .venv/bin/activate && pip install -e ".[dev]"
+ExecStart=/home/ubuntu/cineposto/scraper/.venv/bin/python -m scraper.main --once
+StandardOutput=journal
+StandardError=journal
+Environment=PYTHONUNBUFFERED=1
+Environment=SCRAPER_LOG_LEVEL=INFO

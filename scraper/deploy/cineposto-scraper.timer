@@ -1,0 +1,13 @@
+[Unit]
+Description=CinePosto Scraper — trigger giornaliero alle 03:00
+
+[Timer]
+OnCalendar=*-*-* 03:00:00
+# Recupera la run se la VM era spenta all'ora del trigger.
+Persistent=true
+# Distribuisce gli accessi per evitare picchi sincroni se domani altri scraper girano sulla stessa VM.
+RandomizedDelaySec=10min
+Unit=cineposto-scraper.service
+
+[Install]
+WantedBy=timers.target

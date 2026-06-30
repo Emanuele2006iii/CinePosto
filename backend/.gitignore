@@ -1,0 +1,10 @@
+# Backend-specific ignores (in aggiunta al .gitignore root del monorepo)
+
+# DB SQLite locale (creato al primo run, NON deve finire nel repo)
+cineposto.db
+
+# Alembic locale (se generato)
+alembic.ini.local
+
+# Smoke test usa-e-getta (vengono creati durante lo sviluppo, non sono parte del progetto)
+smoke_*.py

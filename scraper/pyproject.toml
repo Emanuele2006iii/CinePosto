@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "cineposto-scraper"
+version = "0.1.0"
+description = "CinePosto — scraper programmazione cinema Perugia → JSON"
+requires-python = ">=3.12"
+dependencies = [
+    "requests>=2.31.0",
+    "beautifulsoup4>=4.12.0",
+    "lxml>=5.0.0",
+    "cloakbrowser>=0.3.0",
+    "apscheduler>=3.10.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-cov>=5.0.0",
+    "responses>=0.25.0",
+    "ruff>=0.4.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q --tb=short"
+
+[tool.coverage.run]
+source = ["scraper"]
+omit = ["scraper/browser.py"]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = false
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I", "B", "UP"]
+ignore = [
+    "B904",   # raise-without-from-inside-except — stile intenzionale nei connector
+    "UP007",  # X | Y union syntax — mantenuto __future__ annotations per leggibilità
+    "E501",   # line-too-long — gestito da line-length sopra
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["scraper"]
+force-sort-within-sections = true

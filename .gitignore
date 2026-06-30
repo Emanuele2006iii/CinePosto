@@ -1,0 +1,57 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Lo scraper fa parte del monorepo (.git interno rimosso il 2026-06-30).
+# NB: alcune cartelle dello scraper vanno comunque escluse (vedi sezioni Python sotto).
+scraper/.venv/
+scraper/.pytest_cache/
+scraper/.ruff_cache/
+scraper/output/cache/
+scraper/output/history/
+scraper/scraper.log
+
+# Cloudflare worker
+.wrangler/
+
+# Node / Expo
+node_modules/
+.expo/
+.expo-shared/
+dist/
+build/
+web-build/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+env/
+
+# DB (SQLite locale)
+*.db
+*.sqlite
+*.sqlite3
+
+# Log
+*.log
+logs/
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+*.swp
