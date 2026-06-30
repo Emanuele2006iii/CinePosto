@@ -143,11 +143,14 @@ Nessuno scheduler interno al backend (decisione D2): lo scraper vive nel suo pro
 
 ---
 
-## Status (2026-06-30)
+## Status (2026-06-30 sera)
 
 - ✅ Struttura cartelle e file pronta
 - ✅ `requirements.txt`, `.env.example`, `.gitignore` allineati
 - ✅ Tutti i TODO nei file Python riflettono le decisioni D1-D5 + L1-L5 (lingua inglese)
 - ✅ `schema-mapping.md` autorevole con nomi inglesi
 - ✅ Scraper rebrandizzato (rimuoso "cinemascarper") + systemd timer pronto
-- 🔴 Implementazione codice backend: **da fare** (Sprint 2, vedi [PIANO-CONSEGNA-14LUGLIO.md](../PIANO-CONSEGNA-14LUGLIO.md) §7)
+- ✅ **`config.py` implementato** (Settings + get_settings con lru_cache)
+- ✅ **`database.py` implementato** (Base, engine, SessionLocal, get_db, PRAGMA FK)
+- ✅ **3 modelli SQLAlchemy implementati** (Cinema/Film/Showing con vincoli e indici)
+- 🔜 schemas Pydantic, repositories, services, routers, main, seed (D2-D5, vedi [PIANO-CONSEGNA-14LUGLIO.md](../PIANO-CONSEGNA-14LUGLIO.md) §7)

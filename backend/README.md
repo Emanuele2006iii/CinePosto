@@ -121,14 +121,15 @@ Vedi `app/scrapers/README.md`.
 ## 🗺️ Status
 
 - [x] **2026-06-14**: Architettura definita, struttura cartelle creata, requirements.txt + .env.example pronti
-- [x] **2026-06-30**: Audit + decisioni di design proposte (D1-D5) + piano operativo Sprint 2
-- [ ] Implementare `config.py`, `database.py`, `main.py` (entrypoint)
-- [ ] Implementare modelli SQLAlchemy (vedi schema target nel piano §6)
-- [ ] Implementare repositories (CRUD)
-- [ ] Implementare services (cinema vicini, programmazione oggi)
+- [x] **2026-06-30 mattina**: Audit + decisioni di design (D1-D5 + L1-L5) + piano operativo Sprint 2
+- [x] **2026-06-30 sera**: `config.py` + `database.py` + 3 modelli SQLAlchemy (Cinema/Film/Showing) implementati e smoke-testati
+- [ ] Implementare schemas Pydantic
+- [ ] Implementare repositories (CRUD readonly + upsert)
+- [ ] Implementare services (films_today, find_nearby, search_films)
 - [ ] Implementare routers (endpoint REST + Swagger)
-- [ ] Script `seed_from_json.py` (legge `scraper/output/` e popola DB)
-- [ ] Endpoint admin `POST /api/v1/admin/reimport` per ricarica manuale
+- [ ] `main.py` entrypoint con `create_app()` factory
+- [ ] Script `seed.py` (legge `scraper/output/` e popola DB)
+- [ ] Endpoint admin `POST /api/v1/admin/reimport`
 - [ ] Tests pytest con TestClient (conftest.py + 3-4 test endpoint chiave)
 - [ ] Alembic init + migrazione iniziale
 

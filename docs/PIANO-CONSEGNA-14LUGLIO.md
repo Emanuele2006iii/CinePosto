@@ -366,15 +366,53 @@ Funziona per la demo, NON è una soluzione duratura.
 - ✅ `main.py` import aggiornati a `showings` (era `spettacoli`)
 
 **Pendente per finalizzazione**:
-- ⚠️ `WIKIDATA_USER_AGENT` ha placeholder `<GH_OWNER>`: sostituire con username GitHub reale prima del deploy
+- ⚠️ `WIKIDATA_USER_AGENT` ha placeholder `<GH_OWNER>`: sostituire con username GitHub reale (`Emanuele2006iii`) prima del deploy
 - ⚠️ Coordinate UCI da verificare su Google Maps
 - ⚠️ Test articoli IT in `test_normalizer.py` (vedi §5.4)
 
+### 2026-06-30 (D1 SERA) — completato anche D2 parziale
+
+**Setup ambiente backend**:
+- ✅ venv Python 3.12 (era 3.14 di default, incompatibile con pydantic-core 2.27)
+- ✅ Tutte le dipendenze installate (fastapi 0.115, sqlalchemy 2.0.36, pydantic 2.10, ecc.)
+- ✅ `.env` creato da `.env.example`, CORS_ORIGINS in formato JSON array
+
+**`config.py` implementato**:
+- ✅ Settings(BaseSettings) con `database_url`, `scraper_output_dir`, `cors_origins`, `env`, `log_level`, `admin_token`
+- ✅ `get_settings()` con `@lru_cache`
+- ✅ Smoke test verde: legge .env correttamente
+
+**`database.py` implementato**:
+- ✅ `Base(DeclarativeBase)` SQLAlchemy 2.0
+- ✅ `engine` con `check_same_thread=False` per SQLite
+- ✅ `SessionLocal` + `get_db()` dependency
+- ✅ PRAGMA `foreign_keys=ON` via event listener (testato: FK abilitate)
+- ✅ Smoke test verde: `SELECT 1` ritorna 1, foreign_keys ON
+
+**3 modelli SQLAlchemy implementati**:
+- ✅ `Cinema` (PK = slug stringa)
+- ✅ `Film` (PK intera + UNIQUE(title_normalized, year) + UNIQUE(wikidata_id))
+- ✅ `Showing` (FK su film_id intera + cinema_slug string + UNIQUE(film_id, cinema_slug, date) + 3 indici)
+- ✅ Smoke test verde: `Base.metadata.create_all` crea 3 tabelle con tutti vincoli e indici
+
+**Git setup monorepo CinePosto (bonus, non era nel piano)**:
+- ✅ `scraper/.git` interno rimosso (lo scraper ora è parte del monorepo)
+- ✅ `.gitignore` triplo audit (root + backend + scraper): zero file pericolosi
+- ✅ Init repo cineposto/ su branch `main`
+- ✅ Remote configurati: `origin` = fork (Emanuele2006iii), `upstream` = repo Yonas
+- ✅ Primo commit: 122 file, 28310 inserzioni (root-commit f097086)
+- ✅ GitHub CLI (`gh`) installato + autenticazione OAuth
+- ✅ Push --force sul fork riuscito
+- ✅ Audit post-commit: 0 segreti, 0 cache, 0 file temporanei, 2.1 MB di repo
+
 ### 2026-07-01 (D2) — TODO
-- [ ] `config.py` Settings
-- [ ] `database.py` engine + SessionLocal + Base
-- [ ] models/{cinema,film,showing}.py (implementazione effettiva)
-- [ ] schemas/{cinema,film,showing}.py
+
+**Backend — completare layer dati**:
+- [ ] schemas/{cinema,film,showing}.py (DTO Pydantic)
+- [ ] repositories/{cinema,film,showing}_repo.py (CRUD readonly + upsert)
 
 ### 2026-07-02 (D3) — TODO
-- [ ] repositories/{cinema,film,showing}_repo.py
+- [ ] services/{cinema,film}_service.py
+- [ ] routers/{cinema,film,showings,admin}.py
+- [ ] main.py (`create_app()` + CORS + Swagger)
+- [ ] Smoke: `uvicorn app.main:app` → `/docs` mostra endpoint
