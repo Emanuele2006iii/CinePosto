@@ -1,34 +1,34 @@
 {
-  "generated_at": "2026-06-25T12:56:35.086878+02:00",
+  "generated_at": "2026-07-02T16:29:51.622605+02:00",
   "cinemas": [
     {
       "slug": "postmodernissimo",
       "name": "PostModernissimo",
-      "address": "Via del Milite Ignoto 1, 06121 Perugia PG",
+      "address": "Via del Carmine 4, 06121 Perugia PG",
       "city": "Perugia",
       "region": "Umbria",
-      "lat": 43.1107,
-      "lon": 12.3882,
+      "lat": 43.1129,
+      "lon": 12.3933,
       "website": "https://www.postmodernissimo.com"
     },
     {
       "slug": "the-space-corciano",
       "name": "The Space Cinema Corciano",
-      "address": "Via Trasimeno Ovest 164, 06073 Corciano PG",
+      "address": "Via Pierluigi Nervi, 06073 Corciano PG",
       "city": "Corciano",
       "region": "Umbria",
-      "lat": 43.0866,
-      "lon": 12.3073,
+      "lat": 43.099,
+      "lon": 12.3144,
       "website": "https://www.thespacecinema.it"
     },
     {
       "slug": "uci-perugia",
       "name": "UCI Cinemas Perugia",
-      "address": "Via Corcianese 200, 06073 Corciano PG",
-      "city": "Corciano",
+      "address": "Viale Centova 1D, 06100 Perugia PG",
+      "city": "Perugia",
       "region": "Umbria",
-      "lat": 43.0745,
-      "lon": 12.2891,
+      "lat": 43.0965,
+      "lon": 12.3554,
       "website": "https://ucicinemas.it"
     }
   ]

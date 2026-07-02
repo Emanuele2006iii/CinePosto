@@ -1,21 +1,103 @@
-"""Data access layer: CRUD su Showing. SOLO query, niente logica business."""
-# Decisione D3: FK = (film_id int, cinema_slug str). UNIQUE(film_id, cinema_slug, date) → upsert per dedup.
-#
-# TODO funzioni:
-#   def list_by_date(db, date_: date) -> list[Showing]
-#       # eager-load di film e cinema (selectinload) per evitare N+1
-#   def list_by_cinema(db, cinema_slug: str, date_from: date, date_to: date) -> list[Showing]
-#   def list_by_film(db, film_id: int, from_today: bool = True) -> list[Showing]
-#   def upsert(db, data: dict) -> Showing
-#       # cerca per (film_id, cinema_slug, date) → UPDATE times/language/screen se esiste, INSERT altrimenti
-#   def delete_old(db, before: date) -> int
-#       # cleanup showings con date < before (chiamato dopo ogni reimport)
-#
-# Pattern eager-load (SQLAlchemy 2.0):
-#   from sqlalchemy import select
-#   from sqlalchemy.orm import selectinload
-#   stmt = (
-#       select(Showing)
-#       .options(selectinload(Showing.film), selectinload(Showing.cinema))
-#       .where(Showing.date == date_)
-#   )
+"""Data access layer: query su Showing (spettacoli)."""
+from datetime import date as date_type                                          
+                                                    
+from sqlalchemy import select                                                   
+from sqlalchemy.orm import Session, joinedload
+                                                                                
+from app.models.showing import Showing               
+                                        
+                                                                                
+def get_by_id(db: Session, showing_id: int) -> Showing | None:
+    return db.get(Showing, showing_id)                                          
+                                                    
+                                                                                
+def list_by_date(db: Session, target_date: date_type) -> list[Showing]:
+    """Tutti gli spettacoli di una data specifica, con Film e Cinema pre-caricati.                                                                   
+    Il `joinedload` evita il classico problema N+1: senza, l'ORM farebbe
+    1 query per la lista + N query per caricare cinema e film di ognuno.        
+    Con joinedload → 1 query JOIN sola.                                         
+    """                                                                         
+    stmt = (                                                                    
+        select(Showing)                                                         
+        .options(joinedload(Showing.film), joinedload(Showing.cinema))
+        .where(Showing.date == target_date)                                     
+        .order_by(Showing.date)
+    )                                                                           
+    return list(db.scalars(stmt))                    
+                                                                                
+
+def list_by_date_range(                                                         
+    db: Session, date_from: date_type, date_to: date_type
+) -> list[Showing]:                    
+    stmt = (
+        select(Showing)
+        .options(joinedload(Showing.film), joinedload(Showing.cinema))          
+        .where(Showing.date >= date_from, Showing.date <= date_to)
+        .order_by(Showing.date)                                                 
+    )                                                                           
+    return list(db.scalars(stmt))      
+                                                                                
+                                                    
+def list_by_cinema_in_range(           
+    db: Session, cinema_slug: str, date_from: date_type, date_to: date_type
+) -> list[Showing]:                                                             
+    stmt = (
+        select(Showing)                                                         
+        .options(joinedload(Showing.film))   # solo film, cinema noto
+        .where(                                                                 
+            Showing.cinema_slug == cinema_slug,
+            Showing.date >= date_from,                                          
+            Showing.date <= date_to,                 
+        )                                                                       
+        .order_by(Showing.date)
+    )                                                                           
+    return list(db.scalars(stmt))                    
+                                        
+
+def list_by_film(
+    db: Session, film_id: int, from_date: date_type
+) -> list[Showing]:                                                             
+    """Prossimi spettacoli di un dato film a partire da una data. Include 
+cinema."""                                                                      
+    stmt = (                                         
+        select(Showing)                                                         
+        .options(joinedload(Showing.cinema))
+        .where(Showing.film_id == film_id, Showing.date >= from_date)           
+        .order_by(Showing.date)                      
+    )                                                                           
+    return list(db.scalars(stmt))
+                                                                                
+                                                    
+def count_by_cinema(db: Session, cinema_slug: str) -> int:
+    """Numero di spettacoli attivi (futuri) per un cinema. Usato in 
+CinemaWithCount."""                                                             
+    from datetime import date
+    stmt = select(Showing).where(                                               
+        Showing.cinema_slug == cinema_slug,          
+        Showing.date >= date.today(),                                           
+    )                                                
+    return len(list(db.scalars(stmt))) 
+                                                                                
+
+def upsert(db: Session, data: dict) -> Showing:                                 
+    """Insert or update per Showing. Usato dal seed. 
+    UNIQUE key = (film_id, cinema_slug, date).                                  
+    """                                                                         
+    stmt = select(Showing).where(                                               
+        Showing.film_id == data["film_id"],                                     
+        Showing.cinema_slug == data["cinema_slug"],  
+        Showing.date == data["date"],                                           
+    )
+    showing = db.scalars(stmt).one_or_none()                                    
+                                                    
+    if showing is None:                
+        showing = Showing(**data)
+        db.add(showing)                                                         
+    else:
+        # Aggiorna orari, lingua, sala, url — questi cambiano tra scraping.     
+        for key in ("times", "language", "screen", "buy_url"):                  
+            if key in data:                                                     
+                setattr(showing, key, data[key])                                
+                                                                                
+    db.flush()                                       
+    return showing   

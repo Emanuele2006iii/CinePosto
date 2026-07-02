@@ -2,7 +2,17 @@
 
 API REST per servire le programmazioni dei cinema umbri raccolte dallo scraper.
 
-> ⚠️ **Stato reale al 2026-06-30**: i file Python sotto `app/` contengono esclusivamente docstring + commenti `TODO`. **Nessuna riga eseguibile è ancora presente**: `uvicorn app.main:app` fallisce con `ImportError`. La struttura layered descritta qui sotto è il **design target**, non lo stato attuale. Per la roadmap di implementazione completa vedi [`../docs/CONTINUAZIONE-PROGETTUALE.md`](../docs/CONTINUAZIONE-PROGETTUALE.md).
+> **Stato al 2026-07-02** — ✅ Sprint 2 completato:
+> - ✅ `config.py` con validator (admin_token auto-gen, path assoluti, CORS dev-friendly), `database.py`, `models/` (Cinema, Film, Showing)
+> - ✅ `schemas/` Pydantic DTO (CinemaOut/WithCount, FilmOut/Detail, ShowingOut/Detail) con forward reference + `field_validator` che parsa `times` da JSON string
+> - ✅ `repositories/` (SQLAlchemy 2.0 `select()`, `joinedload` anti-N+1, `upsert_from_scraper`, `normalize_title` NFKD)
+> - ✅ `services/` (cinema, film — films_today/settimana, search con validazione, get_film_detail con showings futuri)
+> - ✅ `routers/` (cinema, film, showings, admin) — **15 endpoint** attivi, Swagger su `/docs`
+> - ✅ `main.py` (`create_app` factory + CORS + lifespan + `/health`)
+> - ✅ `seed_from_json.py` con parsing `duration: "109 min"` → `runtime_minutes: 109`
+> - ✅ `tests/` — **26 test verdi** (SQLite in-memory + StaticPool + dependency override)
+>
+> Le decisioni di design **D1-D5** sono chiuse (vedi tabella §Decisioni di progetto).
 >
 > **Decisioni di design pendenti** (vedi §4 del piano):
 > - **D1**: arricchimento dati = Wikidata (già fatto dallo scraper) o TMDB? → proposta: Wikidata, eliminare TMDB.
@@ -88,21 +98,27 @@ Endpoint previsti (definiti in `docs/CONTINUAZIONE-PROGETTUALE.md` §5):
 - `GET /api/v1/cinema/{slug}` → dettaglio cinema
 - `GET /api/v1/cinema/{slug}/spettacoli` → spettacoli di un cinema
 - `GET /api/v1/film/oggi` → film con almeno uno spettacolo oggi
+- `GET /api/v1/film/settimana` → film in programmazione nei prossimi 7 giorni
 - `GET /api/v1/film/{id}` → dettaglio film + prossimi spettacoli
-- `GET /api/v1/film/search?q=...` → ricerca per titolo
-- `GET /api/v1/spettacoli?data=YYYY-MM-DD` → tutti gli spettacoli di una data
-- `POST /api/v1/admin/reimport` → rilegge i JSON dello scraper e aggiorna il DB
+- `GET /api/v1/film/search?q=...&limit=20` → ricerca per titolo (min 2 char)
+- `GET /api/v1/showings?date=YYYY-MM-DD` → tutti gli spettacoli di una data (con cinema + film denormalizzati)
+- `POST /api/v1/admin/reimport` (header `X-Admin-Token`) → rilegge i JSON dello scraper e aggiorna il DB
+- `GET /api/v1/admin/dataset-info` (header `X-Admin-Token`) → conteggi rapidi + ultima scraped_at
 - `GET /health` → liveness probe
+
+📄 **Contratto API completo per l'app**: [`../docs/frontend-integration.md`](../docs/frontend-integration.md) (endpoint, tipi JSDoc, esempi fetch).
 
 ## 🧪 Test
 
 ```bash
-pytest tests/
+pytest tests/           # 26 test verdi (~0.15s)
+pytest tests/ -v        # verbose
 ```
 
-## 🔌 Aggiungere uno scraper nuovo
-
-Vedi `app/scrapers/README.md`.
+Copertura:
+- `tests/conftest.py` — SQLite in-memory + StaticPool + `dependency_overrides` di `get_db`
+- `tests/test_repositories.py` — 14 test unit (upsert, normalize_title parametrizzato, joinedload, count futuri)
+- `tests/test_routers.py` — 12 test e2e via TestClient (200/404/422/403, denormalizzazione, parsing `times`)
 
 ## 📚 Decisioni di progetto
 
@@ -123,15 +139,17 @@ Vedi `app/scrapers/README.md`.
 - [x] **2026-06-14**: Architettura definita, struttura cartelle creata, requirements.txt + .env.example pronti
 - [x] **2026-06-30 mattina**: Audit + decisioni di design (D1-D5 + L1-L5) + piano operativo Sprint 2
 - [x] **2026-06-30 sera**: `config.py` + `database.py` + 3 modelli SQLAlchemy (Cinema/Film/Showing) implementati e smoke-testati
-- [ ] Implementare schemas Pydantic
-- [ ] Implementare repositories (CRUD readonly + upsert)
-- [ ] Implementare services (films_today, find_nearby, search_films)
-- [ ] Implementare routers (endpoint REST + Swagger)
-- [ ] `main.py` entrypoint con `create_app()` factory
-- [ ] Script `seed.py` (legge `scraper/output/` e popola DB)
-- [ ] Endpoint admin `POST /api/v1/admin/reimport`
-- [ ] Tests pytest con TestClient (conftest.py + 3-4 test endpoint chiave)
-- [ ] Alembic init + migrazione iniziale
+- [x] **2026-07-02 mattina**: Schemas Pydantic (CinemaOut/WithCount, FilmOut/Detail, ShowingOut/Detail) con forward reference + field_validator per parsing `times` JSON
+- [x] **2026-07-02 metà**: Repositories (cinema/film/showing) con `select()` SQLAlchemy 2.0, `joinedload` anti-N+1, `upsert_from_scraper`, `normalize_title` per dedup titoli
+- [x] **2026-07-02 sera**: Services (cinema_service + film_service con validazione e aggregazione)
+- [x] **2026-07-02 sera**: Routers (cinema/film/showings/admin) — 15 endpoint, Swagger auto
+- [x] **2026-07-02 sera**: `main.py` con `create_app()` factory, CORS, lifespan, `/health`
+- [x] **2026-07-02 sera**: `seed_from_json.py` con parsing `duration` → `runtime_minutes` e `genres: list` → CSV
+- [x] **2026-07-02 sera**: Config sicurizzato (`admin_token` auto-gen se vuoto, `scraper_output_dir` absolute path, CORS dev defaults)
+- [x] **2026-07-02 sera**: Test suite 26/26 verdi (unit + e2e)
+- [x] **2026-07-02 sera**: `docs/frontend-integration.md` (contratto API per il team frontend)
+- [ ] **Sprint 3+ (open)**: Alembic init + migrazione iniziale (utile per deploy prod; in dev basta `Base.metadata.create_all` nel lifespan)
+- [ ] **Sprint 3+ (open)**: deploy backend su VM Linux (systemd unit + Caddy reverse proxy + HTTPS)
 
 ## 🎯 Presentazione — 14/07/2026
 

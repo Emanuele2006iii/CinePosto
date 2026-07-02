@@ -131,13 +131,19 @@ sudo systemctl list-timers cineposto-scraper.timer
 
 Conseguenza: rimuovere `apscheduler` dal `pyproject.toml` dello scraper (già nelle deps, ma a quel punto non serve più). La funzione `schedule()` in `main.py` può restare come `--schedule` per uso dev locale, ma non viene invocata in prod.
 
-### 5.3 Verifiche dati cinema
+### 5.3 Verifiche dati cinema ✅ chiusa 2026-07-02
 
-In `scraper/scraper/config.py`:
-- `uci-perugia` ha `city: "Corciano"`. Verificare con Google Maps:
-  - se il cinema sta davvero a Corciano → mantenere slug `uci-perugia` solo come nome storico, oppure rinominare slug a `uci-corciano` per coerenza.
-  - se sta a Perugia → correggere `city` e `address`.
-- Tutte e 3 le `lat`/`lon` vanno verificate su Google Maps (15 min totali, owner: EC).
+**Fatto** (le info sono costanti hardcoded in `scraper/scraper/config.py` → `CINEMA_LOCATIONS`, non scrapate):
+
+| Cinema | Address corretto | Fonte |
+|---|---|---|
+| `postmodernissimo` | Via del Carmine 4, 06121 Perugia PG | sito ufficiale postmodernissimo.com |
+| `the-space-corciano` | Via Pierluigi Nervi, 06073 Corciano PG | sito ufficiale thespacecinema.it/cinema/corciano |
+| `uci-perugia` | Viale Centova 1D, 06100 Perugia PG (comune **Perugia**, non Corciano) | verificato da Emanuele su Google Maps |
+
+Coordinate `lat`/`lon`: inserite manualmente da Emanuele da Google Maps al 01/07. Corrette.
+
+**Nota**: dopo qualsiasi cambio a `CINEMA_LOCATIONS` è necessario rilanciare lo scraper (`python -m scraper.main --once`) per rigenerare i JSON, poi il backend (`python -m app.seed_from_json` o endpoint `POST /api/v1/admin/reimport`).
 
 ### 5.4 Test articoli italiani
 

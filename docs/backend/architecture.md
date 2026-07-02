@@ -143,14 +143,21 @@ Nessuno scheduler interno al backend (decisione D2): lo scraper vive nel suo pro
 
 ---
 
-## Status (2026-06-30 sera)
+## Status (2026-07-02)
 
 - ✅ Struttura cartelle e file pronta
 - ✅ `requirements.txt`, `.env.example`, `.gitignore` allineati
 - ✅ Tutti i TODO nei file Python riflettono le decisioni D1-D5 + L1-L5 (lingua inglese)
 - ✅ `schema-mapping.md` autorevole con nomi inglesi
-- ✅ Scraper rebrandizzato (rimuoso "cinemascarper") + systemd timer pronto
-- ✅ **`config.py` implementato** (Settings + get_settings con lru_cache)
-- ✅ **`database.py` implementato** (Base, engine, SessionLocal, get_db, PRAGMA FK)
-- ✅ **3 modelli SQLAlchemy implementati** (Cinema/Film/Showing con vincoli e indici)
-- 🔜 schemas Pydantic, repositories, services, routers, main, seed (D2-D5, vedi [PIANO-CONSEGNA-14LUGLIO.md](../PIANO-CONSEGNA-14LUGLIO.md) §7)
+- ✅ Scraper rebrandizzato + systemd timer pronto
+- ✅ **`config.py`** implementato (Settings + `get_settings` con `lru_cache`)
+- ✅ **`database.py`** implementato (Base, engine, SessionLocal, `get_db`, PRAGMA FK)
+- ✅ **3 modelli SQLAlchemy** implementati (Cinema/Film/Showing con vincoli e indici)
+- ✅ **Schemas Pydantic** implementati (CinemaOut/WithCount, FilmOut/Detail, ShowingOut/Detail; forward reference + `field_validator` su `times`)
+- ✅ **Repositories** implementati (SQLAlchemy 2.0 `select()`, `joinedload` anti-N+1, `upsert_from_scraper`, `normalize_title` per dedup)
+- 🔜 services (`get_films_today`, `get_cinema_with_count`, `search_films`)
+- 🔜 routers (endpoint REST + Swagger auto)
+- 🔜 `main.py` (`create_app` factory + CORS + lifespan)
+- 🔜 `seed_from_json.py` (bootstrap DB da `scraper/output/*.json`)
+- 🔜 tests (`conftest.py` + smoke test endpoint chiave)
+- 🔜 Alembic init + migration iniziale

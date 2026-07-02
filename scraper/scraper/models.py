@@ -38,6 +38,8 @@ class Film:
     duration: str | None = None
     director: str | None = None
     original_title: str | None = None
+    year: int | None = None
+    wikidata_id: str | None = None
 
 
 @dataclass
@@ -124,6 +126,8 @@ def film_to_dict(film: Film) -> dict:
         "director": film.director,
         "original_title": film.original_title,
         "duration": normalize_duration(film.duration),
+        "year": film.year,
+        "wikidata_id": film.wikidata_id,
         "present_in": _consolidate_showings(film.present_in),
         "history": film.history,
     }
@@ -154,6 +158,8 @@ def films_to_json(films: list[Film]) -> dict:
             "genres": film.genres or [],
             "director": film.director,
             "duration": normalize_duration(film.duration),
+            "year": film.year,
+            "wikidata_id": film.wikidata_id,
             "status": film.status,
             "first_seen": first_seen,
             "last_seen": last_seen,

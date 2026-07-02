@@ -106,6 +106,8 @@ def _load_cache(cinema_slug: str) -> list[Film] | None:
                 duration=d.get("duration"),
                 source_poster=d.get("source_poster") or d.get("poster"),
                 original_title=d.get("original_title") or d.get("originalTitle"),
+                year=d.get("year"),
+                wikidata_id=d.get("wikidata_id"),
             ))
         logger.info("  Cache loaded for %s (%d films)", cinema_slug, len(films))
         return films

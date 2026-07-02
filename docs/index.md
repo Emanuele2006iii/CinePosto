@@ -36,6 +36,7 @@ Aggregatore cinema Umbria — scraper Python + backend FastAPI + app React Nativ
 |-----------|-------------|
 | [`../app/README.md`](../app/README.md) | Front door Expo (boilerplate) |
 | [app/overview.md](app/overview.md) | Stack, struttura, comandi Expo, integrazione backend |
+| [**frontend-integration.md**](frontend-integration.md) | **Contratto API per il team frontend** — endpoint, tipi JSDoc, esempi fetch, checklist |
 
 ### Worker (Cloudflare Pages)
 Hosting web build React Native — nessuna logica aggiuntiva. Vedi `../worker/` direttamente.
@@ -70,6 +71,7 @@ cineposto/docs/
 ├── PIANO-CONSEGNA-14LUGLIO.md        ← roadmap T-14 con sprint
 ├── CONTINUAZIONE-PROGETTUALE.md      ← audit + decisioni D1-D5
 ├── development.md                    ← testing, lint, setup dev
+├── frontend-integration.md           ← contratto API per il team frontend (NEW)
 ├── scraper/
 │   └── architecture.md               ← architettura tecnica scraper
 ├── backend/

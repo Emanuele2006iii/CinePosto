@@ -360,7 +360,7 @@ Normalizza qualsiasi formato di durata a `"N min"`:
 
 ## Modulo metadata.py — Wikidata enrichment
 
-**Scopo:** arricchire ogni `Film` con poster, descrizione, regista, durata se non già presenti dal connettore.
+**Scopo:** arricchire ogni `Film` con poster, descrizione, regista, durata, titolo originale, **anno di pubblicazione, wikidata_id** se non già presenti dal connettore.
 
 ### Strategia
 
@@ -369,7 +369,14 @@ Normalizza qualsiasi formato di durata a `"N min"`:
 3. Se non in cache, chiama `_search_fuzzy(title)` → API `wbsearchentities` di Wikidata
 4. Per ogni risultato, controlla se la descrizione contiene "film" o "movie"
 5. Se trovato, chiama `_fetch_entity_details(entity_id)` → `EntityData/{id}.json`
-6. Estrae: P18 (immagine), P57 (regista, risolto come secondo lookup), P2047 (durata in min), labels (titolo), descriptions
+6. **Estrae dalla entity Wikidata**:
+   - `P18` (immagine) → `poster` (URL Commons)
+   - `P57` (regista) → `director` (con secondo lookup per risolvere il nome)
+   - `P2047` (durata) → `duration` ("109 min")
+   - `P577` (data pubblicazione) → `year` (int, primi 4 char del `time` field)
+   - `entity_id` stesso → `wikidata_id` (es. `"Q97154362"`)
+   - `labels.it` / `labels.en` → `title`, `original_title`
+   - `descriptions.it` / `descriptions.en` → `description`
 7. Salva in cache e su disco (`.wikidata_cache.json`)
 
 ### Meccanismi di protezione
@@ -381,7 +388,14 @@ Normalizza qualsiasi formato di durata a `"N min"`:
 | Rate limit 429 | Header `Retry-After` | Backoff adattivo |
 | Pausa post-ricerca | 2s | Sleep dopo ogni ricerca con successo |
 
-**Nota:** il campo `"genres"` non viene mai popolato da Wikidata — `_fetch_entity_details` non estrae questo dato. Wikidata arricchisce solo: poster, descrizione, regista, durata, titolo originale.
+**Nota:** il campo `"genres"` non viene mai popolato da Wikidata — `_fetch_entity_details` non estrae questo dato. Wikidata arricchisce: poster, descrizione, regista, durata, titolo originale, anno, wikidata_id.
+
+**Copertura effettiva** (misurata al 02/07 su 19 film del dataset attuale):
+- `poster`, `description`: 100%
+- `director`: 95%
+- `runtime_minutes` (dopo parsing "X min"): 74%
+- `genres`: 69% (viene dai connettori, non da Wikidata)
+- **`year`, `wikidata_id`**: **37%** — molti film di nicchia (uscite piccole, sale d'essai) non sono su Wikidata → limite della fonte, non fixabile senza altra API.
 
 **Nota:** la risoluzione del regista (P57) esegue un secondo `_fetch_entity_details(director_id)` che bypassa il rate limiter di `_sparql_query` (usa direttamente `requests.get`). Questo è accettabile dato che l'endpoint `/wiki/Special:EntityData/` è distinto da SPARQL.
 

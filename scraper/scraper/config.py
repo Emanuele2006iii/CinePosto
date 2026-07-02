@@ -18,29 +18,32 @@ CINEMAS_JSON = OUTPUT_DIR / "cinemas.json"
 CINEMA_LOCATIONS: dict[str, dict] = {
     "postmodernissimo": {
         "name": "PostModernissimo",
-        "address": "Via del Milite Ignoto 1, 06121 Perugia PG",
+        # Verificato dal sito ufficiale postmodernissimo.com (2026-07-02)
+        "address": "Via del Carmine 4, 06121 Perugia PG",
         "city": "Perugia",
         "region": "Umbria",
-        "lat": 43.1107,
-        "lon": 12.3882,
+        "lat": 43.1129,
+        "lon": 12.3933,
         "website": "https://www.postmodernissimo.com",
     },
     "the-space-corciano": {
         "name": "The Space Cinema Corciano",
-        "address": "Via Trasimeno Ovest 164, 06073 Corciano PG",
+        # Verificato dal sito ufficiale thespacecinema.it (2026-07-02)
+        "address": "Via Pierluigi Nervi, 06073 Corciano PG",
         "city": "Corciano",
         "region": "Umbria",
-        "lat": 43.0866,
-        "lon": 12.3073,
+        "lat": 43.0990,
+        "lon": 12.3144,
         "website": "https://www.thespacecinema.it",
     },
     "uci-perugia": {
         "name": "UCI Cinemas Perugia",
-        "address": "Via Corcianese 200, 06073 Corciano PG",
-        "city": "Corciano",
+        # Indirizzo indicato da Emanuele (2026-07-02). Verificare su Maps.
+        "address": "Viale Centova 1D, 06100 Perugia PG",
+        "city": "Perugia",
         "region": "Umbria",
-        "lat": 43.0745,
-        "lon": 12.2891,
+        "lat": 43.0965,
+        "lon": 12.3554,
         "website": "https://ucicinemas.it",
     },
 }

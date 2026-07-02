@@ -101,7 +101,13 @@ python3 healthcheck.py
 }
 ```
 
-**Campi che possono essere `null`:** `poster`, `description`, `director`, `original_title`, `duration`, `genres`, `screen`, `language` — dipende dalla fonte e dalla disponibilità su Wikidata.
+**Campi che possono essere `null`:** `poster`, `description`, `director`, `original_title`, `duration`, `genres`, `screen`, `language`, `year`, `wikidata_id` — dipende dalla fonte e dalla disponibilità su Wikidata.
+
+**Nuovi campi dal 2026-07-02** (nel JSON `films.json`):
+- `year` (int) — estratto da Wikidata P577 (data pubblicazione)
+- `wikidata_id` (string) — entity_id Wikidata (es. `"Q97154362"`), utile per future re-importazioni di metadati e come UNIQUE nel DB backend
+
+Copertura misurata su 19 film del dataset attuale: `poster` 100%, `description` 100%, `director` 95%, `duration` 74%, `genres` 69%, `year`/`wikidata_id` 37% (film di nicchia non su Wikidata).
 
 **Campi non presenti per scelta:** `rating` (API commerciali non usate), `price` (richiederebbe scraping aggiuntivo fragile su ogni cinema).
 

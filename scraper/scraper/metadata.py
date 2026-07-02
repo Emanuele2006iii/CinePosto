@@ -1,8 +1,9 @@
-"""Wikidata enrichment: fetches poster, description, director, duration, and original title."""
+"""Wikidata enrichment: fetches poster, description, director, duration, original title, year, wikidata_id."""
 from __future__ import annotations
 
 import json
 import logging
+import re
 import time
 
 import requests
@@ -185,6 +186,22 @@ def _fetch_entity_details(entity_id: str) -> dict | None:
                 except (ValueError, TypeError):
                     pass
 
+        # P577 = data di pubblicazione (Wikidata). Estrae l'anno dai primi 4 char.
+        # Formato tipico: "+2021-10-22T00:00:00Z"
+        if "P577" in claims:
+            val = claims["P577"][0].get("mainsnak", {}).get("datavalue", {}).get("value", {})
+            if isinstance(val, dict):
+                time_str = val.get("time", "")
+                m = re.search(r"[+-]?(\d{4})", time_str)
+                if m:
+                    try:
+                        result["year"] = int(m.group(1))
+                    except (ValueError, TypeError):
+                        pass
+
+        # L'entity_id stesso e' il "wikidata_id" (es. "Q97154362").
+        result["wikidata_id"] = entity_id
+
         langs = entity.get("labels", {})
         it_title = langs.get("it", {}).get("value", "")
         en_title = langs.get("en", {}).get("value", "")
@@ -233,3 +250,9 @@ def enrich_film(film) -> None:
 
     if not film.original_title and "original_title" in wiki_data:
         film.original_title = wiki_data["original_title"]
+
+    if not film.year and "year" in wiki_data:
+        film.year = wiki_data["year"]
+
+    if not film.wikidata_id and "wikidata_id" in wiki_data:
+        film.wikidata_id = wiki_data["wikidata_id"]

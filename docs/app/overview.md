@@ -2,6 +2,8 @@
 
 Stato: inizializzata, navigazione tab funzionante, schermate mock attive.
 
+> 📱 **Per il team frontend**: prima di collegare l'app al backend, leggere [`docs/frontend-integration.md`](../frontend-integration.md) — contratto API, tipi JSDoc, esempi `fetch`, checklist di setup.
+
 ---
 
 ## Stack

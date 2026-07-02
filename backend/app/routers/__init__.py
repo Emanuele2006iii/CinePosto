@@ -1,2 +1,4 @@
-# Router package. Importare i singoli moduli in main.py:
-#   from .routers import cinema, film, showings, admin
+"""Re-export dei router per import piu' comodo in main.py."""
+from app.routers import admin, cinema, film, showings
+
+__all__ = ["admin", "cinema", "film", "showings"]

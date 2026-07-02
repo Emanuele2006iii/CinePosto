@@ -3,7 +3,27 @@
 > **Documento**: pianificazione end-to-end per portare CinePosto dallo stato attuale (scraper ✅, resto skeleton) al rilascio v1.0 e oltre.
 > **Audience**: io stesso + team RepCode (Emanuele, Elio, Andrea, Yonas) + prof. ISS.
 > **Data redazione**: 2026-06-30.
+> **Ultimo aggiornamento**: 2026-07-02 sera (Sprint 2 ✅ chiuso).
 > **Stato del documento**: vivo — aggiornare a ogni sprint chiuso.
+
+> ### 📌 Aggiornamento 2026-07-02 (chiusura Sprint 2)
+>
+> L'audit del backend nella §2.2 rifletteva lo stato al 30 giugno ("0 righe eseguibili"). **Ora Sprint 2 è ✅ COMPLETATO**:
+>
+> - ✅ `config.py`, `database.py`, models Cinema/Film/Showing (30/06 sera)
+> - ✅ `schemas/` Pydantic: CinemaOut/WithCount, FilmOut/Detail, ShowingOut/Detail; forward reference risolte in `__init__.py`; `field_validator` che parsa `times` da stringa JSON.
+> - ✅ `repositories/`: SQLAlchemy 2.0 `select()`, `joinedload` anti-N+1, `upsert_from_scraper`, `normalize_title` (NFKD + no punct) per dedup titoli.
+> - ✅ `services/`: `cinema_service` + `film_service` (films_today/settimana, search con validazione min 2 char, get_film_detail con showings futuri).
+> - ✅ `routers/`: cinema, film, showings, admin — **15 endpoint funzionanti**, Swagger auto su `/docs`.
+> - ✅ `main.py`: `create_app` factory + CORS middleware + lifespan hook (`Base.metadata.create_all` in dev) + `/health`.
+> - ✅ `seed_from_json.py`: lettura di `cinemas.json` + `films.json` + `showings.json` con upsert atomico, parsing `duration: "109 min"` → int, mapping `genres: list` → CSV.
+> - ✅ **26 test verdi** in `tests/` (`conftest.py` con SQLite in-memory + StaticPool + dependency override; `test_repositories.py` unit; `test_routers.py` e2e con TestClient).
+> - ✅ Config sicurizzato: `admin_token` **auto-generato** al boot se non in `.env` (no più `"change-me-before-deploy"` come default noto); `scraper_output_dir` risolto a path assoluto; `cors_origins` default dev-friendly (Metro + Expo web + porta 3000).
+> - ✅ Scraper: nuova estrazione Wikidata **P577 (anno pubblicazione)** + **entity_id → wikidata_id**. Copertura reale: `year` 37%, `wikidata_id` 37%, `runtime_minutes` 74% (i film di nicchia non sono su Wikidata → limite fonte).
+> - ✅ Indirizzi cinema verificati: PostModernissimo → *Via del Carmine 4, Perugia*; The Space → *Via Pierluigi Nervi, Corciano*; UCI → *Viale Centova 1D, Perugia* (comune Perugia, non Corciano come era prima).
+> - ✅ Nuovo doc [`frontend-integration.md`](frontend-integration.md) per il team: contratto API + tipi JSDoc + esempi fetch + checklist Andrea.
+>
+> Le sezioni §2.2, §5, §7 sotto restano come **audit storico del 30 giugno** per traccia. Per lo stato reale corrente vedi callout sopra e `docs/backend/architecture.md` §Status.
 
 ---
 

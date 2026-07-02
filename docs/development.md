@@ -36,6 +36,27 @@ python3 -m scraper.main --schedule  # scheduling automatico ogni 24h
 python3 healthcheck.py              # ping ai 3 endpoint
 ```
 
+### Modifiche ai metadati o alle costanti cinema
+
+Se cambi:
+- `scraper/scraper/config.py` → `CINEMA_LOCATIONS` (nomi/indirizzi/coordinate)
+- `scraper/scraper/metadata.py` → estrazione Wikidata (nuovi campi, nuove property)
+
+...ricordati di **invalidare la cache Wikidata** prima di rilanciare, altrimenti riusa i vecchi risultati senza i nuovi campi:
+
+```bash
+rm scraper/.wikidata_cache.json
+python3 -m scraper.main --once
+```
+
+Poi rigenera i JSON e reseed backend:
+
+```bash
+cd ../backend && source venv/bin/activate
+rm cineposto.db
+python -m app.seed_from_json
+```
+
 ### Variabili d'ambiente
 
 | Variabile | Default | Descrizione |
@@ -56,10 +77,48 @@ cd backend
 python3 -m venv venv && source venv/bin/activate
 pip install -r requirements.txt
 cp .env.example .env
+```
+
+### Seed del DB (una volta al primo avvio)
+
+```bash
+# Legge i JSON prodotti dallo scraper e popola cineposto.db
+python -m app.seed_from_json
+```
+
+Da rilanciare **ogni volta che lo scraper aggiorna i JSON** (o via endpoint
+admin `POST /api/v1/admin/reimport` col token in `X-Admin-Token`).
+
+### Avvio server
+
+```bash
 uvicorn app.main:app --reload --port 8000
 ```
 
-Swagger UI disponibile su `http://localhost:8000/docs`.
+Swagger UI: `http://localhost:8000/docs`.
+
+### Test
+
+```bash
+python -m pytest tests/ -q       # 26 test (~0.15s)
+python -m pytest tests/ -v       # verbose
+```
+
+Setup dei test:
+- `conftest.py` — SQLite in-memory + `StaticPool` + override di `get_db`
+- `test_repositories.py` — 14 unit test sui repository
+- `test_routers.py` — 12 end-to-end via TestClient FastAPI
+
+### Variabili d'ambiente (`.env`)
+
+| Variabile | Default | Descrizione |
+|---|---|---|
+| `DATABASE_URL` | `sqlite:///./cineposto.db` | Path DB. In dev SQLite locale, in prod idem (D4) |
+| `SCRAPER_OUTPUT_DIR` | `../scraper/output` | Cartella JSON scraper (risolto a path assoluto) |
+| `CORS_ORIGINS` | *(dev defaults)* | JSON array; se vuoto usa `localhost:8081/19006/3000` |
+| `ENV` | `development` | `development` → SQL echo + `create_all` in lifespan |
+| `LOG_LEVEL` | `INFO` | |
+| `ADMIN_TOKEN` | *(auto-generato)* | Se vuoto o `"change-me-before-deploy"`, il backend genera un token random e lo stampa una volta al boot |
 
 ---
 

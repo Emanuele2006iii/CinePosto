@@ -1,39 +1,6 @@
 {
-  "generated_at": "2026-06-25T12:56:35.080884+02:00",
+  "generated_at": "2026-07-02T16:29:51.616616+02:00",
   "films": [
-    {
-      "id": "Ricchi…da morire - Delitti in famiglia",
-      "title": "Ricchi…da morire – Delitti in famiglia",
-      "title_normalized": "Ricchi…da morire - Delitti in famiglia",
-      "original_title": null,
-      "poster": "https://www.thespacecinema.it/-/media/the-space-cinema/schede-film/2026/06/ricchi-da-morire-delitti-in-famiglia/locandina_ricchidamoriredelitiinfamiglia.jpg?rev=225696c0c1534a0ab7c116952ebc9e6f",
-      "description": "Ricchi...da morire - Delitti in famiglia. Una dark comedy diretta da John Patton Ford: un thriller n...",
-      "genres": [
-        "Commedia",
-        "Noir"
-      ],
-      "director": "John Patton Ford",
-      "duration": "105 min",
-      "status": "in_programmazione",
-      "first_seen": "2026-06-18",
-      "last_seen": "2026-06-25"
-    },
-    {
-      "id": "Allora balliamo",
-      "title": "Allora balliamo",
-      "title_normalized": "Allora balliamo",
-      "original_title": "Leave One Day",
-      "poster": "https://storage.googleapis.com/uci-infrastructure-bucket/Common/Movies/Posters/01KV7TZJH0KTB9174H25FSG67M_resized_at_20260616110747.jpg",
-      "description": "Allora balliamo. Film d’apertura del Festival di Cannes 2025, un esordio sensibile e luminoso, sospe...",
-      "genres": [
-        "Commedia"
-      ],
-      "director": "Amélie Bonnin",
-      "duration": "98 min",
-      "status": "in_programmazione",
-      "first_seen": "2026-06-18",
-      "last_seen": "2026-06-24"
-    },
     {
       "id": "Kontinental '",
       "title": "Kontinental ’25",
@@ -47,25 +14,29 @@
       ],
       "director": "Radu Jude",
       "duration": "109 min",
+      "year": 2025,
+      "wikidata_id": "Q131840079",
       "status": "in_programmazione",
       "first_seen": "2026-06-24",
-      "last_seen": "2026-06-24"
+      "last_seen": "2026-07-02"
     },
     {
-      "id": "After Life - Qual è il tuo ricordo più bello",
-      "title": "After Life – Qual è il tuo ricordo più bello?",
-      "title_normalized": "After Life - Qual è il tuo ricordo più bello",
-      "original_title": null,
-      "poster": "https://rest.postmodernissimo.com/wp-content/uploads/2026/05/coverlg-2-1024x576.jpg",
-      "description": "After Life - Qual è il tuo ricordo più bello?. Secondo film di finzione di Hirokazu Kore-eda, dopo M...",
+      "id": "Allora balliamo",
+      "title": "Allora balliamo",
+      "title_normalized": "Allora balliamo",
+      "original_title": "Leave One Day",
+      "poster": "https://storage.googleapis.com/uci-infrastructure-bucket/Common/Movies/Posters/01KV7TZJH0KTB9174H25FSG67M_resized_at_20260616110747.jpg",
+      "description": "Allora balliamo. Film d’apertura del Festival di Cannes 2025, un esordio sensibile e luminoso, sospe...",
       "genres": [
-        "Drammatico"
+        "Commedia"
       ],
-      "director": "Hirokazu Kore-eda",
-      "duration": "118 min",
+      "director": "Amélie Bonnin",
+      "duration": "98 min",
+      "year": 2025,
+      "wikidata_id": "Q134086622",
       "status": "in_programmazione",
-      "first_seen": "2026-06-24",
-      "last_seen": "2026-06-24"
+      "first_seen": "2026-06-18",
+      "last_seen": "2026-07-02"
     },
     {
       "id": "Disclosure Day",
@@ -79,25 +50,48 @@
       ],
       "director": "Steven Spielberg",
       "duration": "145 min",
+      "year": null,
+      "wikidata_id": null,
       "status": "in_programmazione",
       "first_seen": "2026-06-18",
-      "last_seen": "2026-06-25"
+      "last_seen": "2026-07-02"
     },
     {
-      "id": "Supergirl",
-      "title": "Supergirl",
-      "title_normalized": "Supergirl",
+      "id": "Dove i frati volano",
+      "title": "Dove i frati volano",
+      "title_normalized": "Dove i frati volano",
       "original_title": null,
-      "poster": "https://www.thespacecinema.it/-/media/the-space-cinema/schede-film/2026/06/supergirl-woman-of-tomorrow/locandina_supergirl.jpg?rev=c30af48e746547dda05168d3a9999997",
-      "description": "Quando un avversario inaspettato e spietato colpisce troppo vicino a casa, Kara Zor-El, alias Supergirl, è costretta a stringere un’improbabile alleanza intraprendendo un’epica avventura interstellare all’insegna della vendetta e della giustizia.",
+      "poster": "https://rest.postmodernissimo.com/wp-content/uploads/2026/06/maxresdefault-1024x431.jpg",
+      "description": "Dove i frati volano. Scritto e diretto dalla regista umbra Carolina Boco, un volo nella terra di San...",
       "genres": [
-        "Azione"
+        "Documentario"
       ],
-      "director": "Craig Gillespie",
-      "duration": "108 min",
+      "director": "Carolina Boco",
+      "duration": "72 min",
+      "year": null,
+      "wikidata_id": null,
       "status": "in_programmazione",
-      "first_seen": "2026-06-18",
-      "last_seen": "2026-06-25"
+      "first_seen": "2026-07-02",
+      "last_seen": "2026-07-02"
+    },
+    {
+      "id": "MINIONS & MONSTERS",
+      "title": "MINIONS & MONSTERS",
+      "title_normalized": "MINIONS & MONSTERS",
+      "original_title": null,
+      "poster": "https://www.thespacecinema.it/-/media/the-space-cinema/schede-film/2026/07/minions-e-monsters/locandinaminionsmonsters.jpg?rev=1b9d56e80e4b4f70a440e071f569dea3",
+      "description": "Sull’onda del successo mondiale del blockbuster dell’estate 2024, la commedia più divertente dell’anno, Cattivissimo Me 4, Illumination espande il suo universo animato ricco di energia con un nuovo, scatenato capitolo che introduce personaggi inediti nella più grande franchise animata mondiale di sempre: Minions & Monsters. Questa è la storia turbolenta, assurda e assolutamente vera di come i Minions abbiano conquistato Hollywood, siano diventati star del cinema, abbiano perso tutto, abbiano liberato dei mostri nel mondo e poi si siano riuniti per cercare di salvare il pianeta dal caos che loro stessi avevano creato. Minions & Monsters è diretto dal candidato all’Oscar® Pierre Coffin, già regista dei primi tre film di Cattivissimo Me e del primo Minions. Coffin presta inoltre la voce ai Minions fin dal loro debutto cinematografico nel 2010. ",
+      "genres": [
+        "Animazione",
+        "Famiglia"
+      ],
+      "director": "Pierre Coffin",
+      "duration": "90 min",
+      "year": null,
+      "wikidata_id": null,
+      "status": "in_programmazione",
+      "first_seen": "2026-06-24",
+      "last_seen": "2026-07-02"
     },
     {
       "id": "TOY STORY",
@@ -112,25 +106,63 @@
       ],
       "director": "Andrew Stanton, McKenna Harris",
       "duration": "102 min",
+      "year": null,
+      "wikidata_id": null,
       "status": "in_programmazione",
       "first_seen": "2026-06-18",
-      "last_seen": "2026-06-25"
+      "last_seen": "2026-07-02"
     },
     {
-      "id": "PICCOLO MIRACOLO",
-      "title": "PICCOLO MIRACOLO",
-      "title_normalized": "PICCOLO MIRACOLO",
+      "id": "Supergirl",
+      "title": "Supergirl",
+      "title_normalized": "Supergirl",
       "original_title": null,
-      "poster": "https://www.thespacecinema.it/-/media/the-space-cinema/schede-film/2026/06/piccolo-miracolo/locandina_piccolomiracolo.jpg?rev=da05e6bba5ca4c09a3575926a4cc782d",
-      "description": "Davide Lancia, ricco quarantenne dai gusti raffinati e un debole per tutto ciò che è bello, dalle donne all’arte, deve la sua fortuna al fatto di essere figlio di uno dei più potenti e spregiudicati costruttori romani. Il padre, per spronarlo, gli offre l’occasione per dimostrare finalmente di poter essere il degno erede del suo impero: dovrà demolire una palazzina malandata e realizzare al suo posto un edificio di lusso. ",
+      "poster": "https://www.thespacecinema.it/-/media/the-space-cinema/schede-film/2026/06/supergirl-woman-of-tomorrow/locandina_supergirl.jpg?rev=c30af48e746547dda05168d3a9999997",
+      "description": "Quando un avversario inaspettato e spietato colpisce troppo vicino a casa, Kara Zor-El, alias Supergirl, è costretta a stringere un’improbabile alleanza intraprendendo un’epica avventura interstellare all’insegna della vendetta e della giustizia.",
       "genres": [
-        "Dramma"
+        "Azione"
       ],
-      "director": "Guido Chiesa",
-      "duration": null,
+      "director": "Craig Gillespie",
+      "duration": "108 min",
+      "year": null,
+      "wikidata_id": null,
       "status": "in_programmazione",
-      "first_seen": "2026-06-24",
-      "last_seen": "2026-06-25"
+      "first_seen": "2026-06-18",
+      "last_seen": "2026-07-02"
+    },
+    {
+      "id": "BACKROOMS",
+      "title": "BACKROOMS",
+      "title_normalized": "BACKROOMS",
+      "original_title": null,
+      "poster": "https://www.thespacecinema.it/-/media/the-space-cinema/schede-film/2026/05/backrooms/locandina_backrooms.jpg?rev=876123c2f5b0458580aace00f32ce332",
+      "description": "Se non fai attenzione e superi la barriera della realtà, entrerai nelle backrooms. Se finisci lì dentro, resta vigile, perché i passi che echeggiano in quelle stanze potrebbero non essere solo i tuoi…  Dal genio di Kane Parsons, a.k.a. Kane Pixels, l’attesissimo film tratto dal fenomeno globale che ha terrorizzato il web, con i candidati all’Oscar Chiwetel Ejiofor e Renate Reinsve.",
+      "genres": [
+        "Horror"
+      ],
+      "director": "Kane Parsons",
+      "duration": "111 min",
+      "year": null,
+      "wikidata_id": null,
+      "status": "in_programmazione",
+      "first_seen": "2026-06-18",
+      "last_seen": "2026-07-02"
+    },
+    {
+      "id": "OBSESSION",
+      "title": "OBSESSION",
+      "title_normalized": "OBSESSION",
+      "original_title": null,
+      "poster": "https://www.thespacecinema.it/-/media/the-space-cinema/schede-film/2026/05/obsession/locandina_obsession.jpg?rev=1577825cd6f7423dbca11d3ffc7a1b72",
+      "description": "Dopo aver spezzato il misterioso bastoncino del desiderio per conquistare il cuore della ragazza che ama un romantico senza speranza ottiene esattamente ciò che ha chiesto ma presto scopre che alcuni desideri hanno un prezzo sinistro e pericoloso. ",
+      "genres": [],
+      "director": "Curry Barker",
+      "duration": "93 min",
+      "year": null,
+      "wikidata_id": null,
+      "status": "in_programmazione",
+      "first_seen": "2026-06-18",
+      "last_seen": "2026-07-02"
     },
     {
       "id": "SCARY MOVIE",
@@ -139,32 +171,14 @@
       "original_title": null,
       "poster": "https://www.thespacecinema.it/-/media/the-space-cinema/schede-film/2026/06/scary-movie-6/locandina_scarymovie6.jpg?rev=120e9e8793f04128bc0410913bc117a1",
       "description": "Ventisei anni dopo essere sfuggiti a un killer mascherato fin troppo familiare (“Ghostface”), i Core Four tornano nel mirino dell’assassino — e nessun franchise horror è al sicuro. Marlon Wayans (“Shorty”), Shawn Wayans (“Ray”), Anna Faris (“Cindy”) e Regina Hall (“Brenda”) si riuniscono in Scary Movie insieme a volti amatissimi di ritorno e nuove facce pronte a fare a pezzi reboot, remake, requel, prequel, sequel, spin-off, elevated horror, origin story, qualsiasi cosa contenga la parola “legacy” e ogni “capitolo finale” che finale non è mai.",
-      "genres": [
-        "Commedia",
-        "Horror"
-      ],
+      "genres": [],
       "director": "Michael Tiddes",
       "duration": "96 min",
+      "year": null,
+      "wikidata_id": null,
       "status": "in_programmazione",
       "first_seen": "2026-06-18",
-      "last_seen": "2026-06-25"
-    },
-    {
-      "id": "CHAO",
-      "title": "CHAO",
-      "title_normalized": "CHAO",
-      "original_title": null,
-      "poster": "https://www.thespacecinema.it/-/media/the-space-cinema/schede-film/2026/06/extra/chao/locandina_chao.jpg?rev=7e6ba7eee216442b98a15e2d7ac1a51a",
-      "description": "In un mondo futuristico in cui umani e sirene convivono, la vita di un tranquillo impiegato di una compagnia navale viene sconvolta quando riceve improvvisamente una proposta di matrimonio da Chao, la principessa del regno delle sirene. Senza avere il tempo di capire cosa stia succedendo, Stephan si ritrova a vivere con l’imprevedibile e genuina Chao. ",
-      "genres": [
-        "Romance",
-        "Anime"
-      ],
-      "director": "Yasuhiro Aoki",
-      "duration": "90 min",
-      "status": "in_programmazione",
-      "first_seen": "2026-06-18",
-      "last_seen": "2026-06-24"
+      "last_seen": "2026-07-02"
     },
     {
       "id": "JACKASS: BEST LAST",
@@ -180,131 +194,94 @@
       ],
       "director": "Jeff Tremaine",
       "duration": null,
+      "year": 2026,
+      "wikidata_id": "Q138035676",
       "status": "in_programmazione",
       "first_seen": "2026-06-24",
-      "last_seen": "2026-06-24"
+      "last_seen": "2026-07-02"
     },
     {
-      "id": "OBSESSION",
-      "title": "OBSESSION",
-      "title_normalized": "OBSESSION",
+      "id": "RICCHI... DA MORIRE - DELITTI IN FAMIGLIA",
+      "title": "RICCHI... DA MORIRE - DELITTI IN FAMIGLIA",
+      "title_normalized": "RICCHI... DA MORIRE - DELITTI IN FAMIGLIA",
       "original_title": null,
-      "poster": "https://www.thespacecinema.it/-/media/the-space-cinema/schede-film/2026/05/obsession/locandina_obsession.jpg?rev=1577825cd6f7423dbca11d3ffc7a1b72",
-      "description": "Dopo aver spezzato il misterioso bastoncino del desiderio per conquistare il cuore della ragazza che ama un romantico senza speranza ottiene esattamente ciò che ha chiesto ma presto scopre che alcuni desideri hanno un prezzo sinistro e pericoloso. ",
-      "genres": [
-        "Horror"
-      ],
-      "director": "Curry Barker",
-      "duration": "93 min",
-      "status": "in_programmazione",
-      "first_seen": "2026-06-18",
-      "last_seen": "2026-06-25"
-    },
-    {
-      "id": "BACKROOMS",
-      "title": "BACKROOMS",
-      "title_normalized": "BACKROOMS",
-      "original_title": null,
-      "poster": "https://www.thespacecinema.it/-/media/the-space-cinema/schede-film/2026/05/backrooms/locandina_backrooms.jpg?rev=876123c2f5b0458580aace00f32ce332",
-      "description": "Se non fai attenzione e superi la barriera della realtà, entrerai nelle backrooms. Se finisci lì dentro, resta vigile, perché i passi che echeggiano in quelle stanze potrebbero non essere solo i tuoi…  Dal genio di Kane Parsons, a.k.a. Kane Pixels, l’attesissimo film tratto dal fenomeno globale che ha terrorizzato il web, con i candidati all’Oscar Chiwetel Ejiofor e Renate Reinsve.",
-      "genres": [
-        "Horror"
-      ],
-      "director": "Kane Parsons",
-      "duration": "111 min",
-      "status": "in_programmazione",
-      "first_seen": "2026-06-18",
-      "last_seen": "2026-06-25"
-    },
-    {
-      "id": "FUZE - CONTO ALLA ROVESCIA",
-      "title": "FUZE - CONTO ALLA ROVESCIA",
-      "title_normalized": "FUZE - CONTO ALLA ROVESCIA",
-      "original_title": null,
-      "poster": "https://www.thespacecinema.it/-/media/the-space-cinema/schede-film/2026/06/fuze---conto-alla-rovescia/locandina_fuze.jpg?rev=797c8df3d12747e29e982990ac347f11",
-      "description": "Dal regista di Hell or High Water, David Mackenzie, arriva un action thriller ad alta tensione con Aaron Taylor-Johnson, Theo James e Sam Worthington. Il cuore di Londra sprofonda nel caos dopo il ritrovamento di una bomba inesplosa della Seconda guerra mondiale in un cantiere. ",
+      "poster": "https://www.thespacecinema.it/-/media/the-space-cinema/schede-film/2026/06/ricchi-da-morire-delitti-in-famiglia/locandina_ricchidamoriredelitiinfamiglia.jpg?rev=225696c0c1534a0ab7c116952ebc9e6f",
+      "description": "Becket Redfellow (Glen Powell) è un outsider cresciuto lontano dalla sua famiglia d’origine: una dinastia ricchissima che lo ha rinnegato alla nascita. Determinato a reclamare ciò che ritiene suo di diritto, Becket mette in atto un piano tanto ambizioso quanto spietato: eliminare, uno dopo l’altro, tutti i parenti che lo separano dall’eredità miliardaria. ",
       "genres": [],
-      "director": "David Mackenzie",
-      "duration": "96 min",
+      "director": "John Patton Ford",
+      "duration": "105 min",
+      "year": null,
+      "wikidata_id": null,
       "status": "in_programmazione",
       "first_seen": "2026-06-18",
-      "last_seen": "2026-06-25"
+      "last_seen": "2026-07-02"
     },
     {
-      "id": "MASTERS OF THE UNIVERSE",
-      "title": "MASTERS OF THE UNIVERSE",
-      "title_normalized": "MASTERS OF THE UNIVERSE",
+      "id": "PICCOLO MIRACOLO",
+      "title": "PICCOLO MIRACOLO",
+      "title_normalized": "PICCOLO MIRACOLO",
       "original_title": null,
-      "poster": "https://www.thespacecinema.it/-/media/the-space-cinema/schede-film/2026/06/masters-of-the-universe/locandina_mastersoftheuniverse.jpg?rev=36563d95c72545c5826a620f4669ba12",
-      "description": "In Masters of the Universe, il regista Travis Knight riporta sul grande schermo il leggendario franchise con questa epica avventura live-action. Dopo essere stati separati per 15 anni, la Spada del Potere conduce il Principe Adam (Nicholas Galitzine) di nuovo su Eternia, dove scopre la sua casa devastata dal diabolico dominio di Skeletor (Jared Leto). ",
+      "poster": "https://www.thespacecinema.it/-/media/the-space-cinema/schede-film/2026/06/piccolo-miracolo/locandina_piccolomiracolo.jpg?rev=da05e6bba5ca4c09a3575926a4cc782d",
+      "description": "Davide Lancia, ricco quarantenne dai gusti raffinati e un debole per tutto ciò che è bello, dalle donne all’arte, deve la sua fortuna al fatto di essere figlio di uno dei più potenti e spregiudicati costruttori romani. Il padre, per spronarlo, gli offre l’occasione per dimostrare finalmente di poter essere il degno erede del suo impero: dovrà demolire una palazzina malandata e realizzare al suo posto un edificio di lusso. ",
       "genres": [],
-      "director": "Travis Knight",
-      "duration": "140 min",
-      "status": "in_programmazione",
-      "first_seen": "2026-06-18",
-      "last_seen": "2026-06-25"
-    },
-    {
-      "id": "GLI SPOSTATI - Lingua originale",
-      "title": "GLI SPOSTATI - Lingua originale",
-      "title_normalized": "GLI SPOSTATI - Lingua originale",
-      "original_title": null,
-      "poster": "https://www.thespacecinema.it/-/media/the-space-cinema/schede-film/2026/06/extra/marilyn-100/locandina_marilyn100.jpg?rev=57fa99c362884dcf9b292d42ca395ef2",
-      "description": "Proiezione in lingua originale con sottotitoli in italiano. Si ucciderebbero così anche i cavalli, se non fosse per gli occhi malinconici d’una bionda. Troppe nuvole in viaggio nei cieli del Nevada, troppe anime scorticate, troppa Marilyn in declino psichiatrico.",
-      "genres": [],
-      "director": "John Huston",
-      "duration": "124 min",
-      "status": "in_programmazione",
-      "first_seen": "2026-06-24",
-      "last_seen": "2026-06-24"
-    },
-    {
-      "id": "OZI - La voce della foresta",
-      "title": "OZI - La voce della foresta",
-      "title_normalized": "OZI - La voce della foresta",
-      "original_title": null,
-      "poster": "https://www.thespacecinema.it/-/media/the-space-cinema/img/import/locandina_ozilavocedellaforesta.jpg?rev=6720dc2290654eb997341845929ba182",
-      "description": "Ozi, una giovane orangotango, perde la sua casa nella foresta pluviale a causa di un incendio e viene salvata da un’associazione locale. Impara il linguaggio dei segni dai suoi nuovi amici e diventa famosa online per i suoi trucchi divertenti. ",
-      "genres": [],
-      "director": "Tim Harper",
-      "duration": "87 min",
-      "status": "in_programmazione",
-      "first_seen": "2026-06-18",
-      "last_seen": "2026-06-24"
-    },
-    {
-      "id": "MINIONS & MONSTERS",
-      "title": "MINIONS & MONSTERS",
-      "title_normalized": "MINIONS & MONSTERS",
-      "original_title": null,
-      "poster": "https://www.thespacecinema.it/-/media/the-space-cinema/schede-film/2026/07/minions-e-monsters/locandinaminionsmonsters.jpg?rev=1b9d56e80e4b4f70a440e071f569dea3",
-      "description": "Sull’onda del successo mondiale del blockbuster dell’estate 2024, la commedia più divertente dell’anno, Cattivissimo Me 4, Illumination espande il suo universo animato ricco di energia con un nuovo, scatenato capitolo che introduce personaggi inediti nella più grande franchise animata mondiale di sempre: Minions & Monsters. Questa è la storia turbolenta, assurda e assolutamente vera di come i Minions abbiano conquistato Hollywood, siano diventati star del cinema, abbiano perso tutto, abbiano liberato dei mostri nel mondo e poi si siano riuniti per cercare di salvare il pianeta dal caos che loro stessi avevano creato. Minions & Monsters è diretto dal candidato all’Oscar® Pierre Coffin, già regista dei primi tre film di Cattivissimo Me e del primo Minions. Coffin presta inoltre la voce ai Minions fin dal loro debutto cinematografico nel 2010. ",
-      "genres": [
-        "Animazione",
-        "Famiglia"
-      ],
-      "director": "Pierre Coffin",
-      "duration": "90 min",
-      "status": "in_programmazione",
-      "first_seen": "2026-06-24",
-      "last_seen": "2026-06-25"
-    },
-    {
-      "id": "Cos'è l'amore",
-      "title": "Cos'è l'amore?",
-      "title_normalized": "Cos'è l'amore",
-      "original_title": null,
-      "poster": "https://storage.googleapis.com/uci-infrastructure-bucket/Common/Movies/Posters/01KVYV1T83YD4AYSFERFMDSJWJ_resized_at_20260625093408.jpg",
-      "description": "A Rouen, Marguerite vive serena con il compagno e la figlia adolescente, mantenendo al tempo stesso un rapporto amichevole con Fred, suo primo marito da cui ha divorziato. Un giorno l'uomo le annuncia di volersi risposare, e le chiede aiuto per una semplice pratica di annullamento anche della loro unione religiosa. Marguerite si mostra disponibile, ma la burocrazia della Chiesa complica le cose e la costringe a rimettere in esame la natura del suo rapporto con Fred, nonché la storia trascorsa insieme e la figlia che condividono. Il caso finirà per coinvolgere tutti i membri di questa strana famiglia allargata, portando la comitiva fino a confrontarsi con i vertici del Vaticano.Si ricorda che il film inizia circa 25 minuti dopo l’orario di inizio proiezione comunicato",
-      "genres": [
-        "Commedia",
-        "Dramma"
-      ],
-      "director": null,
+      "director": "Guido Chiesa",
       "duration": null,
+      "year": 2026,
+      "wikidata_id": "Q140358571",
       "status": "in_programmazione",
       "first_seen": "2026-06-24",
-      "last_seen": "2026-06-25"
+      "last_seen": "2026-07-02"
+    },
+    {
+      "id": "PERFECT DAYS",
+      "title": "PERFECT DAYS",
+      "title_normalized": "PERFECT DAYS",
+      "original_title": null,
+      "poster": "https://www.thespacecinema.it/-/media/the-space-cinema/schede-film/2024/01/perfect-days/locandina_perfectdays.jpg?rev=42fe3667a4c54c09901799e809cca1df",
+      "description": "Perfect Days, il film diretto da Wim Wenders, racconta la storia di Hirayama (Koji Yakusho), un uomo che parla poco, umile ma sereno, che lavora come addetto alle pulizie dei bagni pubblici di Tokyo. Hirayama vive in una piccola casa, circondato da piante, e segue un'assidua e tranquilla routine, che gli permette di coltivare le sue passioni: la musica, i libri, la fotografia e gli alberi. ",
+      "genres": [],
+      "director": "Wim Wenders",
+      "duration": "123 min",
+      "year": null,
+      "wikidata_id": null,
+      "status": "in_programmazione",
+      "first_seen": "2026-07-02",
+      "last_seen": "2026-07-02"
+    },
+    {
+      "id": "Hopper Il Segreto della Marmotta",
+      "title": "Hopper Il Segreto della Marmotta",
+      "title_normalized": "Hopper Il Segreto della Marmotta",
+      "original_title": null,
+      "poster": "https://www.thespacecinema.it/-/media/the-space-cinema/schede-film/2026/05/hopper-il-segreto-della-marmotta/locandina_hopperilsegretodellamarmotta.jpg?rev=e1fd9ecf81724d75a53514739443d282",
+      "description": "Hopper Il Segreto della Marmotta racconta la straordinaria avventura di Hopper, un giovane e intraprendente esploratore sempre in viaggio insieme ai suoi inseparabili compagni: Meg, una puzzola esperta di arti marziali, e Abe, una tartaruga sarcastica dall’aspetto poco rassicurante. Seguendo le orme del padre adottivo, il leggendario esploratore Re Peter, Hopper affronta spedizioni epiche alla scoperta di mondi nuovi e affascinanti. Il destino di Hopper cambia radicalmente quando incontra Gina, una misteriosa sconosciuta che si rivela essere sua sorella. Per la prima volta, Hopper scopre di non essere l’unico della sua specie. Diviso tra la lealtà verso il padre adottivo e il desiderio di aiutare i suoi simili, Hopper si ritrova a dover seguire il suo cuore e partire per una nuova avventura. ",
+      "genres": [],
+      "director": null,
+      "duration": "90 min",
+      "year": null,
+      "wikidata_id": null,
+      "status": "in_programmazione",
+      "first_seen": "2026-07-02",
+      "last_seen": "2026-07-02"
+    },
+    {
+      "id": "CASA - IL ROGO DEL MALE",
+      "title": "LA CASA - IL ROGO DEL MALE",
+      "title_normalized": "CASA - IL ROGO DEL MALE",
+      "original_title": null,
+      "poster": "https://www.thespacecinema.it/-/media/the-space-cinema/schede-film/2026/07/la-casa-il-rogo-del-male/locandina_lacasailrogodelmale.jpg?rev=a6638b42ae594a62893fd57ead3158bf",
+      "description": "La casa: Il rogo del male porta sul grande schermo un nuovo capitolo di ferocia e follia demoniaca diventando l'esperienza più selvaggia e terrificante del franchise fino ad oggi. Dopo la perdita del marito, una donna cerca conforto presso i suoceri nella loro isolata casa di famiglia.",
+      "genres": [
+        "Horror",
+        "Thriller"
+      ],
+      "director": "Sébastien Vanicek",
+      "duration": "110 min",
+      "year": null,
+      "wikidata_id": null,
+      "status": "in_programmazione",
+      "first_seen": "2026-07-02",
+      "last_seen": "2026-07-02"
     },
     {
       "id": "Good Luck, Have Fun, Don't Die",
@@ -320,42 +297,48 @@
       ],
       "director": "Gore Verbinski",
       "duration": null,
+      "year": 2025,
+      "wikidata_id": "Q125843356",
       "status": "in_programmazione",
       "first_seen": "2026-06-24",
-      "last_seen": "2026-06-25"
+      "last_seen": "2026-07-02"
     },
     {
-      "id": "Antartica - Quasi una fiaba",
-      "title": "Antartica - Quasi una fiaba",
-      "title_normalized": "Antartica - Quasi una fiaba",
-      "original_title": null,
-      "poster": "https://storage.googleapis.com/uci-infrastructure-bucket/Common/Movies/Posters/01KQWHRT1Q74QNQW8H6RYNREB8_resized_at_20260505190805.jpg",
-      "description": "Una piccola comunità di scienziati, irraggiungibile per otto mesi l’anno, guarda al futuro della specie umana, cercando cose che ancora non capisce. Non Conosce. Non sa. Cose sopra e sottoterra.  L’arrivo di Maria Medri (Barbara Ronchi), genio forastico e cocciuto, nella base più isolata dell’Antartide, metterà in crisi i progetti del capomissione Fulvio Cadorna (Silvio Orlando), suo mentore.  Fulvio e Maria sono simili, sono legati, sono complici. Ma come spesso capita, tutti vogliono la stessa cosa, fino al giorno in cui ognuno vuole la sua.  Un conflitto scientifico, ideologico, affettivo.Si ricorda che il film inizia circa 25 minuti dopo l’orario di inizio proiezione comunicato",
+      "id": "L'esorcista - il credente",
+      "title": "L'esorcista - il credente",
+      "title_normalized": "L'esorcista - il credente",
+      "original_title": "The Exorcist: Believer",
+      "poster": "https://storage.googleapis.com/uci-infrastructure-bucket/Common/Movies/Posters/01KWEKW62D1ESSYN6J2CGKHXTR_resized_at_20260701123401.jpg",
+      "description": "Dopo la tragica scomparsa di sua moglie incinta in un terremoto ad Haiti, avvenuta 12 anni fa, Victor Fielding (interpretato da Leslie Odom Jr., vincitore di un Tony e candidato all'Oscar® per Quella Notte a Miami e Hamilton) ha cresciuto da solo la loro figlia Angela (Lidya Jewett, nota per Good Girls). Ma quando Angela e la sua amica Katherine (una nuova promessa, Olivia Marcum) spariscono nel bosco, per poi tornare tre giorni dopo senza ricordare cosa sia successo, si scatena una serie di eventi che costringeranno Victor a confrontarsi con il male nella sua forma più oscura e, nel terrore e nella disperazione, a cercare l'unica persona in vita che abbia mai assistito a qualcosa di simile: Chris MacNeil.Si ricorda che il film inizia circa 25 minuti dopo l’orario di inizio proiezione comunicato",
       "genres": [
-        "Dramma"
+        "Horror"
       ],
-      "director": null,
+      "director": "David Gordon Green",
       "duration": null,
+      "year": 2023,
+      "wikidata_id": "Q107610336",
       "status": "in_programmazione",
-      "first_seen": "2026-06-24",
-      "last_seen": "2026-06-24"
+      "first_seen": "2026-07-02",
+      "last_seen": "2026-07-02"
     },
     {
-      "id": "Mandalorian & Grogu",
-      "title": "The Mandalorian & Grogu",
-      "title_normalized": "Mandalorian & Grogu",
-      "original_title": null,
-      "poster": "https://storage.googleapis.com/uci-infrastructure-bucket/Common/Movies/Posters/01KPBCRW0PFG23P3MAVDNHH1R6_resized_at_20260416165800.jpg",
-      "description": "Il malvagio Impero è caduto e i signori della guerra imperiali sono sparsi per la galassia. La neonata Nuova Repubblica lavora per proteggere tutto ciò per cui la Ribellione ha combattuto e si è assicurata l'aiuto del leggendario cacciatore di taglie mandaloriano Din Djarin (Pedro Pascal) e del suo giovane apprendista Grogu.Si ricorda che il film inizia circa 25 minuti dopo l’orario di inizio proiezione comunicato",
+      "id": "Masters of the Universe",
+      "title": "Masters of the Universe",
+      "title_normalized": "Masters of the Universe",
+      "original_title": "Masters of the Universe",
+      "poster": "https://storage.googleapis.com/uci-infrastructure-bucket/Common/Movies/Posters/01KRDHJBM7H7KAZC2QDV2Y9RDW.jpg",
+      "description": "In Masters of the Universe, il regista Travis Knight riporta sul grande schermo il leggendario franchise con questa epica avventura live-action. Dopo essere stati separati per 15 anni, la Spada del Potere conduce il Principe Adam (Nicholas Galitzine) di nuovo su Eternia, dove scopre la sua casa devastata dal diabolico dominio di Skeletor (Jared Leto). Per salvare la sua famiglia e il suo mondo, Adam deve unire le forze con i suoi alleati più fidati, Teela (Camila Mendes) e Duncan/Man-At-Arms (Idris Elba), e abbracciare il suo vero destino come He-Man — l’uomo più potente dell’universo.Si ricorda che il film inizia circa 25 minuti dopo l’orario di inizio proiezione comunicato",
       "genres": [
         "Azione",
         "Fantascienza"
       ],
-      "director": "Jon Favreau",
+      "director": "Gary Goddard",
       "duration": null,
+      "year": 1987,
+      "wikidata_id": "Q58972",
       "status": "in_programmazione",
-      "first_seen": "2026-06-24",
-      "last_seen": "2026-06-24"
+      "first_seen": "2026-06-18",
+      "last_seen": "2026-07-02"
     }
   ]
 }

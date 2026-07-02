@@ -12,7 +12,7 @@ linter-yaml-title-alias: CinePosto — Piano degli Sprint e dei Rilasci
 | **Componenti** | Emanuele Ceccariglia, Elio Casciola, Andrea Cestelli, Yonas Burka |
 | **Corso**      | Ingegneria del Software — ITS Umbria Academy, a.a. 2025/2026       |
 
-> ⚠️ **Aggiornamento 2026-06-30**: questo piano riporta gli sprint come pianificati inizialmente. Lo **stato reale** dei componenti è dettagliato in [`docs/CONTINUAZIONE-PROGETTUALE.md`](../CONTINUAZIONE-PROGETTUALE.md) (audit + roadmap operativa). Riepilogo: scraper ✅ produzione · backend 🔴 da implementare da zero (struttura cartelle pronta, codice ancora TODO) · app 🟡 mock-only · documenti ISS ✅. Lo sprint plan formale qui sotto resta come riferimento storico per la consegna ISS.
+> **Aggiornamento 2026-07-02**: Sprint 2 ✅ **completato** (data prevista era 01/07, chiuso il 02/07). Backend: 15 endpoint funzionanti + seed dai JSON + 26 test verdi. Scraper arricchito con `year` (P577 Wikidata) + `wikidata_id`. Sprint 3 (app + fetch reali) pronto a partire.
 
 ---
 
@@ -67,25 +67,34 @@ Nessuna — è il componente di partenza dell'architettura.
 | Campo              | Valore                          |
 | ------------------ | ------------------------------- |
 | **Data inizio**    | 2026-06-16                      |
-| **Data fine**      | 2026-07-01                      |
-| **Stato**          | 🟡 In corso                     |
+| **Data fine**      | 2026-07-02                      |
+| **Stato**          | ✅ Completato                    |
 
 **User stories implementate:**
-- US-01 — Endpoint `GET /api/v1/cinema` che restituisce lista cinema con coordinate
-- US-02 — Endpoint `GET /api/v1/spettacoli?data=YYYY-MM-DD` con programmazione per data
-- US-08 (parziale) — Seed del database SQLite dai JSON prodotti dallo scraper
+- US-01 — `GET /api/v1/cinema` (lista cinema) + `GET /api/v1/cinema/{slug}` (dettaglio con count spettacoli)
+- US-02 — `GET /api/v1/showings?date=YYYY-MM-DD` (spettacoli per data, denormalizzato con film + cinema)
+- US-04 — `GET /api/v1/film/oggi` e `GET /api/v1/film/settimana` (filtri di data)
+- US-07 — `buy_url` incluso in ogni Showing (link diretto acquisto)
+- US-08 — Seed idempotente dai JSON scraper (`python -m app.seed_from_json` + endpoint admin `POST /api/v1/admin/reimport`)
+- US-10 — `GET /api/v1/film/search?q=...` (ricerca case-insensitive, ignora accenti)
 
 **Motivazione della scelta:**
-Il backend è il collante tra scraper e app mobile. Deve essere implementato prima di collegare l'app ai dati reali, altrimenti l'app può lavorare solo con dati mock.
+Il backend è il collante tra scraper e app mobile. Implementato prima di Sprint 3 (app) per permettere ad Andrea di lavorare con dati reali dal giorno 1.
 
 **Dipendenze:**
-- Sprint 1 completato (output JSON dello scraper disponibile in `scraper/output/`)
+- Sprint 1 completato ✅
 
-**Architettura implementata (skeleton):**
+**Architettura implementata**:
 ```
 routers/ → services/ → repositories/ → models/
+                    ↘ schemas/ (Pydantic DTO)
 ```
-Stack: FastAPI + SQLAlchemy 2.0 + SQLite (dev) / PostgreSQL (prod).
+- Stack: FastAPI + SQLAlchemy 2.0 sync + SQLite + Pydantic v2
+- 15 endpoint funzionanti (Swagger auto su `/docs`)
+- 26 test verdi (unit su repositories + end-to-end su TestClient)
+- Seed dai JSON scraper con parsing `duration: "109 min"` → `runtime_minutes: 109`
+- Sicurezza config: `admin_token` auto-generato se non in `.env` (no default insicuro)
+- Nuovo doc: [`docs/frontend-integration.md`](../frontend-integration.md) per il team frontend
 
 ---
 
@@ -93,9 +102,9 @@ Stack: FastAPI + SQLAlchemy 2.0 + SQLite (dev) / PostgreSQL (prod).
 
 | Campo              | Valore                          |
 | ------------------ | ------------------------------- |
-| **Data inizio**    | 2026-07-02                      |
+| **Data inizio**    | 2026-07-03                      |
 | **Data fine**      | 2026-07-07                      |
-| **Stato**          | 🔴 Non iniziato                 |
+| **Stato**          | 🔴 Non iniziato (backend pronto, si può partire) |
 
 **User stories implementate:**
 - US-02 — App mostra la programmazione del giorno corrente (Home screen "Film oggi")
