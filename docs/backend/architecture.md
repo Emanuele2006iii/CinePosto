@@ -1,7 +1,7 @@
 # Backend — Architettura tecnica
 
 Vedi setup e avvio in [backend/README.md](../../backend/README.md).
-Per la roadmap operativa e le decisioni di design vedi [PIANO-CONSEGNA-14LUGLIO.md](../PIANO-CONSEGNA-14LUGLIO.md).
+Per le decisioni di design e il quadro d'insieme vedi [panoramica.md](../panoramica.md).
 Per il mapping JSON scraper → DB vedi [schema-mapping.md](schema-mapping.md).
 
 ---

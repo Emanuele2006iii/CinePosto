@@ -26,7 +26,7 @@ logger = logging.getLogger(__name__)
 
 
 def _decode_html_entities(text: str) -> str:
-    # Prima decodifica escape Unicode JSON (es. \u0026 -> &) poi entità HTML
+    """Decodifica i titoli estratti dal payload RSC: prima gli escape Unicode JSON (\\u0026 -> &), poi le entità HTML (&amp; -> &). L'ordine conta."""
     text = re.sub(r'\\u([0-9a-fA-F]{4})', lambda m: chr(int(m.group(1), 16)), text)
     return html.unescape(text)
 
@@ -45,15 +45,32 @@ def _normalize(label: str | None) -> str | None:
 
 
 class PostModernissimoConnector(BaseConnector):
+    """Connettore PostModernissimo — sito Next.js, dati nel payload RSC della homepage.
+
+    Strategia a 3 livelli:
+    1. parsing del payload RSC inline (fonte primaria: titoli, dettagli, orari);
+    2. card HTML della homepage per i poster + fallback se il RSC è vuoto;
+    3. riconciliazione con la pagina di dettaglio, che è la fonte canonica
+       quando la cache edge della homepage è stantia.
+    """
+
     @property
     def cinema_name(self) -> str:
+        """Nome pubblico del cinema (da config)."""
         return POSTMOD_CINEMA_NAME
 
     @property
     def cinema_slug(self) -> str:
+        """Slug stabile del cinema (da config)."""
         return POSTMOD_CINEMA_SLUG
 
     def scrape(self, today: str, dates: list[str] | None = None) -> ScrapeResult:
+        """Estrae i film in programmazione nelle date richieste dalla homepage.
+
+        Filtra gli "event stub" (concerti, rassegne con ospiti) e gli show
+        marcati `noprog`; raggruppa gli orari per data; completa la descrizione
+        dalla pagina di dettaglio se la homepage non la fornisce.
+        """
         films: list[Film] = []
         errors: list[CinemaError] = []
         self._homepage_session = requests.Session()
@@ -159,8 +176,14 @@ class PostModernissimoConnector(BaseConnector):
         return ScrapeResult(films=films, errors=errors)
 
     def _parse_rsc_payload(self, page_html: str) -> list[dict]:
-        # Next.js RSC pages embed data as self.__next_f.push([1, "..."]) inline scripts.
-        # The payload is a JSON-escaped string containing all film and schedule objects.
+        """Estrae i film dal payload React Server Components inline nella pagina.
+
+        Le pagine Next.js RSC incapsulano i dati in script `self.__next_f.push([1,"..."])`
+        come stringa JSON-escaped: non è JSON valido nel suo insieme, quindi si
+        individuano i film via regex e si estraggono `shows` e `details` con un
+        brace-matching locale. Lo stesso permalink può comparire più volte nello
+        stream: gli show vengono accumulati senza duplicati.
+        """
         pattern = r'self\.__next_f\.push\(\[1,"(.*?)"\]\)'
         matches = re.findall(pattern, page_html, re.DOTALL)
         if not matches:
@@ -227,6 +250,11 @@ class PostModernissimoConnector(BaseConnector):
     )
 
     def _is_event_stub(self, movie: dict) -> bool:
+        """True se la voce è un evento (concerto, rassegna, ospiti) e non un film.
+
+        Il PostMod mescola film ed eventi nello stesso listing: si scarta per
+        path `/eventi/` o per parole-spia nel titolo (_EVENT_HINTS).
+        """
         title = (movie.get("title") or "").lower()
         permalink = (movie.get("permalink") or "").lower()
         if "/eventi/" in permalink:
@@ -234,6 +262,11 @@ class PostModernissimoConnector(BaseConnector):
         return any(h in title for h in self._EVENT_HINTS)
 
     def _extract_details(self, text: str, start: int) -> dict:
+        """Estrae l'oggetto `details` (genere, regia, durata) vicino al match del film.
+
+        Brace-matching manuale con finestra limitata (3000 char dal match, 5000
+        di lunghezza): oltre quella distanza il `details` appartiene a un altro film.
+        """
         details_idx = text.find('"details":{', start)
         if details_idx < 0 or details_idx - start > 3000:
             return {}
@@ -256,6 +289,11 @@ class PostModernissimoConnector(BaseConnector):
             return {}
 
     def _extract_shows(self, text: str, start: int) -> list[dict]:
+        """Estrae l'array `shows` (date YYYYMMDD + orari) vicino al match del film.
+
+        Stessa tecnica di _extract_details, con finestre più ampie perché
+        l'array degli show può essere lungo (una voce per proiezione).
+        """
         shows_idx = text.find('"shows":[', start)
         if shows_idx < 0 or shows_idx - start > 5000:
             return []
@@ -278,6 +316,7 @@ class PostModernissimoConnector(BaseConnector):
             return []
 
     def fetch_film_detail(self, film_url: str) -> dict | None:
+        """Recupera la descrizione dalla pagina di dettaglio: meta description, poi primo paragrafo."""
         if not film_url or not film_url.startswith("http"):
             return None
         try:
@@ -329,9 +368,12 @@ class PostModernissimoConnector(BaseConnector):
         return []
 
     def _reconcile_with_detail(self, film: Film) -> None:
-        # Detail page is the canonical source; homepage RSC can lag behind due to edge-cache staleness.
-        # If the detail shows differ from homepage, replace present_in with detail data.
-        # Falls back silently if the detail page is unreachable.
+        """Sostituisce gli orari della homepage con quelli della pagina di dettaglio, se differiscono.
+
+        La pagina di dettaglio è la fonte canonica: la homepage passa da una
+        edge-cache che può restare indietro di ore. Se il dettaglio è
+        irraggiungibile o vuoto si tengono i dati homepage (fallback silenzioso).
+        """
         if not film.present_in:
             return
         permalink = film.present_in[0].source_url
@@ -400,6 +442,7 @@ class PostModernissimoConnector(BaseConnector):
         film.present_in = new_showings
 
     def _extract_poster_url(self, details: dict) -> str | None:
+        """Poster di ripiego dal campo `youtube_cover` dei details RSC."""
         yt_cover = details.get("youtube_cover")
         if isinstance(yt_cover, dict):
             url = yt_cover.get("url")
@@ -408,6 +451,11 @@ class PostModernissimoConnector(BaseConnector):
         return None
 
     def _parse_film_cards(self, soup: BeautifulSoup) -> list[dict]:
+        """Parsa le card HTML della homepage: slug, poster, titolo, regista.
+
+        Fonte secondaria: serve per i poster (assenti nel RSC) e come base
+        per il fallback quando il parsing RSC non produce nulla.
+        """
         cards: list[dict] = []
         seen_slugs: set[str] = set()
         for li in soup.select("ul.movie-container > li.movie-item"):
@@ -447,6 +495,11 @@ class PostModernissimoConnector(BaseConnector):
         return cards
 
     def _fallback_from_html(self, html_cards: list[dict], today: str) -> ScrapeResult:
+        """Degrado controllato quando il RSC è vuoto: film dalle card HTML, senza orari.
+
+        Meglio un listing senza programmazione che un cinema assente: il delta
+        tracking a valle conserva comunque gli orari della run precedente.
+        """
         films: list[Film] = []
         for card in html_cards:
             slug = card["slug"]

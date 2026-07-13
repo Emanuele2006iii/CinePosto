@@ -13,6 +13,11 @@ logger = logging.getLogger(__name__)
 
 
 def load_previous_movies() -> list[dict]:
+    """Carica i film della run precedente da movies.json; lista vuota se assente o corrotto.
+
+    Non solleva mai: una prima run o un file danneggiato degradano a "nessuna
+    storia precedente", non a un crash notturno.
+    """
     if not MOVIES_JSON.exists():
         return []
     try:
@@ -25,6 +30,10 @@ def load_previous_movies() -> list[dict]:
 
 
 def save_snapshot(today: str) -> None:
+    """Archivia una copia datata di movies.json in output/history/ prima di sovrascriverlo.
+
+    Best-effort: un fallimento viene loggato ma non blocca la run.
+    """
     if not MOVIES_JSON.exists():
         return
     try:
@@ -38,6 +47,19 @@ def save_snapshot(today: str) -> None:
 
 
 def merge_films(new_films: list[Film], previous_data: list[dict], today: str) -> list[Film]:
+    """Riconcilia la run corrente con la precedente: history, status e grace period.
+
+    Regole del ciclo di vita di un film:
+    - nuovo → history "added";
+    - già noto con showings cambiati → history "updated" (poster/descrizione
+      della run vecchia vengono conservati se la nuova non li ha);
+    - sparito dalla fonte → resta "in_programmazione" senza orari per
+      REMOVAL_THRESHOLD_DAYS (grace period: le fonti a volte omettono un film
+      per un giorno), poi "rimosso", e dopo 2× la soglia viene eliminato.
+
+    Ritorna SOLO i film attivi con almeno un orario: è la lista che finisce
+    nei JSON pubblicati.
+    """
     prev_map: dict[str, dict] = {}
     for pf in previous_data:
         key = title_key(pf.get("title_normalized") or pf.get("title", ""))
@@ -154,6 +176,7 @@ def merge_films(new_films: list[Film], previous_data: list[dict], today: str) ->
 
 
 def _showings_changed(old: list[dict], new: list[dict]) -> bool:
+    """True se la programmazione è cambiata tra le run (confronto per chiave cinema:data:orari)."""
     def _showing_key(s: dict) -> str:
         return f"{s.get('cinema_slug','')}:{s.get('date','')}:{','.join(s.get('times', []))}"
 
@@ -163,6 +186,7 @@ def _showings_changed(old: list[dict], new: list[dict]) -> bool:
 
 
 def _last_removal_date(history: list[dict]) -> str | None:
+    """Data dell'ultimo evento "removed" nella history, o None se mai rimosso."""
     for event in reversed(history):
         if event.get("action") == "removed":
             return event.get("date")

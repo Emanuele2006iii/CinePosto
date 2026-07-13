@@ -1,4 +1,3 @@
-
 """Seed del database dai JSON prodotti dallo scraper.
 
 Ordine di esecuzione (vincoli di FK):
@@ -12,11 +11,19 @@ Puo' essere eseguito:
 """
 from __future__ import annotations
 
+from datetime import datetime
 import json
 import logging
-import re
-from datetime import date, datetime
 from pathlib import Path
+import re
+
+from sqlalchemy.orm import Session
+
+from app.database import Base, SessionLocal, engine
+from app.models import Cinema, Film, Showing  # noqa: F401
+from app.repositories import cinema_repo, film_repo, showing_repo
+
+logger = logging.getLogger(__name__)
 
 
 def _parse_duration(raw: str | int | None) -> int | None:
@@ -30,16 +37,13 @@ def _parse_duration(raw: str | int | None) -> int | None:
     match = re.search(r"(\d+)", str(raw))
     return int(match.group(1)) if match else None
 
-from sqlalchemy.orm import Session
-
-from app.database import SessionLocal, engine, Base
-from app.models import Cinema, Film, Showing  # noqa: F401
-from app.repositories import cinema_repo, film_repo, showing_repo
-
-logger = logging.getLogger(__name__)
-
 
 def _load_json(path: Path) -> dict:
+    """Carica un JSON dello scraper; errore esplicito se il file manca.
+
+    FileNotFoundError con path completo invece di un generico errore a valle:
+    il file mancante è il failure mode più comune (scraper non ancora girato).
+    """
     if not path.exists():
         raise FileNotFoundError(f"File JSON dello scraper mancante: {path}")
     with path.open(encoding="utf-8") as f:
@@ -89,13 +93,13 @@ def _seed_films(db: Session, data: dict) -> tuple[int, dict[str, int]]:
         payload = {
             "title": entry["title"],
             "original_title": entry.get("original_title"),
-            "year": entry.get("year"),        # non presente nel JSON attuale, resta null
+            "year": entry.get("year"),        # da Wikidata P577; null se il film non è stato arricchito
             "runtime_minutes": runtime,
             "genres": genres_csv,
             "director": entry.get("director"),
             "poster_url": entry.get("poster") or entry.get("poster_url"),
             "synopsis": entry.get("synopsis") or entry.get("description"),
-            "wikidata_id": entry.get("wikidata_id"),   # scraper non emette (per ora)
+            "wikidata_id": entry.get("wikidata_id"),   # null se il film non è su Wikidata
         }
         film = film_repo.upsert_from_scraper(db, payload)
         # entry['id'] e' il TITOLO stringa nel JSON scraper; lo usiamo come chiave.
@@ -106,8 +110,16 @@ def _seed_films(db: Session, data: dict) -> tuple[int, dict[str, int]]:
 
 
 def _seed_showings(db: Session, data: dict, film_lookup: dict[str, int]) -> int:
-    """Upsert degli spettacoli. Salta le righe orfane (film_id JSON non trovato)."""
-    count = 0
+    """Upsert degli spettacoli, UNENDO gli orari per (film, cinema, data).
+
+    Lo scraper puo' emettere piu' record per lo stesso (film, cinema, data) —
+    tipicamente uno per sala (es. The Space: Odissea in 7 sale). Il DB pero' ha
+    UNIQUE(film_id, cinema_slug, date): senza pre-aggregazione l'upsert terrebbe
+    solo l'ultima sala, perdendo tutti gli altri orari. Qui li uniamo in un'unica
+    riga. `screen` si conserva solo se proviene da un'unica sala (altrimenti e'
+    ambiguo e viene omesso). Salta le righe orfane (film_id JSON non trovato).
+    """
+    aggregated: dict[tuple, dict] = {}
     skipped = 0
     for entry in data.get("showings", []):
         film_key = entry["film_id"]
@@ -117,10 +129,6 @@ def _seed_showings(db: Session, data: dict, film_lookup: dict[str, int]) -> int:
             logger.warning("Showing orfano (film JSON non trovato): %s", film_key)
             continue
 
-        # times nel JSON e' array; nel DB lo salviamo come JSON string
-        times_raw = entry.get("times", [])
-        times_str = json.dumps(times_raw) if isinstance(times_raw, list) else str(times_raw)
-
         # Parsing data
         date_raw = entry["date"]
         showing_date = (
@@ -128,14 +136,44 @@ def _seed_showings(db: Session, data: dict, film_lookup: dict[str, int]) -> int:
             if isinstance(date_raw, str) else date_raw
         )
 
+        key = (film_id, entry["cinema_slug"], showing_date)
+        times_raw = entry.get("times", [])
+        times_list = times_raw if isinstance(times_raw, list) else [times_raw]
+
+        agg = aggregated.get(key)
+        if agg is None:
+            agg = {
+                "film_id": film_id,
+                "cinema_slug": entry["cinema_slug"],
+                "date": showing_date,
+                "times": [],
+                "screens": set(),
+                "language": entry.get("language"),
+                "buy_url": entry.get("buy_url") or entry.get("source_url"),
+            }
+            aggregated[key] = agg
+        for t in times_list:
+            if t and t not in agg["times"]:
+                agg["times"].append(t)
+        if entry.get("screen"):
+            agg["screens"].add(entry["screen"])
+        if not agg["language"] and entry.get("language"):
+            agg["language"] = entry.get("language")
+        if not agg["buy_url"]:
+            agg["buy_url"] = entry.get("buy_url") or entry.get("source_url")
+
+    count = 0
+    for agg in aggregated.values():
+        agg["times"].sort()
+        screen = next(iter(agg["screens"])) if len(agg["screens"]) == 1 else None
         showing_repo.upsert(db, {
-            "film_id": film_id,
-            "cinema_slug": entry["cinema_slug"],
-            "date": showing_date,
-            "times": times_str,
-            "language": entry.get("language"),
-            "screen": entry.get("screen"),
-            "buy_url": entry.get("buy_url") or entry.get("source_url"),
+            "film_id": agg["film_id"],
+            "cinema_slug": agg["cinema_slug"],
+            "date": agg["date"],
+            "times": json.dumps(agg["times"]),
+            "language": agg["language"],
+            "screen": screen,
+            "buy_url": agg["buy_url"],
         })
         count += 1
 

@@ -1,13 +1,25 @@
 """SQLAlchemy model: Film. PK = intera, dedup tramite UNIQUE(title_normalized, year)."""
 from datetime import datetime
+from typing import TYPE_CHECKING
 
 from sqlalchemy import DateTime, Index, Integer, String, Text, UniqueConstraint, func
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.database import Base
 
+if TYPE_CHECKING:
+    from app.models.showing import Showing
+
 
 class Film(Base):
+    """Opera cinematografica, deduplicata tra i cinema.
+
+    PK artificiale intera + chiave naturale UNIQUE(title_normalized, year):
+    il titolo grezzo è troppo fragile per fare da chiave (apostrofi tipografici,
+    trattini, remake omonimi — decisione D3). Metadati arricchiti via Wikidata
+    (D1): i campi nullable restano null quando l'arricchimento non trova nulla.
+    """
+
     __tablename__ = "films"
     __table_args__ = (
         UniqueConstraint("title_normalized", "year", name="uq_film_title_year"),

@@ -1,14 +1,28 @@
 """SQLAlchemy model: Showing (programmazione: film X cinema Y giorno Z, N orari)."""
 from datetime import date as date_type
 from datetime import datetime
+from typing import TYPE_CHECKING
 
 from sqlalchemy import Date, DateTime, ForeignKey, Index, Integer, String, UniqueConstraint, func
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.database import Base
 
+if TYPE_CHECKING:
+    from app.models.cinema import Cinema
+    from app.models.film import Film
+
 
 class Showing(Base):
+    """Programmazione: il film X al cinema Y nel giorno Z, con i suoi orari.
+
+    Classe associativa tra Film e Cinema. Un record per coppia film-cinema-data
+    — gli orari multipli del giorno stanno in `times` come stringa JSON, non in
+    righe separate. UNIQUE(film_id, cinema_slug, date) rende idempotente il
+    re-import notturno. FK con ON DELETE CASCADE: rimosso un film o un cinema,
+    spariscono i suoi spettacoli.
+    """
+
     __tablename__ = "showings"
     __table_args__ = (
         UniqueConstraint("film_id", "cinema_slug", "date", name="uq_showing_dedup"),

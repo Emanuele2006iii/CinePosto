@@ -8,10 +8,8 @@ from datetime import date, timedelta
 import pytest
 
 from app.models.cinema import Cinema
-from app.models.film import Film
 from app.models.showing import Showing
 from app.repositories import cinema_repo, film_repo, showing_repo
-
 
 # ============ CinemaRepository ============
 

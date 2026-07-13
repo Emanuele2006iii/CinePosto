@@ -4,12 +4,12 @@ Aggregatore cinema dell'Umbria — app mobile React Native + backend FastAPI + s
 
 > **Stato (2026-07-02)**:
 > - **Scraper** ✅ produzione (75 test, ruff pulito, 3 connettori). Ora arricchisce anche `year` (P577 Wikidata) e `wikidata_id`.
-> - **Backend** ✅ **Sprint 2 completato**: FastAPI attiva con 15 endpoint funzionanti, seed dai JSON scraper, 26 test verdi.
+> - **Backend** ✅ **Sprint 2 completato**: FastAPI attiva con 11 endpoint funzionanti, seed dai JSON scraper, 26 test verdi.
 > - **App mobile** 🟡 2 schermate con dati hardcoded (Sprint 3 non iniziato — fetch al backend + mappa da aggiungere).
 > - **Worker Cloudflare** 🟡 stub (Sprint 4).
 >
-> 📖 **Piano completo di continuazione** → [`docs/CONTINUAZIONE-PROGETTUALE.md`](docs/CONTINUAZIONE-PROGETTUALE.md) (decisioni di design, sprint, divisione lavoro, schema DB target)
-> 📱 **Guida integrazione frontend** → [`docs/frontend-integration.md`](docs/frontend-integration.md) (contratto API + tipi JSDoc + esempi fetch)
+> 📖 **Panoramica completa del sistema** → [`docs/panoramica.md`](docs/panoramica.md) (architettura, decisioni di design, qualità)
+> 📱 **Guida integrazione frontend** → [`docs/backend/api.md`](docs/backend/api.md) (contratto API + tipi JSDoc + esempi fetch)
 
 ---
 
@@ -70,7 +70,7 @@ uvicorn app.main:app --reload --port 8000
 Cloudflare Pages — distribuisce la web build di React Native (gratis, CDN globale).
 
 ### `app/`
-React Native Expo SDK 54 — navigazione tab funzionante con **2 schermate a dati hardcoded** (`MOCK_FILMS`, `CINEMAS`). Nessun fetch verso il backend, mappa interattiva (RF-03) ancora da aggiungere (`react-native-maps`). TypeScript installato ma codice in `.jsx`. Vedi `docs/frontend-integration.md` per il contratto API e la roadmap di collegamento.
+React Native Expo SDK 54 — navigazione tab funzionante con **2 schermate a dati hardcoded** (`MOCK_FILMS`, `CINEMAS`). Nessun fetch verso il backend, mappa interattiva (RF-03) ancora da aggiungere (`react-native-maps`). TypeScript installato ma codice in `.jsx`. Vedi `docs/backend/api.md` per il contratto API e la roadmap di collegamento.
 
 ```bash
 cd app
@@ -84,7 +84,7 @@ npx expo start
 - [x] Scraper 3 cinema funzionante (PostModernissimo, The Space, UCI)
 - [x] Arricchimento Wikidata (poster, regista, titolo originale, durata, **year, wikidata_id**)
 - [x] Output JSON separato (cinemas / films / showings)
-- [x] **Sprint 2**: backend FastAPI completo — models SQLAlchemy + schemas Pydantic + repositories CRUD + services + 15 endpoint REST + seed da JSON + 26 test
+- [x] **Sprint 2**: backend FastAPI completo — models SQLAlchemy + schemas Pydantic + repositories CRUD + services + 11 endpoint REST + seed da JSON + 26 test
 - [x] Inizializzare app React Native (Expo SDK 54, navigazione tab, schermate mock)
 - [ ] **Sprint 3**: collegare app al backend + aggiungere mappa (RF-03)
 - [ ] **Sprint 4**: deploy web build su Cloudflare Pages + backend su VM Linux
@@ -99,7 +99,7 @@ Tutta la documentazione è in [`docs/`](docs/index.md), organizzata per componen
 |---|---|
 | [`docs/index.md`](docs/index.md) | Catalogo navigabile di tutta la documentazione |
 | [`docs/development.md`](docs/development.md) | Testing, lint, setup locale, variabili d'ambiente |
-| [`docs/frontend-integration.md`](docs/frontend-integration.md) | **Contratto API per il team frontend** (endpoint, tipi JSDoc, esempi) |
+| [`docs/backend/api.md`](docs/backend/api.md) | **Contratto API per il team frontend** (endpoint, tipi JSDoc, esempi) |
 | [`docs/scraper/architecture.md`](docs/scraper/architecture.md) | Architettura tecnica scraper |
 | [`docs/backend/architecture.md`](docs/backend/architecture.md) | Architettura tecnica backend |
 | [`docs/backend/schema-mapping.md`](docs/backend/schema-mapping.md) | Mapping JSON scraper → tabelle DB |

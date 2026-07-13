@@ -1,7 +1,7 @@
 # Schema mapping — JSON scraper → DB backend
 
 > **Riferimento autorevole** per lo script di seed e per qualsiasi futura modifica al mapping.
-> Aggiornato: 2026-06-30. Allineato alle decisioni L1-L5 di [`../../docs/PIANO-CONSEGNA-14LUGLIO.md`](../../docs/PIANO-CONSEGNA-14LUGLIO.md).
+> Aggiornato: 2026-06-30. Allineato alle decisioni L1-L5 e D1-D5 (tabella in [`panoramica.md`](../panoramica.md) §6).
 
 ---
 
@@ -94,7 +94,7 @@ Schema completamente in **inglese** (decisione L1+L2): tabelle DB e chiavi JSON 
 | `title` | `title` | |
 | `title_normalized` | `title_normalized` | ⚠️ **rinormalizzare nel backend** — la normalizzazione dello scraper può differire (em-dash). Meglio NON fidarsi del campo del JSON e ricalcolare via `normalize_title()`. |
 | `original_title` | `original_title` | nullable |
-| `year` | `year` | int, nullable |
+| `year` | `year` | int, nullable. ⚠️ In SQL `NULL ≠ NULL`: con `year` NULL la `UNIQUE(title_normalized, year)` **non blocca duplicati a livello DB** — la dedup è garantita dal lookup applicativo in `get_by_natural_key` (che usa `IS NULL`). Limite noto e accettato per l'MVP. |
 | `duration` (stringa "X min") | `runtime_minutes` | parsing: estrai int da `"95 min"` → `95` |
 | `genres` (array) | `genres` (string CSV) | `",".join(genres)` |
 | `director` | `director` | nullable |

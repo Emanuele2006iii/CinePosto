@@ -29,6 +29,11 @@ _MISS_SENTINEL = "__NOT_FOUND__"  # distinguishes "searched, not found" from "no
 
 
 def _load_cache() -> dict[str, dict]:
+    """Carica la cache Wikidata da disco (una volta per processo, poi resta in memoria).
+
+    NB: dopo aver modificato la logica di estrazione (nuove property) va
+    invalidata a mano: `rm .wikidata_cache.json` — vedi docs/development.md.
+    """
     global _cache
     if _cache:
         return _cache
@@ -42,6 +47,7 @@ def _load_cache() -> dict[str, dict]:
 
 
 def _save_cache() -> None:
+    """Persiste la cache su disco a ogni aggiornamento (best-effort)."""
     try:
         with open(WIKIDATA_CACHE, "w", encoding="utf-8") as f:
             json.dump(_cache, f, ensure_ascii=False, indent=2)
@@ -50,6 +56,13 @@ def _save_cache() -> None:
 
 
 def _sparql_query(query: str) -> list[dict] | None:
+    """Esegue una query SPARQL sull'endpoint pubblico Wikidata, da buon cittadino.
+
+    Tre protezioni contro il ban: intervallo minimo di 5s tra query, rispetto
+    del Retry-After sul 429, e circuit breaker che smette di interrogare dopo
+    3 fallimenti consecutivi (l'arricchimento degrada, la run non muore).
+    Ritorna i bindings o None su errore.
+    """
     global _last_query_time, _consecutive_failures, _rate_limited_until
     if _consecutive_failures >= _MAX_CONSECUTIVE_FAILURES:
         logger.warning("Wikidata: skipping query after %d consecutive failures", _consecutive_failures)
@@ -94,6 +107,11 @@ def _sparql_query(query: str) -> list[dict] | None:
 
 
 def _search_wikidata(title: str) -> dict | None:
+    """Cerca i metadati di un film, passando prima dalla cache.
+
+    Anche i MISS vengono cachati (sentinella): un film di nicchia assente da
+    Wikidata non genera una ricerca a ogni run notturna.
+    """
     cache = _load_cache()
     key = normalize_title(title).lower()
     if key in cache:
@@ -116,6 +134,11 @@ def _search_wikidata(title: str) -> dict | None:
 
 
 def _search_fuzzy(title: str) -> dict | None:
+    """Cerca il titolo con l'API wbsearchentities (lingua it) e filtra i soli film.
+
+    Il filtro sulla description ("film"/"movie") evita di agganciare l'omonimo
+    libro, videogioco o persona.
+    """
     try:
         resp = requests.get(
             "https://www.wikidata.org/w/api.php",
@@ -145,6 +168,12 @@ def _search_fuzzy(title: str) -> dict | None:
 
 
 def _fetch_entity_details(entity_id: str) -> dict | None:
+    """Estrae i metadati utili dall'entità Wikidata.
+
+    Property lette: P18 immagine → poster, P57 regista (con lookup ricorsivo
+    del nome), P2047 durata, P577 data di pubblicazione → year. Più label
+    it/en per titolo e original_title, e la prima description disponibile.
+    """
     try:
         resp = requests.get(
             f"https://www.wikidata.org/wiki/Special:EntityData/{entity_id}.json",
@@ -224,6 +253,12 @@ def _fetch_entity_details(entity_id: str) -> dict | None:
 
 
 def enrich_film(film) -> None:
+    """Completa i metadati mancanti di un Film via Wikidata, in-place.
+
+    Riempe SOLO i campi vuoti: quanto raccolto dal sito del cinema ha
+    priorità su Wikidata. Se il film ha già tutto, nessuna chiamata di rete.
+    Tenta prima col titolo originale, poi con quello normalizzato.
+    """
     if not isinstance(film, Film):
         return
 

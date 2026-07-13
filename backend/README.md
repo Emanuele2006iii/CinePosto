@@ -7,7 +7,7 @@ API REST per servire le programmazioni dei cinema umbri raccolte dallo scraper.
 > - ✅ `schemas/` Pydantic DTO (CinemaOut/WithCount, FilmOut/Detail, ShowingOut/Detail) con forward reference + `field_validator` che parsa `times` da JSON string
 > - ✅ `repositories/` (SQLAlchemy 2.0 `select()`, `joinedload` anti-N+1, `upsert_from_scraper`, `normalize_title` NFKD)
 > - ✅ `services/` (cinema, film — films_today/settimana, search con validazione, get_film_detail con showings futuri)
-> - ✅ `routers/` (cinema, film, showings, admin) — **15 endpoint** attivi, Swagger su `/docs`
+> - ✅ `routers/` (cinema, film, showings, admin) — **11 endpoint** attivi, Swagger su `/docs`
 > - ✅ `main.py` (`create_app` factory + CORS + lifespan + `/health`)
 > - ✅ `seed_from_json.py` con parsing `duration: "109 min"` → `runtime_minutes: 109`
 > - ✅ `tests/` — **26 test verdi** (SQLite in-memory + StaticPool + dependency override)
@@ -92,7 +92,7 @@ cp .env.example .env
 uvicorn app.main:app --reload --port 8000
 ```
 
-Endpoint previsti (definiti in `docs/CONTINUAZIONE-PROGETTUALE.md` §5):
+Endpoint implementati (contratto completo in `docs/backend/api.md`):
 - `http://localhost:8000/docs` → Swagger UI auto-generato
 - `GET /api/v1/cinema` → lista cinema
 - `GET /api/v1/cinema/{slug}` → dettaglio cinema
@@ -106,7 +106,7 @@ Endpoint previsti (definiti in `docs/CONTINUAZIONE-PROGETTUALE.md` §5):
 - `GET /api/v1/admin/dataset-info` (header `X-Admin-Token`) → conteggi rapidi + ultima scraped_at
 - `GET /health` → liveness probe
 
-📄 **Contratto API completo per l'app**: [`../docs/frontend-integration.md`](../docs/frontend-integration.md) (endpoint, tipi JSDoc, esempi fetch).
+📄 **Contratto API completo per l'app**: [`../docs/backend/api.md`](../docs/backend/api.md) (endpoint, tipi JSDoc, esempi fetch).
 
 ## 🧪 Test
 
@@ -142,12 +142,12 @@ Copertura:
 - [x] **2026-07-02 mattina**: Schemas Pydantic (CinemaOut/WithCount, FilmOut/Detail, ShowingOut/Detail) con forward reference + field_validator per parsing `times` JSON
 - [x] **2026-07-02 metà**: Repositories (cinema/film/showing) con `select()` SQLAlchemy 2.0, `joinedload` anti-N+1, `upsert_from_scraper`, `normalize_title` per dedup titoli
 - [x] **2026-07-02 sera**: Services (cinema_service + film_service con validazione e aggregazione)
-- [x] **2026-07-02 sera**: Routers (cinema/film/showings/admin) — 15 endpoint, Swagger auto
+- [x] **2026-07-02 sera**: Routers (cinema/film/showings/admin) — 11 endpoint, Swagger auto
 - [x] **2026-07-02 sera**: `main.py` con `create_app()` factory, CORS, lifespan, `/health`
 - [x] **2026-07-02 sera**: `seed_from_json.py` con parsing `duration` → `runtime_minutes` e `genres: list` → CSV
 - [x] **2026-07-02 sera**: Config sicurizzato (`admin_token` auto-gen se vuoto, `scraper_output_dir` absolute path, CORS dev defaults)
 - [x] **2026-07-02 sera**: Test suite 26/26 verdi (unit + e2e)
-- [x] **2026-07-02 sera**: `docs/frontend-integration.md` (contratto API per il team frontend)
+- [x] **2026-07-02 sera**: `docs/backend/api.md` (contratto API per il team frontend)
 - [ ] **Sprint 3+ (open)**: Alembic init + migrazione iniziale (utile per deploy prod; in dev basta `Base.metadata.create_all` nel lifespan)
 - [ ] **Sprint 3+ (open)**: deploy backend su VM Linux (systemd unit + Caddy reverse proxy + HTTPS)
 
@@ -158,4 +158,4 @@ Per la presentazione minima (MVP):
 - Backend funzionante con 3+ endpoint readonly (cinema, film/oggi, spettacoli)
 - Seed DB dai JSON prodotti dallo scraper (`scraper/output/`)
 - Swagger UI accessibile su `/docs`
-- App collegata al backend (vedi `docs/CONTINUAZIONE-PROGETTUALE.md` §7 Sprint 3)
+- App collegata al backend (Sprint 3 — vedi `docs/iss/sprint-plan.md`)

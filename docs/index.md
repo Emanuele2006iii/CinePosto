@@ -2,90 +2,63 @@
 
 Aggregatore cinema Umbria — scraper Python + backend FastAPI + app React Native.
 
-> 📂 **Tutta la documentazione vive qui** (`cineposto/docs/`). Nelle cartelle dei singoli componenti (`scraper/`, `backend/`, `app/`) c'è solo il `README.md` "front door"; il dettaglio è qui.
+> 📂 **Tutta la documentazione vive qui** (`cineposto/docs/`), organizzata per aree. Nelle cartelle dei componenti c'è solo il `README.md` "front door".
 
 ---
 
-## 🎯 Documenti chiave — leggi prima questi
+## 🎯 Da dove partire
 
-| Documento | Quando aprirlo |
-|-----------|----------------|
-| [**PIANO-CONSEGNA-14LUGLIO.md**](PIANO-CONSEGNA-14LUGLIO.md) | **Roadmap operativa giorno per giorno** fino alla presentazione. Decisioni L1-L5, scope MVP, sprint, task con DoD, rischi, fallback. |
-| [CONTINUAZIONE-PROGETTUALE.md](CONTINUAZIONE-PROGETTUALE.md) | Audit completo dello stato (2026-06-30) e decisioni di design D1-D5. Documento di riferimento storico. |
-| [backend/schema-mapping.md](backend/schema-mapping.md) | **Tabella autorevole** per il seed: come ogni campo dei JSON scraper diventa una colonna del DB. |
+| Documento | A cosa serve |
+|-----------|--------------|
+| [**panoramica.md**](panoramica.md) | **Il sistema spiegato da cima a fondo** — flusso dati, componenti, decisioni. Da leggere per primo. |
+| [**presentazione-14-luglio.md**](presentazione-14-luglio.md) | **Preparazione all'esposizione** — scaletta, demo, domande probabili del prof con risposte. |
+| [development.md](development.md) | Setup locale, test, lint, variabili d'ambiente per ogni componente. |
 
----
+## 📦 Aree tecniche per componente
 
-## 📦 Documentazione per componente
+| Area | Documenti |
+|------|-----------|
+| **Scraper** | [scraper/architecture.md](scraper/architecture.md) — connettori, normalizzazione, Wikidata, delta, systemd |
+| **Backend** | [backend/architecture.md](backend/architecture.md) — layer, modelli, endpoint · [backend/schema-mapping.md](backend/schema-mapping.md) — mapping JSON→DB (autorevole per il seed) · [backend/api.md](backend/api.md) — **contratto API per il team frontend** |
+| **App** | [app/overview.md](app/overview.md) — stack, struttura, schermate, client API, avvio (backend+app), web+telefono · [app/integrazione-e-fix.md](app/integrazione-e-fix.md) — integrazione frontend e fix applicati |
+| **Worker** | [worker/overview.md](worker/overview.md) — hosting Cloudflare Pages + nota sul codice legacy |
 
-### Scraper
-| Documento | Descrizione |
-|-----------|-------------|
-| [`../scraper/README.md`](../scraper/README.md) | Front door scraper: installazione, avvio, output JSON, deploy systemd timer |
-| [scraper/architecture.md](scraper/architecture.md) | Architettura tecnica: connettori, modello dati, flusso, Wikidata, delta, systemd |
+## 📋 ISS — documenti formali del corso
 
-### Backend
-| Documento | Descrizione |
-|-----------|-------------|
-| [`../backend/README.md`](../backend/README.md) | Front door backend: architettura layered, setup, endpoint, status |
-| [backend/architecture.md](backend/architecture.md) | Modelli SQLAlchemy (Cinema/Film/Showing), endpoint REST, decisioni L1-L5 |
-| [backend/schema-mapping.md](backend/schema-mapping.md) | Mapping JSON scraper → DB, strategia seed, esempi end-to-end |
+Ingegneria del Software, ITS Umbria Academy a.a. 2025/2026 (team RepCode).
 
-### App (React Native + Expo)
-| Documento | Descrizione |
-|-----------|-------------|
-| [`../app/README.md`](../app/README.md) | Front door Expo (boilerplate) |
-| [app/overview.md](app/overview.md) | Stack, struttura, comandi Expo, integrazione backend |
-| [**frontend-integration.md**](frontend-integration.md) | **Contratto API per il team frontend** — endpoint, tipi JSDoc, esempi fetch, checklist |
-
-### Worker (Cloudflare Pages)
-Hosting web build React Native — nessuna logica aggiuntiva. Vedi `../worker/` direttamente.
-
----
-
-## 📋 ISS — Ingegneria del Software
-
-Documenti formali del corso ITS Umbria Academy a.a. 2025/2026 (team RepCode).
-
-| Documento | Descrizione |
-|-----------|-------------|
+| Documento | Contenuto |
+|-----------|-----------|
 | [iss/analisi-requisiti.md](iss/analisi-requisiti.md) | RF, RNF, stakeholder, matrice importanza-difficoltà, risk assessment |
-| [iss/sprint-plan.md](iss/sprint-plan.md) | 5 sprint, user stories, date, piano rilasci Alpha→1.0→1.1 |
+| [iss/sprint-plan.md](iss/sprint-plan.md) | User stories, 5 sprint, piano rilasci Alpha→1.0→1.1 |
+| [iss/progettazione-uml.md](iss/progettazione-uml.md) | Use case, class diagram, ER, sequence, deployment + design pattern |
 
----
-
-## 🛠️ Sviluppo
-
-| Documento | Descrizione |
-|-----------|-------------|
-| [development.md](development.md) | Testing, lint, variabili d'ambiente, setup locale per ogni componente |
-| [`../README.md`](../README.md) | Monorepo overview: struttura, stato componenti, roadmap |
-
----
-
-## 📂 Struttura completa `cineposto/docs/`
+## 📂 Struttura
 
 ```
 cineposto/docs/
-├── index.md                          ← questo file (hub)
-├── PIANO-CONSEGNA-14LUGLIO.md        ← roadmap T-14 con sprint
-├── CONTINUAZIONE-PROGETTUALE.md      ← audit + decisioni D1-D5
-├── development.md                    ← testing, lint, setup dev
-├── frontend-integration.md           ← contratto API per il team frontend (NEW)
-├── scraper/
-│   └── architecture.md               ← architettura tecnica scraper
+├── index.md                     ← questo hub
+├── panoramica.md                ← il sistema end-to-end (leggere per primo)
+├── presentazione-14-luglio.md   ← guida esposizione
+├── development.md               ← setup, test, lint
+├── scraper/architecture.md
 ├── backend/
-│   ├── architecture.md               ← modello dati, API, decisioni
-│   └── schema-mapping.md             ← mapping JSON → DB (per seed)
+│   ├── architecture.md
+│   ├── schema-mapping.md
+│   └── api.md                   ← contratto API per il frontend
 ├── app/
-│   └── overview.md                   ← React Native overview
-└── iss/
-    ├── analisi-requisiti.md          ← documento formale ISS
-    └── sprint-plan.md                ← documento formale ISS
+│   ├── overview.md
+│   └── integrazione-e-fix.md    ← integrazione frontend + fix
+├── worker/overview.md
+└── iss/                         ← documenti formali del corso
+    ├── analisi-requisiti.md
+    ├── sprint-plan.md
+    └── progettazione-uml.md
 ```
 
 ### Regola d'oro
 
-- **Documentazione tecnica** → sempre in `docs/`
+- **Documentazione tecnica** → sempre in `docs/`, nell'area del suo componente
 - **`README.md` nei componenti** → solo front-door (link e quickstart)
-- **Niente `<componente>/docs/`** sparso: tutto in `cineposto/docs/<componente>/`
+- **Documenti formali del corso** → `iss/`
+- Niente documenti storici od operativi consumati: quando un piano è eseguito, si cancella

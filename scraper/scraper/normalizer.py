@@ -31,6 +31,14 @@ _ARTICLES = {"il", "la", "lo", "le", "gli", "i", "un", "uno", "una", "di", "del"
 
 
 def normalize_title(title: str) -> str:
+    """Riduce un titolo alla forma canonica usata come id del film nei JSON.
+
+    Rimuove il rumore che varia tra i siti dei cinema mantenendo il titolo
+    leggibile: apostrofi/trattini tipografici → ASCII, suffissi di sala
+    (3D, IMAX, VOS...), anno tra parentesi, marcatori di riedizione, prefissi
+    di franchise e articoli iniziali. NON fa lowercase: per il confronto
+    case-insensitive si usa `title_key()`.
+    """
     if not title:
         return ""
     t = title.strip()
@@ -67,6 +75,11 @@ def normalize_title(title: str) -> str:
 
 
 def title_key(title: str) -> str:
+    """Chiave di confronto aggressiva: minuscole, senza punteggiatura né spazi.
+
+    Usata SOLO per i match tra titoli (mai mostrata o salvata): "Dune – Parte 2"
+    e "DUNE parte 2" producono la stessa chiave.
+    """
     normalized = normalize_title(title).lower()
     normalized = re.sub(r"[^\w\s]", "", normalized)
     normalized = re.sub(r"\s+", "", normalized)
@@ -74,10 +87,17 @@ def title_key(title: str) -> str:
 
 
 def titles_match(a: str, b: str) -> bool:
+    """Match esatto sulle chiavi normalizzate (nessuna tolleranza ai refusi)."""
     return title_key(a) == title_key(b)
 
 
 def fuzzy_match(a: str, b: str) -> bool:
+    """Match tollerante per la dedup cross-cinema: esatto, contenimento o Levenshtein.
+
+    La soglia di edit distance scala con la lunghezza (1 refuso ogni 4 caratteri,
+    minimo 2): abbastanza larga da unire "alien"/"alein", abbastanza stretta da
+    non fondere film diversi.
+    """
     ka = title_key(a)
     kb = title_key(b)
     if ka == kb:
@@ -112,6 +132,11 @@ def _edit_distance(s1: str, s2: str) -> int:
 
 
 def normalize_genres(raw: list | str | None) -> list[str]:
+    """Uniforma i generi alla forma lista di stringhe.
+
+    Le fonti sono eterogenee: stringa CSV ("Drammatico, Thriller"), lista di
+    stringhe, o lista di oggetti con campo `name` (API The Space).
+    """
     if isinstance(raw, str):
         return [g.strip() for g in re.split(r"[,/]", raw) if g.strip()]
     if isinstance(raw, list):
@@ -125,6 +150,11 @@ _HOURS_MIN_RE = re.compile(r"(\d+)\s*h\s*(\d+)?\s*m?", re.IGNORECASE)
 
 
 def normalize_duration(duration: str | None) -> str | None:
+    """Uniforma la durata al formato canonico "N min".
+
+    Accetta i formati delle varie fonti: "1:49:00" (H:M:S), "1h 49m", "109",
+    "109 min". Ritorna None se non c'è nessun numero riconoscibile.
+    """
     if not duration:
         return None
 

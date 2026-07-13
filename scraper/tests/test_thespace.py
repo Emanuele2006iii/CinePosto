@@ -1,3 +1,4 @@
+"""Test del connettore The Space su risposte API registrate."""
 from __future__ import annotations
 
 from scraper.connectors.thespace import TheSpaceConnector

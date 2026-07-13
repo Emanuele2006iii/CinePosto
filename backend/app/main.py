@@ -24,6 +24,12 @@ async def lifespan(app: FastAPI):
 
 
 def create_app() -> FastAPI:
+    """Application factory: costruisce e configura l'istanza FastAPI.
+
+    Tenere la costruzione in una funzione (invece che a livello modulo) permette
+    di creare app configurate diversamente nei test e rende esplicito l'ordine
+    di composizione: middleware CORS → router → route di monitoring.
+    """
     settings = get_settings()
 
     app = FastAPI(
@@ -33,11 +39,12 @@ def create_app() -> FastAPI:
         lifespan=lifespan,
     )
 
-    # CORS: le origin sono in .env (JSON array). In dev accetto anche localhost:*.
+    # CORS: le origin sono in .env (JSON array); se assente, config.py mette i default dev (localhost).
     app.add_middleware(
         CORSMiddleware,
-        allow_origins=settings.cors_origins or ["*"],
-        allow_credentials=True,
+        allow_origins=settings.cors_origins,
+        # L'app non usa cookie/sessioni: nessuna credenziale cross-origin.
+        allow_credentials=False,
         allow_methods=["*"],
         allow_headers=["*"],
     )
@@ -51,6 +58,7 @@ def create_app() -> FastAPI:
     # /health resta senza versione (usato da UptimeRobot / monitoring)
     @app.get("/health", tags=["health"])
     def health():
+        """Liveness probe: risponde 200 se il processo è vivo. Non tocca il DB."""
         return {"status": "ok"}
 
     return app

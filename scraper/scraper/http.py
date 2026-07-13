@@ -18,6 +18,19 @@ def retry_request(
     label: str = "",
     **kwargs,
 ) -> requests.Response:
+    """Esegue una richiesta HTTP con retry e backoff esponenziale.
+
+    Fino a REQUEST_RETRY tentativi con attesa RETRY_BACKOFF^n tra l'uno e
+    l'altro. Eccezione: il 403 NON viene ritentato — è un blocco anti-bot
+    permanente, insistere peggiora la reputazione del nostro IP.
+
+    Args:
+        method: nome del metodo della session ("get", "post").
+        label: prefisso per i log, identifica il connettore chiamante.
+    Raises:
+        requests.HTTPError | requests.RequestException: l'ultima eccezione,
+        se tutti i tentativi falliscono.
+    """
     last_exc = None
     for attempt in range(1, REQUEST_RETRY + 1):
         try:

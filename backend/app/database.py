@@ -26,10 +26,15 @@ engine = create_engine(
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 
-# SQLite di default IGNORA le foreign key. Le abilitiamo a ogni connessione.
 @event.listens_for(Engine, "connect")
 def _enable_sqlite_foreign_keys(dbapi_connection, connection_record):
-    # Controlla che sia davvero SQLite (l'event listener parte per ogni engine)
+    """Attiva le foreign key su ogni nuova connessione SQLite.
+
+    SQLite di default NON applica i vincoli FK: senza questo PRAGMA si
+    potrebbero inserire showings orfani. Il listener è registrato sulla classe
+    Engine (vale per tutti gli engine, incluso quello dei test in-memory),
+    quindi verifica che la connessione sia davvero SQLite prima di agire.
+    """
     if "sqlite" in str(dbapi_connection):
         cursor = dbapi_connection.cursor()
         cursor.execute("PRAGMA foreign_keys=ON")

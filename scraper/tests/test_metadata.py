@@ -1,3 +1,4 @@
+"""Test dell'arricchimento Wikidata: cache, sentinella dei miss, estrazione property."""
 from __future__ import annotations
 
 from unittest.mock import patch

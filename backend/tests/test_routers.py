@@ -9,7 +9,6 @@ from app.models.cinema import Cinema
 from app.models.film import Film
 from app.models.showing import Showing
 
-
 # ============ /health ============
 
 def test_health_returns_ok(client):

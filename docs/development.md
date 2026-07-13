@@ -31,8 +31,8 @@ python3 -m pytest tests/ --cov --cov-report=term-missing
 ### Esecuzione manuale
 
 ```bash
-python3 -m scraper.main --once      # run singolo
-python3 -m scraper.main --schedule  # scheduling automatico ogni 24h
+python3 -m scraper.main --once      # run singolo (è quello che usa systemd in produzione — L3)
+python3 -m scraper.main --schedule  # SOLO DEV: loop APScheduler ogni 24h (richiede extra [dev])
 python3 healthcheck.py              # ping ai 3 endpoint
 ```
 
@@ -124,16 +124,22 @@ Setup dei test:
 
 ## App (React Native)
 
-SDK 54 installata, navigazione tab funzionante. **NON usare `create-expo-app`** — installa SDK 55+ incompatibile con Expo Go.
+App integrata e collegata al backend (React Navigation, Expo SDK 54). **NON usare
+`create-expo-app`** — installa SDK 55+ incompatibile con Expo Go.
 
 ```bash
 cd app
-npx expo start           # avvia Metro bundler + QR code per Expo Go
-npx expo start --web     # solo web build (browser)
-npx expo export --platform web  # build statica per Cloudflare Pages
+npm install
+# IP LAN del Mac (macOS): ipconfig getifaddr en0
+EXPO_PUBLIC_API_BASE="http://<IP-LAN>:8000/api/v1" npx expo start
 ```
 
-Vedi setup completo in [docs/app/overview.md](app/overview.md).
+- **Web**: apri `http://localhost:8081` (o premi `w`).
+- **Telefono**: Expo Go → scansiona il QR (telefono e backend sulla stessa Wi-Fi).
+- **Build web statica**: `npx expo export --platform web` → `dist/`.
+
+Il backend dev'essere in esecuzione su `0.0.0.0:8000` con il DB seedato. Setup
+completo in [docs/app/overview.md](app/overview.md).
 
 ---
 

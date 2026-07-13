@@ -14,6 +14,12 @@ _ROME = ZoneInfo("Europe/Rome")
 
 @dataclass
 class Showing:
+    """Proiezioni di un film in un cinema in una data: uno o più orari.
+
+    `session_attributes` = varianti della proiezione (3D, IMAX, VOS...) così
+    come le espone la fonte; `language` è separato perché guida il filtro UI.
+    """
+
     cinema: str
     cinema_slug: str
     date: str
@@ -26,6 +32,13 @@ class Showing:
 
 @dataclass
 class Film:
+    """Film aggregato tra i cinema, con metadati Wikidata e storia delle run.
+
+    `title_normalized` è la chiave di dedup cross-cinema (vedi normalizer).
+    `status` traccia il ciclo di vita ("in_programmazione" / "rimosso") e
+    `history` le transizioni tra run — servono al delta tracking (delta.py).
+    """
+
     title: str
     title_normalized: str
     present_in: list[Showing] = field(default_factory=list)
@@ -44,6 +57,12 @@ class Film:
 
 @dataclass
 class CinemaError:
+    """Errore di scraping non fatale: la run continua, l'errore finisce in errors.json.
+
+    `phase` indica dove si è rotto il flusso (fetch, parse, detail...): è la
+    prima cosa da guardare quando un sito cambia struttura.
+    """
+
     cinema: str
     timestamp: str
     exception: str
@@ -52,6 +71,7 @@ class CinemaError:
     detail: str | None = None
 
     def to_dict(self) -> dict:
+        """Serializza l'errore per errors.json."""
         return {
             "cinema": self.cinema,
             "timestamp": self.timestamp,
@@ -64,11 +84,19 @@ class CinemaError:
 
 @dataclass
 class ScrapeResult:
+    """Esito di un connettore: film raccolti + errori non fatali incontrati."""
+
     films: list[Film] = field(default_factory=list)
     errors: list[CinemaError] = field(default_factory=list)
 
 
 def _consolidate_showings(showings: list[Showing]) -> list[dict]:
+    """Raggruppa gli showing per (cinema, data, lingua, sala, attributi) unendo gli orari.
+
+    I connettori possono emettere più Showing per lo stesso giorno (es. uno per
+    fascia oraria): qui diventano un record solo con `times` ordinato e senza
+    duplicati. I campi vuoti vengono omessi dal dict finale per tenere i JSON compatti.
+    """
     groups: dict[tuple, dict] = {}
     for s in showings:
         lang_key = s.language or ""
@@ -105,6 +133,11 @@ def _consolidate_showings(showings: list[Showing]) -> list[dict]:
 
 
 def _clean_poster(url: str | None) -> str | None:
+    """Estrae l'URL reale del poster dai wrapper di ottimizzazione Next.js.
+
+    I siti Next servono immagini come `/_next/image?url=<originale>&w=...`:
+    salviamo l'originale, che non dipende dal CDN del sito fonte.
+    """
     if not url:
         return None
     if "/_next/image" in url:
@@ -116,6 +149,7 @@ def _clean_poster(url: str | None) -> str | None:
 
 
 def film_to_dict(film: Film) -> dict:
+    """Serializza un Film per movies.json (stato interno completo, con history)."""
     return {
         "title": html.unescape(film.title) if film.title else film.title,
         "title_normalized": html.unescape(film.title_normalized) if film.title_normalized else film.title_normalized,
@@ -134,6 +168,7 @@ def film_to_dict(film: Film) -> dict:
 
 
 def cinemas_to_json(locations: dict) -> dict:
+    """Serializza CINEMA_LOCATIONS in cinemas.json (DB-ready per la tabella cinemas)."""
     return {
         "generated_at": datetime.now(_ROME).isoformat(),
         "cinemas": [{"slug": slug, **data} for slug, data in locations.items()],
@@ -141,6 +176,12 @@ def cinemas_to_json(locations: dict) -> dict:
 
 
 def films_to_json(films: list[Film]) -> dict:
+    """Serializza i film in films.json (DB-ready per la tabella films).
+
+    `id` = title_normalized: è la chiave di join che showings.json usa in
+    `film_id` — il backend la risolve in PK intera durante il seed.
+    `first_seen`/`last_seen` sono derivati dalla history del delta tracking.
+    """
     result = []
     for film in films:
         first_seen = next((h["date"] for h in film.history if h.get("action") == "added"), None)
@@ -171,6 +212,11 @@ def films_to_json(films: list[Film]) -> dict:
 
 
 def showings_to_json(films: list[Film], date_from: str, date_to: str) -> dict:
+    """Serializza gli spettacoli in showings.json (DB-ready per la tabella showings).
+
+    `film_id` è il title_normalized del film: DEVE combaciare con l'`id` emesso
+    da films_to_json, altrimenti il seed del backend scarta la riga come orfana.
+    """
     rows = []
     for film in films:
         for group in _consolidate_showings(film.present_in):
@@ -187,6 +233,7 @@ def showings_to_json(films: list[Film], date_from: str, date_to: str) -> dict:
 
 
 def output_to_json(films: list[Film], errors: list[CinemaError], city: str = "Perugia") -> dict:
+    """Serializza lo stato completo della run (film + errori) per movies.json."""
     return {
         "generated_at": datetime.now(_ROME).isoformat(),
         "city": city,

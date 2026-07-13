@@ -1,657 +1,435 @@
 {
-  "generated_at": "2026-07-02T16:29:51.618824+02:00",
-  "date_from": "2026-07-02",
-  "date_to": "2026-07-09",
+  "generated_at": "2026-07-13T13:04:57.262433+02:00",
+  "date_from": "2026-07-13",
+  "date_to": "2026-07-20",
   "showings": [
     {
-      "film_id": "Kontinental '",
+      "film_id": "Principessa Mononoke",
       "cinema_slug": "postmodernissimo",
-      "date": "2026-07-02",
-      "times": [
-        "18:45"
-      ],
-      "source_url": "https://www.postmodernissimo.com/films/kontinental-25"
-    },
-    {
-      "film_id": "Kontinental '",
-      "cinema_slug": "postmodernissimo",
-      "date": "2026-07-06",
-      "times": [
-        "21:30"
-      ],
-      "source_url": "https://www.postmodernissimo.com/films/kontinental-25"
-    },
-    {
-      "film_id": "Kontinental '",
-      "cinema_slug": "postmodernissimo",
-      "date": "2026-07-07",
-      "times": [
-        "18:45"
-      ],
-      "source_url": "https://www.postmodernissimo.com/films/kontinental-25"
-    },
-    {
-      "film_id": "Allora balliamo",
-      "cinema_slug": "postmodernissimo",
-      "date": "2026-07-03",
-      "times": [
-        "21:30"
-      ],
-      "source_url": "https://www.postmodernissimo.com/films/allora-balliamo"
-    },
-    {
-      "film_id": "Allora balliamo",
-      "cinema_slug": "postmodernissimo",
-      "date": "2026-07-04",
-      "times": [
-        "18:45"
-      ],
-      "source_url": "https://www.postmodernissimo.com/films/allora-balliamo"
-    },
-    {
-      "film_id": "Allora balliamo",
-      "cinema_slug": "postmodernissimo",
-      "date": "2026-07-05",
-      "times": [
-        "18:45"
-      ],
-      "source_url": "https://www.postmodernissimo.com/films/allora-balliamo"
-    },
-    {
-      "film_id": "Allora balliamo",
-      "cinema_slug": "postmodernissimo",
-      "date": "2026-07-08",
-      "times": [
-        "18:45"
-      ],
-      "source_url": "https://www.postmodernissimo.com/films/allora-balliamo"
-    },
-    {
-      "film_id": "Disclosure Day",
-      "cinema_slug": "postmodernissimo",
-      "date": "2026-07-02",
-      "times": [
-        "21:30"
-      ],
-      "source_url": "https://www.postmodernissimo.com/films/disclosure-day"
-    },
-    {
-      "film_id": "Disclosure Day",
-      "cinema_slug": "postmodernissimo",
-      "date": "2026-07-03",
-      "times": [
-        "18:45"
-      ],
-      "source_url": "https://www.postmodernissimo.com/films/disclosure-day"
-    },
-    {
-      "film_id": "Disclosure Day",
-      "cinema_slug": "postmodernissimo",
-      "date": "2026-07-04",
-      "times": [
-        "21:30"
-      ],
-      "source_url": "https://www.postmodernissimo.com/films/disclosure-day"
-    },
-    {
-      "film_id": "Disclosure Day",
-      "cinema_slug": "postmodernissimo",
-      "date": "2026-07-05",
-      "times": [
-        "21:30"
-      ],
-      "source_url": "https://www.postmodernissimo.com/films/disclosure-day"
-    },
-    {
-      "film_id": "Disclosure Day",
-      "cinema_slug": "postmodernissimo",
-      "date": "2026-07-06",
-      "times": [
-        "18:45"
-      ],
-      "source_url": "https://www.postmodernissimo.com/films/disclosure-day"
-    },
-    {
-      "film_id": "Disclosure Day",
-      "cinema_slug": "postmodernissimo",
-      "date": "2026-07-07",
-      "times": [
-        "21:30"
-      ],
-      "source_url": "https://www.postmodernissimo.com/films/disclosure-day"
-    },
-    {
-      "film_id": "Disclosure Day",
-      "cinema_slug": "postmodernissimo",
-      "date": "2026-07-08",
-      "times": [
-        "21:30"
-      ],
-      "source_url": "https://www.postmodernissimo.com/films/disclosure-day"
-    },
-    {
-      "film_id": "Disclosure Day",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-02",
-      "times": [
-        "18:20"
-      ],
-      "screen": "Sala 4",
-      "source_url": "https://www.thespacecinema.it/film/disclosure-day",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "Disclosure Day",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-02",
-      "times": [
-        "21:40"
-      ],
-      "screen": "Sala 11",
-      "source_url": "https://www.thespacecinema.it/film/disclosure-day",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "Disclosure Day",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-03",
-      "times": [
-        "16:20"
-      ],
-      "screen": "Sala 10",
-      "source_url": "https://www.thespacecinema.it/film/disclosure-day",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "Disclosure Day",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-03",
-      "times": [
-        "21:10"
-      ],
-      "screen": "Sala 6",
-      "source_url": "https://www.thespacecinema.it/film/disclosure-day",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "Disclosure Day",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-04",
-      "times": [
-        "14:30"
-      ],
-      "screen": "Sala 10",
-      "source_url": "https://www.thespacecinema.it/film/disclosure-day",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "Disclosure Day",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-04",
-      "times": [
-        "20:10"
-      ],
-      "screen": "Sala 5",
-      "source_url": "https://www.thespacecinema.it/film/disclosure-day",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "Disclosure Day",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-04",
-      "times": [
-        "23:05"
-      ],
-      "screen": "Sala 6",
-      "source_url": "https://www.thespacecinema.it/film/disclosure-day",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "Disclosure Day",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-05",
-      "times": [
-        "17:40"
-      ],
-      "screen": "Sala 10",
-      "source_url": "https://www.thespacecinema.it/film/disclosure-day",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "Disclosure Day",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-05",
-      "times": [
-        "21:10"
-      ],
-      "screen": "Sala 6",
-      "source_url": "https://www.thespacecinema.it/film/disclosure-day",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "Disclosure Day",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-06",
-      "times": [
-        "16:05"
-      ],
-      "screen": "Sala 5",
-      "source_url": "https://www.thespacecinema.it/film/disclosure-day",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "Disclosure Day",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-06",
-      "times": [
-        "21:10"
-      ],
-      "screen": "Sala 6",
-      "source_url": "https://www.thespacecinema.it/film/disclosure-day",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "Disclosure Day",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-07",
-      "times": [
-        "21:10"
-      ],
-      "screen": "Sala 6",
-      "source_url": "https://www.thespacecinema.it/film/disclosure-day",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "Disclosure Day",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-08",
-      "times": [
-        "21:10"
-      ],
-      "screen": "Sala 6",
-      "source_url": "https://www.thespacecinema.it/film/disclosure-day",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "Disclosure Day",
-      "cinema_slug": "uci-perugia",
-      "date": "2026-07-02",
-      "times": [
-        "21:40"
-      ],
-      "screen": "2D",
-      "source_url": "https://ucicinemas.it/film/disclosure-day/",
-      "language": "ITA"
-    },
-    {
-      "film_id": "Disclosure Day",
-      "cinema_slug": "uci-perugia",
-      "date": "2026-07-03",
-      "times": [
-        "21:40"
-      ],
-      "screen": "2D",
-      "source_url": "https://ucicinemas.it/film/disclosure-day/",
-      "language": "ITA"
-    },
-    {
-      "film_id": "Disclosure Day",
-      "cinema_slug": "uci-perugia",
-      "date": "2026-07-04",
-      "times": [
-        "21:40"
-      ],
-      "screen": "2D",
-      "source_url": "https://ucicinemas.it/film/disclosure-day/",
-      "language": "ITA"
-    },
-    {
-      "film_id": "Disclosure Day",
-      "cinema_slug": "uci-perugia",
-      "date": "2026-07-05",
-      "times": [
-        "21:40"
-      ],
-      "screen": "2D",
-      "source_url": "https://ucicinemas.it/film/disclosure-day/",
-      "language": "ITA"
-    },
-    {
-      "film_id": "Disclosure Day",
-      "cinema_slug": "uci-perugia",
-      "date": "2026-07-06",
-      "times": [
-        "21:40"
-      ],
-      "screen": "2D",
-      "source_url": "https://ucicinemas.it/film/disclosure-day/",
-      "language": "ITA"
-    },
-    {
-      "film_id": "Disclosure Day",
-      "cinema_slug": "uci-perugia",
-      "date": "2026-07-07",
-      "times": [
-        "18:30"
-      ],
-      "screen": "2D",
-      "source_url": "https://ucicinemas.it/film/disclosure-day/",
-      "language": "ITA"
-    },
-    {
-      "film_id": "Disclosure Day",
-      "cinema_slug": "uci-perugia",
-      "date": "2026-07-08",
-      "times": [
-        "19:50"
-      ],
-      "screen": "2D",
-      "source_url": "https://ucicinemas.it/film/disclosure-day/",
-      "language": "ITA"
-    },
-    {
-      "film_id": "Dove i frati volano",
-      "cinema_slug": "postmodernissimo",
-      "date": "2026-07-09",
+      "date": "2026-07-13",
       "times": [
         "21:15"
       ],
-      "source_url": "https://www.postmodernissimo.com/films/dove-i-frati-volano"
+      "source_url": "https://www.postmodernissimo.com/films/principessa-mononoke"
     },
     {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-02",
+      "film_id": "Un Anno di Scuola",
+      "cinema_slug": "postmodernissimo",
+      "date": "2026-07-13",
       "times": [
-        "16:20",
-        "18:40",
-        "21:00"
+        "19:30"
       ],
-      "screen": "Sala 3",
-      "source_url": "https://www.thespacecinema.it/film/minions-and-monsters",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
+      "source_url": "https://www.postmodernissimo.com/films/un-anno-di-scuola"
     },
     {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-02",
+      "film_id": "Palazzina LAF",
+      "cinema_slug": "postmodernissimo",
+      "date": "2026-07-14",
       "times": [
-        "17:00",
-        "19:20",
-        "21:40"
+        "19:00",
+        "21:15"
       ],
-      "screen": "Sala 8",
-      "source_url": "https://www.thespacecinema.it/film/minions-and-monsters",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
+      "source_url": "https://www.postmodernissimo.com/films/palazzina-laf"
     },
     {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-02",
+      "film_id": "Maradona di Kusturica",
+      "cinema_slug": "postmodernissimo",
+      "date": "2026-07-14",
       "times": [
-        "17:40",
-        "20:00",
-        "22:20"
+        "19:00"
       ],
-      "screen": "Sala 2",
-      "source_url": "https://www.thespacecinema.it/film/minions-and-monsters",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
+      "source_url": "https://www.postmodernissimo.com/films/maradona-di-kusturica"
     },
     {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-02",
+      "film_id": "Primavera",
+      "cinema_slug": "postmodernissimo",
+      "date": "2026-07-14",
       "times": [
-        "18:00",
-        "20:20"
+        "21:15"
       ],
-      "screen": "Sala 10",
-      "source_url": "https://www.thespacecinema.it/film/minions-and-monsters",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
+      "source_url": "https://www.postmodernissimo.com/films/primavera"
     },
     {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-02",
+      "film_id": "casa dalle finestre che ridono",
+      "cinema_slug": "postmodernissimo",
+      "date": "2026-07-13",
       "times": [
-        "18:30"
+        "21:30"
       ],
-      "screen": "Sala 6",
-      "source_url": "https://www.thespacecinema.it/film/minions-and-monsters",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "3D",
-        "ITALIANO"
-      ]
+      "source_url": "https://www.postmodernissimo.com/films/la-casa-dalle-finestre-che-ridono"
     },
     {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-03",
+      "film_id": "casa dalle finestre che ridono",
+      "cinema_slug": "postmodernissimo",
+      "date": "2026-07-14",
       "times": [
-        "16:00"
+        "19:00"
       ],
-      "screen": "Sala 4",
-      "source_url": "https://www.thespacecinema.it/film/minions-and-monsters",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
+      "source_url": "https://www.postmodernissimo.com/films/la-casa-dalle-finestre-che-ridono"
     },
     {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-03",
+      "film_id": "casa dalle finestre che ridono",
+      "cinema_slug": "postmodernissimo",
+      "date": "2026-07-15",
       "times": [
-        "16:20",
-        "18:40",
-        "21:00"
+        "21:30"
       ],
-      "screen": "Sala 3",
-      "source_url": "https://www.thespacecinema.it/film/minions-and-monsters",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
+      "source_url": "https://www.postmodernissimo.com/films/la-casa-dalle-finestre-che-ridono"
     },
     {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-03",
+      "film_id": "Doors",
+      "cinema_slug": "postmodernissimo",
+      "date": "2026-07-13",
       "times": [
-        "17:00",
-        "19:20",
-        "21:40"
+        "19:00"
       ],
-      "screen": "Sala 8",
-      "source_url": "https://www.thespacecinema.it/film/minions-and-monsters",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
+      "source_url": "https://www.postmodernissimo.com/films/the-doors"
     },
     {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-03",
+      "film_id": "Doors",
+      "cinema_slug": "postmodernissimo",
+      "date": "2026-07-14",
       "times": [
-        "17:40",
-        "20:00",
-        "22:20"
+        "21:30"
       ],
-      "screen": "Sala 2",
-      "source_url": "https://www.thespacecinema.it/film/minions-and-monsters",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
+      "source_url": "https://www.postmodernissimo.com/films/the-doors"
     },
     {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-03",
+      "film_id": "Doors",
+      "cinema_slug": "postmodernissimo",
+      "date": "2026-07-15",
       "times": [
-        "18:05",
-        "20:20"
+        "19:00"
       ],
-      "screen": "Sala 11",
-      "source_url": "https://www.thespacecinema.it/film/minions-and-monsters",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
+      "source_url": "https://www.postmodernissimo.com/films/the-doors"
     },
     {
-      "film_id": "MINIONS & MONSTERS",
+      "film_id": "Doors",
       "cinema_slug": "the-space-corciano",
-      "date": "2026-07-03",
+      "date": "2026-07-13",
       "times": [
-        "18:30"
-      ],
-      "screen": "Sala 6",
-      "source_url": "https://www.thespacecinema.it/film/minions-and-monsters",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "3D",
-        "ITALIANO"
-      ]
-    },
-    {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-04",
-      "times": [
-        "14:00",
-        "16:20",
-        "18:40",
-        "21:00"
-      ],
-      "screen": "Sala 3",
-      "source_url": "https://www.thespacecinema.it/film/minions-and-monsters",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-04",
-      "times": [
-        "14:50",
-        "17:20",
-        "19:40"
-      ],
-      "screen": "Sala 11",
-      "source_url": "https://www.thespacecinema.it/film/minions-and-monsters",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-04",
-      "times": [
-        "15:20",
-        "17:40",
-        "20:00",
-        "22:15"
-      ],
-      "screen": "Sala 2",
-      "source_url": "https://www.thespacecinema.it/film/minions-and-monsters",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-04",
-      "times": [
-        "15:50",
-        "18:10",
         "20:30"
       ],
+      "screen": "Sala 9",
+      "source_url": "https://www.thespacecinema.it/film/the-doors-4k",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "BACK ON THE BIG SCREEN",
+        "EXTRA",
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "Doors",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-14",
+      "times": [
+        "20:30"
+      ],
+      "screen": "Sala 9",
+      "source_url": "https://www.thespacecinema.it/film/the-doors-4k",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "BACK ON THE BIG SCREEN",
+        "EXTRA",
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "Doors",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-15",
+      "times": [
+        "20:30"
+      ],
+      "screen": "Sala 9",
+      "source_url": "https://www.thespacecinema.it/film/the-doors-4k",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "BACK ON THE BIG SCREEN",
+        "EXTRA",
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "Doors",
+      "cinema_slug": "uci-perugia",
+      "date": "2026-07-13",
+      "times": [
+        "21:00"
+      ],
+      "screen": "2D",
+      "source_url": "https://ucicinemas.it/film/the-doors/",
+      "language": "ITA"
+    },
+    {
+      "film_id": "Doors",
+      "cinema_slug": "uci-perugia",
+      "date": "2026-07-14",
+      "times": [
+        "21:15"
+      ],
+      "screen": "2D",
+      "source_url": "https://ucicinemas.it/film/the-doors/",
+      "language": "ITA"
+    },
+    {
+      "film_id": "Doors",
+      "cinema_slug": "uci-perugia",
+      "date": "2026-07-15",
+      "times": [
+        "21:15"
+      ],
+      "screen": "2D",
+      "source_url": "https://ucicinemas.it/film/the-doors/",
+      "language": "ITA"
+    },
+    {
+      "film_id": "Doors",
+      "cinema_slug": "uci-perugia",
+      "date": "2026-07-15",
+      "times": [
+        "19:00"
+      ],
+      "screen": "2D",
+      "source_url": "https://ucicinemas.it/film/the-doors/",
+      "language": "ENG"
+    },
+    {
+      "film_id": "Hamnet - Nel nome del figlio",
+      "cinema_slug": "postmodernissimo",
+      "date": "2026-07-15",
+      "times": [
+        "21:15"
+      ],
+      "source_url": "https://www.postmodernissimo.com/films/hamnet-nel-nome-del-figlio"
+    },
+    {
+      "film_id": "Illusione",
+      "cinema_slug": "postmodernissimo",
+      "date": "2026-07-16",
+      "times": [
+        "21:15"
+      ],
+      "source_url": "https://www.postmodernissimo.com/films/illusione"
+    },
+    {
+      "film_id": "Toy Story",
+      "cinema_slug": "postmodernissimo",
+      "date": "2026-07-17",
+      "times": [
+        "21:15"
+      ],
+      "source_url": "https://www.postmodernissimo.com/films/toy-story-5"
+    },
+    {
+      "film_id": "Toy Story",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-13",
+      "times": [
+        "16:20"
+      ],
+      "screen": "Sala 4",
+      "source_url": "https://www.thespacecinema.it/film/toy-story-5",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "Toy Story",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-13",
+      "times": [
+        "17:00",
+        "19:40"
+      ],
+      "screen": "Sala 6",
+      "source_url": "https://www.thespacecinema.it/film/toy-story-5",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "Toy Story",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-13",
+      "times": [
+        "21:40"
+      ],
+      "screen": "Sala 2",
+      "source_url": "https://www.thespacecinema.it/film/toy-story-5",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "Toy Story",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-14",
+      "times": [
+        "16:25"
+      ],
+      "screen": "Sala 4",
+      "source_url": "https://www.thespacecinema.it/film/toy-story-5",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "Toy Story",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-14",
+      "times": [
+        "17:00",
+        "19:40"
+      ],
+      "screen": "Sala 6",
+      "source_url": "https://www.thespacecinema.it/film/toy-story-5",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "Toy Story",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-14",
+      "times": [
+        "21:40"
+      ],
+      "screen": "Sala 2",
+      "source_url": "https://www.thespacecinema.it/film/toy-story-5",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "Toy Story",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-15",
+      "times": [
+        "17:00",
+        "19:40"
+      ],
+      "screen": "Sala 6",
+      "source_url": "https://www.thespacecinema.it/film/toy-story-5",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "Toy Story",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-15",
+      "times": [
+        "18:15"
+      ],
+      "screen": "Sala 4",
+      "source_url": "https://www.thespacecinema.it/film/toy-story-5",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "Toy Story",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-15",
+      "times": [
+        "21:40"
+      ],
       "screen": "Sala 7",
+      "source_url": "https://www.thespacecinema.it/film/toy-story-5",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "Toy Story",
+      "cinema_slug": "uci-perugia",
+      "date": "2026-07-13",
+      "times": [
+        "16:00",
+        "18:25",
+        "21:20"
+      ],
+      "screen": "2D",
+      "source_url": "https://ucicinemas.it/film/toy-story-5/",
+      "language": "ITA"
+    },
+    {
+      "film_id": "Toy Story",
+      "cinema_slug": "uci-perugia",
+      "date": "2026-07-14",
+      "times": [
+        "16:10",
+        "18:40",
+        "21:20"
+      ],
+      "screen": "2D",
+      "source_url": "https://ucicinemas.it/film/toy-story-5/",
+      "language": "ITA"
+    },
+    {
+      "film_id": "Toy Story",
+      "cinema_slug": "uci-perugia",
+      "date": "2026-07-15",
+      "times": [
+        "16:10",
+        "18:45",
+        "21:30"
+      ],
+      "screen": "2D",
+      "source_url": "https://ucicinemas.it/film/toy-story-5/",
+      "language": "ITA"
+    },
+    {
+      "film_id": "Berlinguer. La grande ambizione",
+      "cinema_slug": "postmodernissimo",
+      "date": "2026-07-18",
+      "times": [
+        "21:15"
+      ],
+      "source_url": "https://www.postmodernissimo.com/films/berlinguer-la-grande-ambizione"
+    },
+    {
+      "film_id": "Si alza il vento",
+      "cinema_slug": "postmodernissimo",
+      "date": "2026-07-20",
+      "times": [
+        "21:15"
+      ],
+      "source_url": "https://www.postmodernissimo.com/films/si-alza-il-vento"
+    },
+    {
+      "film_id": "MINIONS & MONSTERS",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-13",
+      "times": [
+        "16:20",
+        "18:40",
+        "21:00"
+      ],
+      "screen": "Sala 3",
       "source_url": "https://www.thespacecinema.it/film/minions-and-monsters",
       "language": "ITALIANO",
       "session_attributes": [
@@ -662,9 +440,24 @@
     {
       "film_id": "MINIONS & MONSTERS",
       "cinema_slug": "the-space-corciano",
-      "date": "2026-07-04",
+      "date": "2026-07-13",
       "times": [
-        "16:40",
+        "17:45",
+        "22:20"
+      ],
+      "screen": "Sala 11",
+      "source_url": "https://www.thespacecinema.it/film/minions-and-monsters",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "MINIONS & MONSTERS",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-13",
+      "times": [
         "19:00"
       ],
       "screen": "Sala 4",
@@ -678,57 +471,8 @@
     {
       "film_id": "MINIONS & MONSTERS",
       "cinema_slug": "the-space-corciano",
-      "date": "2026-07-04",
+      "date": "2026-07-14",
       "times": [
-        "17:00",
-        "19:20",
-        "21:35"
-      ],
-      "screen": "Sala 8",
-      "source_url": "https://www.thespacecinema.it/film/minions-and-monsters",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-04",
-      "times": [
-        "18:30"
-      ],
-      "screen": "Sala 6",
-      "source_url": "https://www.thespacecinema.it/film/minions-and-monsters",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "3D",
-        "ITALIANO"
-      ]
-    },
-    {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-04",
-      "times": [
-        "23:10"
-      ],
-      "screen": "Sala 1",
-      "source_url": "https://www.thespacecinema.it/film/minions-and-monsters",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-05",
-      "times": [
-        "11:00",
-        "14:00",
         "16:20",
         "18:40",
         "21:00"
@@ -744,12 +488,1625 @@
     {
       "film_id": "MINIONS & MONSTERS",
       "cinema_slug": "the-space-corciano",
-      "date": "2026-07-05",
+      "date": "2026-07-14",
       "times": [
-        "11:30"
+        "17:45",
+        "22:20"
+      ],
+      "screen": "Sala 11",
+      "source_url": "https://www.thespacecinema.it/film/minions-and-monsters",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "MINIONS & MONSTERS",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-14",
+      "times": [
+        "19:05"
+      ],
+      "screen": "Sala 4",
+      "source_url": "https://www.thespacecinema.it/film/minions-and-monsters",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "MINIONS & MONSTERS",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-15",
+      "times": [
+        "16:20",
+        "18:40",
+        "21:00"
+      ],
+      "screen": "Sala 3",
+      "source_url": "https://www.thespacecinema.it/film/minions-and-monsters",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "MINIONS & MONSTERS",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-15",
+      "times": [
+        "17:30"
+      ],
+      "screen": "Sala 8",
+      "source_url": "https://www.thespacecinema.it/film/minions-and-monsters",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "MINIONS & MONSTERS",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-15",
+      "times": [
+        "22:20"
       ],
       "screen": "Sala 5",
       "source_url": "https://www.thespacecinema.it/film/minions-and-monsters",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "MINIONS & MONSTERS",
+      "cinema_slug": "uci-perugia",
+      "date": "2026-07-13",
+      "times": [
+        "16:50"
+      ],
+      "screen": "3D",
+      "source_url": "https://ucicinemas.it/film/minions-monsters/",
+      "language": "ITA"
+    },
+    {
+      "film_id": "MINIONS & MONSTERS",
+      "cinema_slug": "uci-perugia",
+      "date": "2026-07-13",
+      "times": [
+        "16:20",
+        "17:20",
+        "18:40",
+        "19:30",
+        "20:45",
+        "21:45"
+      ],
+      "screen": "2D",
+      "source_url": "https://ucicinemas.it/film/minions-monsters/",
+      "language": "ITA"
+    },
+    {
+      "film_id": "MINIONS & MONSTERS",
+      "cinema_slug": "uci-perugia",
+      "date": "2026-07-14",
+      "times": [
+        "16:50"
+      ],
+      "screen": "3D",
+      "source_url": "https://ucicinemas.it/film/minions-monsters/",
+      "language": "ITA"
+    },
+    {
+      "film_id": "MINIONS & MONSTERS",
+      "cinema_slug": "uci-perugia",
+      "date": "2026-07-14",
+      "times": [
+        "16:20",
+        "17:20",
+        "18:30",
+        "19:30",
+        "20:45",
+        "21:50"
+      ],
+      "screen": "2D",
+      "source_url": "https://ucicinemas.it/film/minions-monsters/",
+      "language": "ITA"
+    },
+    {
+      "film_id": "MINIONS & MONSTERS",
+      "cinema_slug": "uci-perugia",
+      "date": "2026-07-15",
+      "times": [
+        "16:50"
+      ],
+      "screen": "3D",
+      "source_url": "https://ucicinemas.it/film/minions-monsters/",
+      "language": "ITA"
+    },
+    {
+      "film_id": "MINIONS & MONSTERS",
+      "cinema_slug": "uci-perugia",
+      "date": "2026-07-15",
+      "times": [
+        "16:20",
+        "17:20",
+        "18:30",
+        "19:30",
+        "20:45",
+        "21:50"
+      ],
+      "screen": "2D",
+      "source_url": "https://ucicinemas.it/film/minions-monsters/",
+      "language": "ITA"
+    },
+    {
+      "film_id": "CASA - IL ROGO DEL MALE",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-13",
+      "times": [
+        "17:30"
+      ],
+      "screen": "Sala 9",
+      "source_url": "https://www.thespacecinema.it/film/la-casa-il-rogo-del-male",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "CASA - IL ROGO DEL MALE",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-13",
+      "times": [
+        "19:45"
+      ],
+      "screen": "Sala 8",
+      "source_url": "https://www.thespacecinema.it/film/la-casa-il-rogo-del-male",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "CASA - IL ROGO DEL MALE",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-13",
+      "times": [
+        "21:20"
+      ],
+      "screen": "Sala 4",
+      "source_url": "https://www.thespacecinema.it/film/la-casa-il-rogo-del-male",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "CASA - IL ROGO DEL MALE",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-13",
+      "times": [
+        "22:00"
+      ],
+      "screen": "Sala 1",
+      "source_url": "https://www.thespacecinema.it/film/la-casa-il-rogo-del-male",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "CASA - IL ROGO DEL MALE",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-14",
+      "times": [
+        "17:30"
+      ],
+      "screen": "Sala 9",
+      "source_url": "https://www.thespacecinema.it/film/la-casa-il-rogo-del-male",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "CASA - IL ROGO DEL MALE",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-14",
+      "times": [
+        "19:40"
+      ],
+      "screen": "Sala 8",
+      "source_url": "https://www.thespacecinema.it/film/la-casa-il-rogo-del-male",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "CASA - IL ROGO DEL MALE",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-14",
+      "times": [
+        "21:25"
+      ],
+      "screen": "Sala 4",
+      "source_url": "https://www.thespacecinema.it/film/la-casa-il-rogo-del-male",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "CASA - IL ROGO DEL MALE",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-14",
+      "times": [
+        "22:00"
+      ],
+      "screen": "Sala 1",
+      "source_url": "https://www.thespacecinema.it/film/la-casa-il-rogo-del-male",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "CASA - IL ROGO DEL MALE",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-15",
+      "times": [
+        "16:40",
+        "22:00"
+      ],
+      "screen": "Sala 1",
+      "source_url": "https://www.thespacecinema.it/film/la-casa-il-rogo-del-male",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "CASA - IL ROGO DEL MALE",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-15",
+      "times": [
+        "18:55"
+      ],
+      "screen": "Sala 7",
+      "source_url": "https://www.thespacecinema.it/film/la-casa-il-rogo-del-male",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "CASA - IL ROGO DEL MALE",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-15",
+      "times": [
+        "20:50"
+      ],
+      "screen": "Sala 4",
+      "source_url": "https://www.thespacecinema.it/film/la-casa-il-rogo-del-male",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "CASA - IL ROGO DEL MALE",
+      "cinema_slug": "uci-perugia",
+      "date": "2026-07-13",
+      "times": [
+        "17:10",
+        "19:40",
+        "21:50",
+        "22:40",
+        "23:00"
+      ],
+      "screen": "2D",
+      "source_url": "https://ucicinemas.it/film/la-casa-il-rogo-del-male/",
+      "language": "ITA"
+    },
+    {
+      "film_id": "CASA - IL ROGO DEL MALE",
+      "cinema_slug": "uci-perugia",
+      "date": "2026-07-13",
+      "times": [
+        "17:50",
+        "20:20"
+      ],
+      "screen": "2D",
+      "source_url": "https://ucicinemas.it/film/la-casa-il-rogo-del-male/",
+      "language": "ENG"
+    },
+    {
+      "film_id": "CASA - IL ROGO DEL MALE",
+      "cinema_slug": "uci-perugia",
+      "date": "2026-07-14",
+      "times": [
+        "17:10",
+        "19:40",
+        "22:00",
+        "22:40",
+        "23:00"
+      ],
+      "screen": "2D",
+      "source_url": "https://ucicinemas.it/film/la-casa-il-rogo-del-male/",
+      "language": "ITA"
+    },
+    {
+      "film_id": "CASA - IL ROGO DEL MALE",
+      "cinema_slug": "uci-perugia",
+      "date": "2026-07-14",
+      "times": [
+        "16:40",
+        "19:20"
+      ],
+      "screen": "2D",
+      "source_url": "https://ucicinemas.it/film/la-casa-il-rogo-del-male/",
+      "language": "ENG"
+    },
+    {
+      "film_id": "CASA - IL ROGO DEL MALE",
+      "cinema_slug": "uci-perugia",
+      "date": "2026-07-15",
+      "times": [
+        "17:10",
+        "19:40",
+        "22:00",
+        "22:40",
+        "23:00"
+      ],
+      "screen": "2D",
+      "source_url": "https://ucicinemas.it/film/la-casa-il-rogo-del-male/",
+      "language": "ITA"
+    },
+    {
+      "film_id": "CASA - IL ROGO DEL MALE",
+      "cinema_slug": "uci-perugia",
+      "date": "2026-07-15",
+      "times": [
+        "17:50",
+        "20:20"
+      ],
+      "screen": "2D",
+      "source_url": "https://ucicinemas.it/film/la-casa-il-rogo-del-male/",
+      "language": "ENG"
+    },
+    {
+      "film_id": "Supergirl",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-13",
+      "times": [
+        "17:15"
+      ],
+      "screen": "Sala 8",
+      "source_url": "https://www.thespacecinema.it/film/supergirl",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "Supergirl",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-13",
+      "times": [
+        "19:15"
+      ],
+      "screen": "Sala 1",
+      "source_url": "https://www.thespacecinema.it/film/supergirl",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "Supergirl",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-13",
+      "times": [
+        "21:55"
+      ],
+      "screen": "Sala 5",
+      "source_url": "https://www.thespacecinema.it/film/supergirl",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "Supergirl",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-14",
+      "times": [
+        "17:15"
+      ],
+      "screen": "Sala 8",
+      "source_url": "https://www.thespacecinema.it/film/supergirl",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "Supergirl",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-14",
+      "times": [
+        "19:25"
+      ],
+      "screen": "Sala 5",
+      "source_url": "https://www.thespacecinema.it/film/supergirl",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "Supergirl",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-14",
+      "times": [
+        "22:15"
+      ],
+      "screen": "Sala 6",
+      "source_url": "https://www.thespacecinema.it/film/supergirl",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "Supergirl",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-15",
+      "times": [
+        "16:05"
+      ],
+      "screen": "Sala 7",
+      "source_url": "https://www.thespacecinema.it/film/supergirl",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "Supergirl",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-15",
+      "times": [
+        "18:20"
+      ],
+      "screen": "Sala 2",
+      "source_url": "https://www.thespacecinema.it/film/supergirl",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "Supergirl",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-15",
+      "times": [
+        "20:45"
+      ],
+      "screen": "Sala 11",
+      "source_url": "https://www.thespacecinema.it/film/supergirl",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "Supergirl",
+      "cinema_slug": "uci-perugia",
+      "date": "2026-07-13",
+      "times": [
+        "17:00",
+        "22:50"
+      ],
+      "screen": "2D",
+      "source_url": "https://ucicinemas.it/film/supergirl/",
+      "language": "ITA"
+    },
+    {
+      "film_id": "Supergirl",
+      "cinema_slug": "uci-perugia",
+      "date": "2026-07-14",
+      "times": [
+        "17:00",
+        "23:00"
+      ],
+      "screen": "2D",
+      "source_url": "https://ucicinemas.it/film/supergirl/",
+      "language": "ITA"
+    },
+    {
+      "film_id": "Supergirl",
+      "cinema_slug": "uci-perugia",
+      "date": "2026-07-15",
+      "times": [
+        "17:00",
+        "22:50"
+      ],
+      "screen": "2D",
+      "source_url": "https://ucicinemas.it/film/supergirl/",
+      "language": "ITA"
+    },
+    {
+      "film_id": "BACKROOMS - EVERYTHING MUST GO EDITION",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-13",
+      "times": [
+        "16:05"
+      ],
+      "screen": "Sala 10",
+      "source_url": "https://www.thespacecinema.it/film/backrooms-everything-must-go-edition",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "BACKROOMS - EVERYTHING MUST GO EDITION",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-13",
+      "times": [
+        "22:10"
+      ],
+      "screen": "Sala 6",
+      "source_url": "https://www.thespacecinema.it/film/backrooms-everything-must-go-edition",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "BACKROOMS - EVERYTHING MUST GO EDITION",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-14",
+      "times": [
+        "16:05"
+      ],
+      "screen": "Sala 10",
+      "source_url": "https://www.thespacecinema.it/film/backrooms-everything-must-go-edition",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "BACKROOMS - EVERYTHING MUST GO EDITION",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-14",
+      "times": [
+        "22:05"
+      ],
+      "screen": "Sala 5",
+      "source_url": "https://www.thespacecinema.it/film/backrooms-everything-must-go-edition",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "BACKROOMS - EVERYTHING MUST GO EDITION",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-15",
+      "times": [
+        "17:45"
+      ],
+      "screen": "Sala 11",
+      "source_url": "https://www.thespacecinema.it/film/backrooms-everything-must-go-edition",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "BACKROOMS - EVERYTHING MUST GO EDITION",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-15",
+      "times": [
+        "21:30"
+      ],
+      "screen": "Sala 10",
+      "source_url": "https://www.thespacecinema.it/film/backrooms-everything-must-go-edition",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "BACKROOMS - EVERYTHING MUST GO EDITION",
+      "cinema_slug": "uci-perugia",
+      "date": "2026-07-13",
+      "times": [
+        "19:50",
+        "22:15"
+      ],
+      "screen": "2D",
+      "source_url": "https://ucicinemas.it/film/backrooms-everything-must-go-edition/",
+      "language": "ITA"
+    },
+    {
+      "film_id": "BACKROOMS - EVERYTHING MUST GO EDITION",
+      "cinema_slug": "uci-perugia",
+      "date": "2026-07-14",
+      "times": [
+        "19:50",
+        "22:15"
+      ],
+      "screen": "2D",
+      "source_url": "https://ucicinemas.it/film/backrooms-everything-must-go-edition/",
+      "language": "ITA"
+    },
+    {
+      "film_id": "BACKROOMS - EVERYTHING MUST GO EDITION",
+      "cinema_slug": "uci-perugia",
+      "date": "2026-07-15",
+      "times": [
+        "19:50",
+        "22:15"
+      ],
+      "screen": "2D",
+      "source_url": "https://ucicinemas.it/film/backrooms-everything-must-go-edition/",
+      "language": "ITA"
+    },
+    {
+      "film_id": "DISCLOSURE DAY",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-13",
+      "times": [
+        "16:00"
+      ],
+      "screen": "Sala 1",
+      "source_url": "https://www.thespacecinema.it/film/disclosure-day",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "DISCLOSURE DAY",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-13",
+      "times": [
+        "20:45"
+      ],
+      "screen": "Sala 7",
+      "source_url": "https://www.thespacecinema.it/film/disclosure-day",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "DISCLOSURE DAY",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-14",
+      "times": [
+        "16:05"
+      ],
+      "screen": "Sala 5",
+      "source_url": "https://www.thespacecinema.it/film/disclosure-day",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "DISCLOSURE DAY",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-14",
+      "times": [
+        "18:45"
+      ],
+      "screen": "Sala 1",
+      "source_url": "https://www.thespacecinema.it/film/disclosure-day",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "DISCLOSURE DAY",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-14",
+      "times": [
+        "20:45"
+      ],
+      "screen": "Sala 7",
+      "source_url": "https://www.thespacecinema.it/film/disclosure-day",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "DISCLOSURE DAY",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-15",
+      "times": [
+        "17:15"
+      ],
+      "screen": "Sala 9",
+      "source_url": "https://www.thespacecinema.it/film/disclosure-day",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "DISCLOSURE DAY",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-15",
+      "times": [
+        "21:10"
+      ],
+      "screen": "Sala 2",
+      "source_url": "https://www.thespacecinema.it/film/disclosure-day",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "ELECTION DAY",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-13",
+      "times": [
+        "16:00"
+      ],
+      "screen": "Sala 7",
+      "source_url": "https://www.thespacecinema.it/film/election-day",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "Prezzo finale 3,50€ + diritto di prevendita",
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "ELECTION DAY",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-13",
+      "times": [
+        "19:20"
+      ],
+      "screen": "Sala 2",
+      "source_url": "https://www.thespacecinema.it/film/election-day",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "Prezzo finale 3,50€ + diritto di prevendita",
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "ELECTION DAY",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-14",
+      "times": [
+        "16:00"
+      ],
+      "screen": "Sala 7",
+      "source_url": "https://www.thespacecinema.it/film/election-day",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "Prezzo finale 3,50€ + diritto di prevendita",
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "ELECTION DAY",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-14",
+      "times": [
+        "19:20"
+      ],
+      "screen": "Sala 2",
+      "source_url": "https://www.thespacecinema.it/film/election-day",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "Prezzo finale 3,50€ + diritto di prevendita",
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "ELECTION DAY",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-15",
+      "times": [
+        "16:00"
+      ],
+      "screen": "Sala 2",
+      "source_url": "https://www.thespacecinema.it/film/election-day",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "Prezzo finale 3,50€ + diritto di prevendita",
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "ELECTION DAY",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-15",
+      "times": [
+        "20:00"
+      ],
+      "screen": "Sala 8",
+      "source_url": "https://www.thespacecinema.it/film/election-day",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "Prezzo finale 3,50€ + diritto di prevendita",
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "ELECTION DAY",
+      "cinema_slug": "uci-perugia",
+      "date": "2026-07-13",
+      "times": [
+        "16:10",
+        "19:00"
+      ],
+      "screen": "2D",
+      "source_url": "https://ucicinemas.it/film/election-day/",
+      "language": "ITA"
+    },
+    {
+      "film_id": "ELECTION DAY",
+      "cinema_slug": "uci-perugia",
+      "date": "2026-07-14",
+      "times": [
+        "16:00",
+        "19:00"
+      ],
+      "screen": "2D",
+      "source_url": "https://ucicinemas.it/film/election-day/",
+      "language": "ITA"
+    },
+    {
+      "film_id": "ELECTION DAY",
+      "cinema_slug": "uci-perugia",
+      "date": "2026-07-15",
+      "times": [
+        "16:00",
+        "19:10"
+      ],
+      "screen": "2D",
+      "source_url": "https://ucicinemas.it/film/election-day/",
+      "language": "ITA"
+    },
+    {
+      "film_id": "OBSESSION",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-13",
+      "times": [
+        "16:40"
+      ],
+      "screen": "Sala 2",
+      "source_url": "https://www.thespacecinema.it/film/obsession",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "OBSESSION",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-13",
+      "times": [
+        "19:55"
+      ],
+      "screen": "Sala 11",
+      "source_url": "https://www.thespacecinema.it/film/obsession",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "OBSESSION",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-13",
+      "times": [
+        "22:15"
+      ],
+      "screen": "Sala 8",
+      "source_url": "https://www.thespacecinema.it/film/obsession",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "OBSESSION",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-14",
+      "times": [
+        "16:40"
+      ],
+      "screen": "Sala 2",
+      "source_url": "https://www.thespacecinema.it/film/obsession",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "OBSESSION",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-14",
+      "times": [
+        "19:55"
+      ],
+      "screen": "Sala 11",
+      "source_url": "https://www.thespacecinema.it/film/obsession",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "OBSESSION",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-14",
+      "times": [
+        "22:10"
+      ],
+      "screen": "Sala 8",
+      "source_url": "https://www.thespacecinema.it/film/obsession",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "OBSESSION",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-15",
+      "times": [
+        "16:30"
+      ],
+      "screen": "Sala 10",
+      "source_url": "https://www.thespacecinema.it/film/obsession",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "OBSESSION",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-15",
+      "times": [
+        "19:20"
+      ],
+      "screen": "Sala 1",
+      "source_url": "https://www.thespacecinema.it/film/obsession",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "OBSESSION",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-15",
+      "times": [
+        "22:10"
+      ],
+      "screen": "Sala 8",
+      "source_url": "https://www.thespacecinema.it/film/obsession",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "SCARY MOVIE",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-13",
+      "times": [
+        "16:05"
+      ],
+      "screen": "Sala 5",
+      "source_url": "https://www.thespacecinema.it/film/scary-movie",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "SCARY MOVIE",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-13",
+      "times": [
+        "18:20"
+      ],
+      "screen": "Sala 7",
+      "source_url": "https://www.thespacecinema.it/film/scary-movie",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "SCARY MOVIE",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-13",
+      "times": [
+        "21:40"
+      ],
+      "screen": "Sala 10",
+      "source_url": "https://www.thespacecinema.it/film/scary-movie",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "SCARY MOVIE",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-14",
+      "times": [
+        "16:00"
+      ],
+      "screen": "Sala 1",
+      "source_url": "https://www.thespacecinema.it/film/scary-movie",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "SCARY MOVIE",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-14",
+      "times": [
+        "18:20"
+      ],
+      "screen": "Sala 7",
+      "source_url": "https://www.thespacecinema.it/film/scary-movie",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "SCARY MOVIE",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-14",
+      "times": [
+        "21:40"
+      ],
+      "screen": "Sala 10",
+      "source_url": "https://www.thespacecinema.it/film/scary-movie",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "SCARY MOVIE",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-15",
+      "times": [
+        "18:00",
+        "20:10"
+      ],
+      "screen": "Sala 5",
+      "source_url": "https://www.thespacecinema.it/film/scary-movie",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "SCARY MOVIE",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-15",
+      "times": [
+        "22:05"
+      ],
+      "screen": "Sala 6",
+      "source_url": "https://www.thespacecinema.it/film/scary-movie",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "SCARY MOVIE",
+      "cinema_slug": "uci-perugia",
+      "date": "2026-07-14",
+      "times": [
+        "21:35"
+      ],
+      "screen": "2D",
+      "source_url": "https://ucicinemas.it/film/scary-movie/",
+      "language": "ITA"
+    },
+    {
+      "film_id": "Diamanti",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-13",
+      "times": [
+        "18:50"
+      ],
+      "screen": "Sala 5",
+      "source_url": "https://www.thespacecinema.it/film/diamanti",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "Prezzo finale 3,50€ + diritto di prevendita",
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "LUPIN III - IL CASTELLO DI CAGLIOSTRO (RIED. 4K)",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-13",
+      "times": [
+        "19:10"
+      ],
+      "screen": "Sala 10",
+      "source_url": "https://www.thespacecinema.it/film/lupin-iii-il-castello-di-cagliostro-ried-4k",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "BACK ON THE BIG SCREEN",
+        "EXTRA",
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "LUPIN III - IL CASTELLO DI CAGLIOSTRO (RIED. 4K)",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-14",
+      "times": [
+        "19:10"
+      ],
+      "screen": "Sala 10",
+      "source_url": "https://www.thespacecinema.it/film/lupin-iii-il-castello-di-cagliostro-ried-4k",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "BACK ON THE BIG SCREEN",
+        "EXTRA",
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "LUPIN III - IL CASTELLO DI CAGLIOSTRO (RIED. 4K)",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-15",
+      "times": [
+        "19:10"
+      ],
+      "screen": "Sala 10",
+      "source_url": "https://www.thespacecinema.it/film/lupin-iii-il-castello-di-cagliostro-ried-4k",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "BACK ON THE BIG SCREEN",
+        "EXTRA",
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "LUPIN III - IL CASTELLO DI CAGLIOSTRO (RIED. 4K)",
+      "cinema_slug": "uci-perugia",
+      "date": "2026-07-13",
+      "times": [
+        "18:15",
+        "20:40"
+      ],
+      "screen": "2D",
+      "source_url": "https://ucicinemas.it/film/lupin-iii-il-castello-di-cagliostro-4k/",
+      "language": "ITA"
+    },
+    {
+      "film_id": "LUPIN III - IL CASTELLO DI CAGLIOSTRO (RIED. 4K)",
+      "cinema_slug": "uci-perugia",
+      "date": "2026-07-14",
+      "times": [
+        "18:15",
+        "20:40"
+      ],
+      "screen": "2D",
+      "source_url": "https://ucicinemas.it/film/lupin-iii-il-castello-di-cagliostro-4k/",
+      "language": "ITA"
+    },
+    {
+      "film_id": "LUPIN III - IL CASTELLO DI CAGLIOSTRO (RIED. 4K)",
+      "cinema_slug": "uci-perugia",
+      "date": "2026-07-15",
+      "times": [
+        "18:20",
+        "20:50"
+      ],
+      "screen": "2D",
+      "source_url": "https://ucicinemas.it/film/lupin-iii-il-castello-di-cagliostro-4k/",
+      "language": "ITA"
+    },
+    {
+      "film_id": "Odissea",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-16",
+      "times": [
+        "14:30",
+        "18:30",
+        "22:30"
+      ],
+      "screen": "Sala 8",
+      "source_url": "https://www.thespacecinema.it/film/odissea",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "Odissea",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-16",
+      "times": [
+        "15:30",
+        "19:30"
+      ],
+      "screen": "Sala 4",
+      "source_url": "https://www.thespacecinema.it/film/odissea",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "Odissea",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-16",
+      "times": [
+        "16:30",
+        "20:30"
+      ],
+      "screen": "Sala 2",
+      "source_url": "https://www.thespacecinema.it/film/odissea",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "Odissea",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-16",
+      "times": [
+        "17:00",
+        "21:00"
+      ],
+      "screen": "Sala 1",
+      "source_url": "https://www.thespacecinema.it/film/odissea",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "Odissea",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-16",
+      "times": [
+        "17:30",
+        "21:30"
+      ],
+      "screen": "Sala 3",
+      "source_url": "https://www.thespacecinema.it/film/odissea",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "Odissea",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-16",
+      "times": [
+        "20:00"
+      ],
+      "screen": "Sala 7",
+      "source_url": "https://www.thespacecinema.it/film/odissea",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "Odissea",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-16",
+      "times": [
+        "20:30"
+      ],
+      "screen": "Sala 11",
+      "source_url": "https://www.thespacecinema.it/film/odissea",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "Odissea",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-17",
+      "times": [
+        "14:30",
+        "18:30",
+        "22:30"
+      ],
+      "screen": "Sala 8",
+      "source_url": "https://www.thespacecinema.it/film/odissea",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "Odissea",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-17",
+      "times": [
+        "15:30",
+        "19:30"
+      ],
+      "screen": "Sala 7",
+      "source_url": "https://www.thespacecinema.it/film/odissea",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "Odissea",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-17",
+      "times": [
+        "16:30",
+        "20:30"
+      ],
+      "screen": "Sala 2",
+      "source_url": "https://www.thespacecinema.it/film/odissea",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "Odissea",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-17",
+      "times": [
+        "17:00",
+        "21:00"
+      ],
+      "screen": "Sala 1",
+      "source_url": "https://www.thespacecinema.it/film/odissea",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "Odissea",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-17",
+      "times": [
+        "17:30",
+        "21:30"
+      ],
+      "screen": "Sala 3",
+      "source_url": "https://www.thespacecinema.it/film/odissea",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "Odissea",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-17",
+      "times": [
+        "20:00"
+      ],
+      "screen": "Sala 9",
+      "source_url": "https://www.thespacecinema.it/film/odissea",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "Odissea",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-18",
+      "times": [
+        "14:30",
+        "18:30",
+        "22:30"
+      ],
+      "screen": "Sala 8",
+      "source_url": "https://www.thespacecinema.it/film/odissea",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "Odissea",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-18",
+      "times": [
+        "15:30",
+        "19:30"
+      ],
+      "screen": "Sala 7",
+      "source_url": "https://www.thespacecinema.it/film/odissea",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "Odissea",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-18",
+      "times": [
+        "16:30",
+        "20:30"
+      ],
+      "screen": "Sala 2",
+      "source_url": "https://www.thespacecinema.it/film/odissea",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "Odissea",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-18",
+      "times": [
+        "17:00",
+        "21:00"
+      ],
+      "screen": "Sala 1",
+      "source_url": "https://www.thespacecinema.it/film/odissea",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "Odissea",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-18",
+      "times": [
+        "17:30",
+        "21:30"
+      ],
+      "screen": "Sala 3",
+      "source_url": "https://www.thespacecinema.it/film/odissea",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "Odissea",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-18",
+      "times": [
+        "20:00"
+      ],
+      "screen": "Sala 6",
+      "source_url": "https://www.thespacecinema.it/film/odissea",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "Odissea",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-19",
+      "times": [
+        "11:00"
+      ],
+      "screen": "Sala 11",
+      "source_url": "https://www.thespacecinema.it/film/odissea",
       "language": "LINGUA ORIGINALE",
       "session_attributes": [
         "LINGUA ORIGINALE",
@@ -757,15 +2114,16 @@
       ]
     },
     {
-      "film_id": "MINIONS & MONSTERS",
+      "film_id": "Odissea",
       "cinema_slug": "the-space-corciano",
-      "date": "2026-07-05",
+      "date": "2026-07-19",
       "times": [
-        "11:50",
-        "18:05"
+        "11:30",
+        "15:30",
+        "19:30"
       ],
       "screen": "Sala 7",
-      "source_url": "https://www.thespacecinema.it/film/minions-and-monsters",
+      "source_url": "https://www.thespacecinema.it/film/odissea",
       "language": "ITALIANO",
       "session_attributes": [
         "ITALIANO",
@@ -773,863 +2131,50 @@
       ]
     },
     {
-      "film_id": "MINIONS & MONSTERS",
+      "film_id": "Odissea",
       "cinema_slug": "the-space-corciano",
-      "date": "2026-07-05",
+      "date": "2026-07-19",
       "times": [
-        "14:40",
-        "17:00",
-        "19:20",
-        "21:40"
-      ],
-      "screen": "Sala 8",
-      "source_url": "https://www.thespacecinema.it/film/minions-and-monsters",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-05",
-      "times": [
-        "15:20",
-        "17:40",
-        "20:00",
-        "22:20"
-      ],
-      "screen": "Sala 2",
-      "source_url": "https://www.thespacecinema.it/film/minions-and-monsters",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-05",
-      "times": [
-        "15:50"
-      ],
-      "screen": "Sala 1",
-      "source_url": "https://www.thespacecinema.it/film/minions-and-monsters",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-05",
-      "times": [
-        "16:40"
-      ],
-      "screen": "Sala 11",
-      "source_url": "https://www.thespacecinema.it/film/minions-and-monsters",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-05",
-      "times": [
-        "17:20"
-      ],
-      "screen": "Sala 4",
-      "source_url": "https://www.thespacecinema.it/film/minions-and-monsters",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-05",
-      "times": [
-        "18:30"
-      ],
-      "screen": "Sala 6",
-      "source_url": "https://www.thespacecinema.it/film/minions-and-monsters",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "3D",
-        "ITALIANO"
-      ]
-    },
-    {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-06",
-      "times": [
-        "16:20",
-        "18:40",
-        "21:00"
-      ],
-      "screen": "Sala 3",
-      "source_url": "https://www.thespacecinema.it/film/minions-and-monsters",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-06",
-      "times": [
-        "17:00",
-        "19:20",
-        "21:40"
-      ],
-      "screen": "Sala 8",
-      "source_url": "https://www.thespacecinema.it/film/minions-and-monsters",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-06",
-      "times": [
-        "17:40",
-        "20:00",
-        "22:20"
-      ],
-      "screen": "Sala 2",
-      "source_url": "https://www.thespacecinema.it/film/minions-and-monsters",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-06",
-      "times": [
-        "18:30"
-      ],
-      "screen": "Sala 6",
-      "source_url": "https://www.thespacecinema.it/film/minions-and-monsters",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "3D",
-        "ITALIANO"
-      ]
-    },
-    {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-07",
-      "times": [
-        "16:20",
-        "18:40",
-        "21:00"
-      ],
-      "screen": "Sala 3",
-      "source_url": "https://www.thespacecinema.it/film/minions-and-monsters",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-07",
-      "times": [
-        "17:00",
-        "19:20",
-        "21:40"
-      ],
-      "screen": "Sala 8",
-      "source_url": "https://www.thespacecinema.it/film/minions-and-monsters",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-07",
-      "times": [
-        "17:40",
-        "20:00",
-        "22:20"
-      ],
-      "screen": "Sala 2",
-      "source_url": "https://www.thespacecinema.it/film/minions-and-monsters",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-07",
-      "times": [
-        "18:30"
-      ],
-      "screen": "Sala 6",
-      "source_url": "https://www.thespacecinema.it/film/minions-and-monsters",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "3D",
-        "ITALIANO"
-      ]
-    },
-    {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-08",
-      "times": [
-        "16:00"
-      ],
-      "screen": "Sala 7",
-      "source_url": "https://www.thespacecinema.it/film/minions-and-monsters",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-08",
-      "times": [
-        "16:20",
-        "18:40",
-        "21:00"
-      ],
-      "screen": "Sala 3",
-      "source_url": "https://www.thespacecinema.it/film/minions-and-monsters",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-08",
-      "times": [
-        "17:00",
-        "19:20",
-        "21:40"
-      ],
-      "screen": "Sala 8",
-      "source_url": "https://www.thespacecinema.it/film/minions-and-monsters",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-08",
-      "times": [
-        "17:40",
-        "20:00",
-        "22:20"
-      ],
-      "screen": "Sala 2",
-      "source_url": "https://www.thespacecinema.it/film/minions-and-monsters",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-08",
-      "times": [
-        "18:30"
-      ],
-      "screen": "Sala 6",
-      "source_url": "https://www.thespacecinema.it/film/minions-and-monsters",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "3D",
-        "ITALIANO"
-      ]
-    },
-    {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "uci-perugia",
-      "date": "2026-07-02",
-      "times": [
-        "16:50"
-      ],
-      "screen": "3D",
-      "source_url": "https://ucicinemas.it/film/minions-monsters/",
-      "language": "ITA"
-    },
-    {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "uci-perugia",
-      "date": "2026-07-02",
-      "times": [
+        "12:30",
         "16:30",
-        "17:10",
-        "17:40",
-        "18:00",
-        "18:15",
-        "18:40",
-        "19:30",
-        "20:10",
-        "20:30",
-        "20:40",
-        "21:00",
-        "21:20",
-        "21:50",
-        "22:40",
-        "23:10"
+        "20:30"
       ],
-      "screen": "2D",
-      "source_url": "https://ucicinemas.it/film/minions-monsters/",
-      "language": "ITA"
+      "screen": "Sala 2",
+      "source_url": "https://www.thespacecinema.it/film/odissea",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
     },
     {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "uci-perugia",
-      "date": "2026-07-02",
+      "film_id": "Odissea",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-19",
       "times": [
-        "19:00"
+        "13:30",
+        "17:30",
+        "21:30"
       ],
-      "screen": "2D",
-      "source_url": "https://ucicinemas.it/film/minions-monsters/",
-      "language": "ENG"
+      "screen": "Sala 3",
+      "source_url": "https://www.thespacecinema.it/film/odissea",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
     },
     {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "uci-perugia",
-      "date": "2026-07-03",
-      "times": [
-        "14:40",
-        "16:50"
-      ],
-      "screen": "3D",
-      "source_url": "https://ucicinemas.it/film/minions-monsters/",
-      "language": "ITA"
-    },
-    {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "uci-perugia",
-      "date": "2026-07-03",
+      "film_id": "Odissea",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-19",
       "times": [
         "14:30",
-        "15:00",
-        "15:30",
-        "16:00",
-        "16:30",
-        "17:10",
-        "17:40",
-        "18:15",
-        "18:40",
-        "19:30",
-        "20:10",
-        "20:30",
-        "21:00",
-        "21:20",
-        "21:50",
-        "22:40",
-        "23:10"
-      ],
-      "screen": "2D",
-      "source_url": "https://ucicinemas.it/film/minions-monsters/",
-      "language": "ITA"
-    },
-    {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "uci-perugia",
-      "date": "2026-07-03",
-      "times": [
-        "19:00"
-      ],
-      "screen": "2D",
-      "source_url": "https://ucicinemas.it/film/minions-monsters/",
-      "language": "ENG"
-    },
-    {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "uci-perugia",
-      "date": "2026-07-04",
-      "times": [
-        "14:40",
-        "16:50"
-      ],
-      "screen": "3D",
-      "source_url": "https://ucicinemas.it/film/minions-monsters/",
-      "language": "ITA"
-    },
-    {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "uci-perugia",
-      "date": "2026-07-04",
-      "times": [
-        "00:01",
-        "14:10",
-        "14:50",
-        "15:00",
-        "15:30",
-        "16:00",
-        "16:30",
-        "17:10",
-        "17:40",
-        "18:15",
-        "18:40",
-        "19:30",
-        "20:10",
-        "20:30",
-        "21:00",
-        "21:20",
-        "21:50",
-        "22:40",
-        "23:10"
-      ],
-      "screen": "2D",
-      "source_url": "https://ucicinemas.it/film/minions-monsters/",
-      "language": "ITA"
-    },
-    {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "uci-perugia",
-      "date": "2026-07-04",
-      "times": [
-        "19:00"
-      ],
-      "screen": "2D",
-      "source_url": "https://ucicinemas.it/film/minions-monsters/",
-      "language": "ENG"
-    },
-    {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "uci-perugia",
-      "date": "2026-07-05",
-      "times": [
-        "14:40",
-        "16:50"
-      ],
-      "screen": "3D",
-      "source_url": "https://ucicinemas.it/film/minions-monsters/",
-      "language": "ITA"
-    },
-    {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "uci-perugia",
-      "date": "2026-07-05",
-      "times": [
-        "14:10",
-        "14:50",
-        "15:00",
-        "15:30",
-        "16:00",
-        "16:30",
-        "17:10",
-        "17:40",
-        "18:15",
-        "18:40",
-        "19:30",
-        "20:10",
-        "20:30",
-        "21:00",
-        "21:20",
-        "21:50",
-        "22:40",
-        "23:10"
-      ],
-      "screen": "2D",
-      "source_url": "https://ucicinemas.it/film/minions-monsters/",
-      "language": "ITA"
-    },
-    {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "uci-perugia",
-      "date": "2026-07-05",
-      "times": [
-        "19:00"
-      ],
-      "screen": "2D",
-      "source_url": "https://ucicinemas.it/film/minions-monsters/",
-      "language": "ENG"
-    },
-    {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "uci-perugia",
-      "date": "2026-07-06",
-      "times": [
-        "16:50"
-      ],
-      "screen": "3D",
-      "source_url": "https://ucicinemas.it/film/minions-monsters/",
-      "language": "ITA"
-    },
-    {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "uci-perugia",
-      "date": "2026-07-06",
-      "times": [
-        "16:00",
-        "16:15",
-        "16:30",
-        "17:10",
-        "17:40",
-        "18:15",
-        "18:40",
-        "19:30",
-        "20:10",
-        "20:30",
-        "21:00",
-        "21:20",
-        "21:50",
-        "22:40",
-        "23:10"
-      ],
-      "screen": "2D",
-      "source_url": "https://ucicinemas.it/film/minions-monsters/",
-      "language": "ITA"
-    },
-    {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "uci-perugia",
-      "date": "2026-07-06",
-      "times": [
-        "19:00"
-      ],
-      "screen": "2D",
-      "source_url": "https://ucicinemas.it/film/minions-monsters/",
-      "language": "ENG"
-    },
-    {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "uci-perugia",
-      "date": "2026-07-07",
-      "times": [
-        "16:50"
-      ],
-      "screen": "3D",
-      "source_url": "https://ucicinemas.it/film/minions-monsters/",
-      "language": "ITA"
-    },
-    {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "uci-perugia",
-      "date": "2026-07-07",
-      "times": [
-        "16:00",
-        "16:15",
-        "16:30",
-        "17:10",
-        "17:40",
-        "18:15",
-        "18:40",
-        "19:30",
-        "20:10",
-        "20:30",
-        "21:00",
-        "21:20",
-        "21:50",
-        "22:40",
-        "23:10"
-      ],
-      "screen": "2D",
-      "source_url": "https://ucicinemas.it/film/minions-monsters/",
-      "language": "ITA"
-    },
-    {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "uci-perugia",
-      "date": "2026-07-07",
-      "times": [
-        "19:00"
-      ],
-      "screen": "2D",
-      "source_url": "https://ucicinemas.it/film/minions-monsters/",
-      "language": "ENG"
-    },
-    {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "uci-perugia",
-      "date": "2026-07-08",
-      "times": [
-        "16:50"
-      ],
-      "screen": "3D",
-      "source_url": "https://ucicinemas.it/film/minions-monsters/",
-      "language": "ITA"
-    },
-    {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "uci-perugia",
-      "date": "2026-07-08",
-      "times": [
-        "16:00",
-        "16:30",
-        "17:10",
-        "17:40",
-        "18:15",
-        "18:40",
-        "19:30",
-        "20:10",
-        "20:30",
-        "21:00",
-        "21:20",
-        "21:50",
-        "22:40",
-        "23:10"
-      ],
-      "screen": "2D",
-      "source_url": "https://ucicinemas.it/film/minions-monsters/",
-      "language": "ITA"
-    },
-    {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "uci-perugia",
-      "date": "2026-07-08",
-      "times": [
-        "19:00"
-      ],
-      "screen": "2D",
-      "source_url": "https://ucicinemas.it/film/minions-monsters/",
-      "language": "ENG"
-    },
-    {
-      "film_id": "MINIONS & MONSTERS",
-      "cinema_slug": "uci-perugia",
-      "date": "2026-07-09",
-      "times": [
-        "17:10",
-        "19:30",
-        "21:50"
-      ],
-      "screen": "2D",
-      "source_url": "https://ucicinemas.it/film/minions-monsters/",
-      "language": "ITA"
-    },
-    {
-      "film_id": "TOY STORY",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-02",
-      "times": [
-        "17:15",
-        "22:10"
-      ],
-      "screen": "Sala 5",
-      "source_url": "https://www.thespacecinema.it/film/toy-story-5",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "TOY STORY",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-02",
-      "times": [
-        "18:10",
-        "20:50"
-      ],
-      "screen": "Sala 1",
-      "source_url": "https://www.thespacecinema.it/film/toy-story-5",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "TOY STORY",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-02",
-      "times": [
-        "19:15"
-      ],
-      "screen": "Sala 11",
-      "source_url": "https://www.thespacecinema.it/film/toy-story-5",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "TOY STORY",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-02",
-      "times": [
-        "20:10"
-      ],
-      "screen": "Sala 9",
-      "source_url": "https://www.thespacecinema.it/film/toy-story-5",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "TOY STORY",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-03",
-      "times": [
-        "16:00",
-        "21:35"
-      ],
-      "screen": "Sala 9",
-      "source_url": "https://www.thespacecinema.it/film/toy-story-5",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "TOY STORY",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-03",
-      "times": [
-        "17:15",
-        "19:50"
-      ],
-      "screen": "Sala 5",
-      "source_url": "https://www.thespacecinema.it/film/toy-story-5",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "TOY STORY",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-03",
-      "times": [
-        "18:10",
-        "20:50"
-      ],
-      "screen": "Sala 1",
-      "source_url": "https://www.thespacecinema.it/film/toy-story-5",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "TOY STORY",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-04",
-      "times": [
-        "14:05"
-      ],
-      "screen": "Sala 4",
-      "source_url": "https://www.thespacecinema.it/film/toy-story-5",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "TOY STORY",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-04",
-      "times": [
-        "14:40"
-      ],
-      "screen": "Sala 5",
-      "source_url": "https://www.thespacecinema.it/film/toy-story-5",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "TOY STORY",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-04",
-      "times": [
-        "15:10",
-        "18:10",
-        "20:50"
-      ],
-      "screen": "Sala 1",
-      "source_url": "https://www.thespacecinema.it/film/toy-story-5",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "TOY STORY",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-04",
-      "times": [
-        "15:50"
-      ],
-      "screen": "Sala 6",
-      "source_url": "https://www.thespacecinema.it/film/toy-story-5",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "TOY STORY",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-04",
-      "times": [
-        "22:35"
-      ],
-      "screen": "Sala 7",
-      "source_url": "https://www.thespacecinema.it/film/toy-story-5",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "TOY STORY",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-05",
-      "times": [
-        "12:05"
+        "18:30",
+        "22:30"
       ],
       "screen": "Sala 8",
-      "source_url": "https://www.thespacecinema.it/film/toy-story-5",
+      "source_url": "https://www.thespacecinema.it/film/odissea",
       "language": "ITALIANO",
       "session_attributes": [
         "ITALIANO",
@@ -1637,75 +2182,15 @@
       ]
     },
     {
-      "film_id": "TOY STORY",
+      "film_id": "Odissea",
       "cinema_slug": "the-space-corciano",
-      "date": "2026-07-05",
+      "date": "2026-07-19",
       "times": [
-        "14:05"
-      ],
-      "screen": "Sala 11",
-      "source_url": "https://www.thespacecinema.it/film/toy-story-5",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "TOY STORY",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-05",
-      "times": [
-        "14:40"
-      ],
-      "screen": "Sala 4",
-      "source_url": "https://www.thespacecinema.it/film/toy-story-5",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "TOY STORY",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-05",
-      "times": [
-        "15:30"
-      ],
-      "screen": "Sala 7",
-      "source_url": "https://www.thespacecinema.it/film/toy-story-5",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "TOY STORY",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-05",
-      "times": [
-        "16:10"
-      ],
-      "screen": "Sala 5",
-      "source_url": "https://www.thespacecinema.it/film/toy-story-5",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "TOY STORY",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-05",
-      "times": [
-        "18:10",
-        "20:50"
+        "17:00",
+        "21:00"
       ],
       "screen": "Sala 1",
-      "source_url": "https://www.thespacecinema.it/film/toy-story-5",
+      "source_url": "https://www.thespacecinema.it/film/odissea",
       "language": "ITALIANO",
       "session_attributes": [
         "ITALIANO",
@@ -1713,29 +2198,14 @@
       ]
     },
     {
-      "film_id": "TOY STORY",
+      "film_id": "Odissea",
       "cinema_slug": "the-space-corciano",
-      "date": "2026-07-06",
+      "date": "2026-07-19",
       "times": [
-        "16:10"
-      ],
-      "screen": "Sala 7",
-      "source_url": "https://www.thespacecinema.it/film/toy-story-5",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "TOY STORY",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-06",
-      "times": [
-        "17:05"
+        "20:00"
       ],
       "screen": "Sala 4",
-      "source_url": "https://www.thespacecinema.it/film/toy-story-5",
+      "source_url": "https://www.thespacecinema.it/film/odissea",
       "language": "ITALIANO",
       "session_attributes": [
         "ITALIANO",
@@ -1743,377 +2213,16 @@
       ]
     },
     {
-      "film_id": "TOY STORY",
+      "film_id": "Odissea",
       "cinema_slug": "the-space-corciano",
-      "date": "2026-07-06",
+      "date": "2026-07-20",
       "times": [
-        "18:10",
-        "20:50"
-      ],
-      "screen": "Sala 1",
-      "source_url": "https://www.thespacecinema.it/film/toy-story-5",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "TOY STORY",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-06",
-      "times": [
-        "19:25"
-      ],
-      "screen": "Sala 5",
-      "source_url": "https://www.thespacecinema.it/film/toy-story-5",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "TOY STORY",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-06",
-      "times": [
-        "21:50"
-      ],
-      "screen": "Sala 10",
-      "source_url": "https://www.thespacecinema.it/film/toy-story-5",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "TOY STORY",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-07",
-      "times": [
-        "16:05"
-      ],
-      "screen": "Sala 7",
-      "source_url": "https://www.thespacecinema.it/film/toy-story-5",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "TOY STORY",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-07",
-      "times": [
-        "16:50"
-      ],
-      "screen": "Sala 4",
-      "source_url": "https://www.thespacecinema.it/film/toy-story-5",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "TOY STORY",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-07",
-      "times": [
-        "17:25",
-        "19:50",
-        "22:10"
-      ],
-      "screen": "Sala 5",
-      "source_url": "https://www.thespacecinema.it/film/toy-story-5",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "TOY STORY",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-07",
-      "times": [
-        "18:10",
-        "20:50"
-      ],
-      "screen": "Sala 1",
-      "source_url": "https://www.thespacecinema.it/film/toy-story-5",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "TOY STORY",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-08",
-      "times": [
-        "16:00"
-      ],
-      "screen": "Sala 10",
-      "source_url": "https://www.thespacecinema.it/film/toy-story-5",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "TOY STORY",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-08",
-      "times": [
-        "16:50",
-        "19:25"
-      ],
-      "screen": "Sala 1",
-      "source_url": "https://www.thespacecinema.it/film/toy-story-5",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "TOY STORY",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-08",
-      "times": [
-        "17:10"
-      ],
-      "screen": "Sala 4",
-      "source_url": "https://www.thespacecinema.it/film/toy-story-5",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "TOY STORY",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-08",
-      "times": [
-        "21:25"
-      ],
-      "screen": "Sala 7",
-      "source_url": "https://www.thespacecinema.it/film/toy-story-5",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "TOY STORY",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-08",
-      "times": [
-        "21:55"
-      ],
-      "screen": "Sala 5",
-      "source_url": "https://www.thespacecinema.it/film/toy-story-5",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "TOY STORY",
-      "cinema_slug": "uci-perugia",
-      "date": "2026-07-02",
-      "times": [
-        "16:20",
-        "19:10",
-        "21:30"
-      ],
-      "screen": "2D",
-      "source_url": "https://ucicinemas.it/film/toy-story-5/",
-      "language": "ITA"
-    },
-    {
-      "film_id": "TOY STORY",
-      "cinema_slug": "uci-perugia",
-      "date": "2026-07-03",
-      "times": [
-        "14:00",
-        "15:50",
-        "16:20",
-        "19:10",
-        "21:30"
-      ],
-      "screen": "2D",
-      "source_url": "https://ucicinemas.it/film/toy-story-5/",
-      "language": "ITA"
-    },
-    {
-      "film_id": "TOY STORY",
-      "cinema_slug": "uci-perugia",
-      "date": "2026-07-04",
-      "times": [
-        "14:00",
-        "15:50",
-        "16:20",
-        "19:10",
-        "21:30",
-        "23:30"
-      ],
-      "screen": "2D",
-      "source_url": "https://ucicinemas.it/film/toy-story-5/",
-      "language": "ITA"
-    },
-    {
-      "film_id": "TOY STORY",
-      "cinema_slug": "uci-perugia",
-      "date": "2026-07-05",
-      "times": [
-        "14:00",
-        "15:50",
-        "16:20",
-        "19:10",
-        "21:30"
-      ],
-      "screen": "2D",
-      "source_url": "https://ucicinemas.it/film/toy-story-5/",
-      "language": "ITA"
-    },
-    {
-      "film_id": "TOY STORY",
-      "cinema_slug": "uci-perugia",
-      "date": "2026-07-06",
-      "times": [
-        "16:20",
-        "17:20",
-        "19:10",
-        "21:30"
-      ],
-      "screen": "2D",
-      "source_url": "https://ucicinemas.it/film/toy-story-5/",
-      "language": "ITA"
-    },
-    {
-      "film_id": "TOY STORY",
-      "cinema_slug": "uci-perugia",
-      "date": "2026-07-07",
-      "times": [
-        "16:20",
-        "17:20",
-        "19:10",
-        "21:30"
-      ],
-      "screen": "2D",
-      "source_url": "https://ucicinemas.it/film/toy-story-5/",
-      "language": "ITA"
-    },
-    {
-      "film_id": "TOY STORY",
-      "cinema_slug": "uci-perugia",
-      "date": "2026-07-08",
-      "times": [
-        "16:20",
-        "17:20",
-        "19:10",
-        "21:30"
-      ],
-      "screen": "2D",
-      "source_url": "https://ucicinemas.it/film/toy-story-5/",
-      "language": "ITA"
-    },
-    {
-      "film_id": "Supergirl",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-02",
-      "times": [
-        "17:20"
-      ],
-      "screen": "Sala 9",
-      "source_url": "https://www.thespacecinema.it/film/supergirl",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "Supergirl",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-02",
-      "times": [
-        "19:05",
-        "21:45"
-      ],
-      "screen": "Sala 7",
-      "source_url": "https://www.thespacecinema.it/film/supergirl",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "Supergirl",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-03",
-      "times": [
-        "18:20"
-      ],
-      "screen": "Sala 4",
-      "source_url": "https://www.thespacecinema.it/film/supergirl",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "Supergirl",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-03",
-      "times": [
-        "19:35"
-      ],
-      "screen": "Sala 10",
-      "source_url": "https://www.thespacecinema.it/film/supergirl",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "Supergirl",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-03",
-      "times": [
-        "21:50"
-      ],
-      "screen": "Sala 7",
-      "source_url": "https://www.thespacecinema.it/film/supergirl",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "Supergirl",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-04",
-      "times": [
-        "14:20",
-        "23:40"
+        "14:30",
+        "18:30",
+        "22:30"
       ],
       "screen": "Sala 8",
-      "source_url": "https://www.thespacecinema.it/film/supergirl",
+      "source_url": "https://www.thespacecinema.it/film/odissea",
       "language": "ITALIANO",
       "session_attributes": [
         "ITALIANO",
@@ -2121,14 +2230,15 @@
       ]
     },
     {
-      "film_id": "Supergirl",
+      "film_id": "Odissea",
       "cinema_slug": "the-space-corciano",
-      "date": "2026-07-04",
+      "date": "2026-07-20",
       "times": [
-        "17:30"
+        "15:40",
+        "19:30"
       ],
-      "screen": "Sala 5",
-      "source_url": "https://www.thespacecinema.it/film/supergirl",
+      "screen": "Sala 7",
+      "source_url": "https://www.thespacecinema.it/film/odissea",
       "language": "ITALIANO",
       "session_attributes": [
         "ITALIANO",
@@ -2136,14 +2246,15 @@
       ]
     },
     {
-      "film_id": "Supergirl",
+      "film_id": "Odissea",
       "cinema_slug": "the-space-corciano",
-      "date": "2026-07-04",
+      "date": "2026-07-20",
       "times": [
-        "20:35"
+        "16:30",
+        "20:30"
       ],
-      "screen": "Sala 6",
-      "source_url": "https://www.thespacecinema.it/film/supergirl",
+      "screen": "Sala 2",
+      "source_url": "https://www.thespacecinema.it/film/odissea",
       "language": "ITALIANO",
       "session_attributes": [
         "ITALIANO",
@@ -2151,14 +2262,15 @@
       ]
     },
     {
-      "film_id": "Supergirl",
+      "film_id": "Odissea",
       "cinema_slug": "the-space-corciano",
-      "date": "2026-07-05",
+      "date": "2026-07-20",
       "times": [
-        "13:10"
+        "17:00",
+        "21:00"
       ],
       "screen": "Sala 1",
-      "source_url": "https://www.thespacecinema.it/film/supergirl",
+      "source_url": "https://www.thespacecinema.it/film/odissea",
       "language": "ITALIANO",
       "session_attributes": [
         "ITALIANO",
@@ -2166,14 +2278,30 @@
       ]
     },
     {
-      "film_id": "Supergirl",
+      "film_id": "Odissea",
       "cinema_slug": "the-space-corciano",
-      "date": "2026-07-05",
+      "date": "2026-07-20",
       "times": [
-        "15:35"
+        "17:30",
+        "21:30"
+      ],
+      "screen": "Sala 3",
+      "source_url": "https://www.thespacecinema.it/film/odissea",
+      "language": "ITALIANO",
+      "session_attributes": [
+        "ITALIANO",
+        "2D"
+      ]
+    },
+    {
+      "film_id": "Odissea",
+      "cinema_slug": "the-space-corciano",
+      "date": "2026-07-20",
+      "times": [
+        "20:00"
       ],
       "screen": "Sala 6",
-      "source_url": "https://www.thespacecinema.it/film/supergirl",
+      "source_url": "https://www.thespacecinema.it/film/odissea",
       "language": "ITALIANO",
       "session_attributes": [
         "ITALIANO",
@@ -2181,1114 +2309,165 @@
       ]
     },
     {
-      "film_id": "Supergirl",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-05",
-      "times": [
-        "18:45"
-      ],
-      "screen": "Sala 5",
-      "source_url": "https://www.thespacecinema.it/film/supergirl",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "Supergirl",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-05",
-      "times": [
-        "19:40"
-      ],
-      "screen": "Sala 4",
-      "source_url": "https://www.thespacecinema.it/film/supergirl",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "Supergirl",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-05",
-      "times": [
-        "22:00"
-      ],
-      "screen": "Sala 11",
-      "source_url": "https://www.thespacecinema.it/film/supergirl",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "Supergirl",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-06",
-      "times": [
-        "17:15",
-        "19:45"
-      ],
-      "screen": "Sala 11",
-      "source_url": "https://www.thespacecinema.it/film/supergirl",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "Supergirl",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-06",
-      "times": [
-        "21:55"
-      ],
-      "screen": "Sala 7",
-      "source_url": "https://www.thespacecinema.it/film/supergirl",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "Supergirl",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-07",
-      "times": [
-        "17:15",
-        "19:45"
-      ],
-      "screen": "Sala 11",
-      "source_url": "https://www.thespacecinema.it/film/supergirl",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "Supergirl",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-07",
-      "times": [
-        "21:55"
-      ],
-      "screen": "Sala 7",
-      "source_url": "https://www.thespacecinema.it/film/supergirl",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "Supergirl",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-08",
-      "times": [
-        "16:15"
-      ],
-      "screen": "Sala 5",
-      "source_url": "https://www.thespacecinema.it/film/supergirl",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "Supergirl",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-08",
-      "times": [
-        "18:20"
-      ],
-      "screen": "Sala 7",
-      "source_url": "https://www.thespacecinema.it/film/supergirl",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "Supergirl",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-08",
-      "times": [
-        "22:05"
-      ],
-      "screen": "Sala 4",
-      "source_url": "https://www.thespacecinema.it/film/supergirl",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "Supergirl",
+      "film_id": "Odissea",
       "cinema_slug": "uci-perugia",
-      "date": "2026-07-02",
+      "date": "2026-07-16",
       "times": [
-        "16:10",
-        "18:45",
-        "21:45"
-      ],
-      "screen": "2D",
-      "source_url": "https://ucicinemas.it/film/supergirl/",
-      "language": "ITA"
-    },
-    {
-      "film_id": "Supergirl",
-      "cinema_slug": "uci-perugia",
-      "date": "2026-07-03",
-      "times": [
-        "16:10",
-        "18:45",
-        "21:45"
-      ],
-      "screen": "2D",
-      "source_url": "https://ucicinemas.it/film/supergirl/",
-      "language": "ITA"
-    },
-    {
-      "film_id": "Supergirl",
-      "cinema_slug": "uci-perugia",
-      "date": "2026-07-04",
-      "times": [
-        "00:20",
-        "16:10",
-        "18:45",
-        "21:45"
-      ],
-      "screen": "2D",
-      "source_url": "https://ucicinemas.it/film/supergirl/",
-      "language": "ITA"
-    },
-    {
-      "film_id": "Supergirl",
-      "cinema_slug": "uci-perugia",
-      "date": "2026-07-05",
-      "times": [
-        "16:10",
-        "18:45",
-        "21:45"
-      ],
-      "screen": "2D",
-      "source_url": "https://ucicinemas.it/film/supergirl/",
-      "language": "ITA"
-    },
-    {
-      "film_id": "Supergirl",
-      "cinema_slug": "uci-perugia",
-      "date": "2026-07-06",
-      "times": [
-        "16:10",
-        "18:45",
-        "21:45"
-      ],
-      "screen": "2D",
-      "source_url": "https://ucicinemas.it/film/supergirl/",
-      "language": "ITA"
-    },
-    {
-      "film_id": "Supergirl",
-      "cinema_slug": "uci-perugia",
-      "date": "2026-07-07",
-      "times": [
-        "16:10",
-        "18:45",
-        "21:45"
-      ],
-      "screen": "2D",
-      "source_url": "https://ucicinemas.it/film/supergirl/",
-      "language": "ITA"
-    },
-    {
-      "film_id": "Supergirl",
-      "cinema_slug": "uci-perugia",
-      "date": "2026-07-08",
-      "times": [
-        "16:10",
-        "18:45",
-        "21:40"
-      ],
-      "screen": "2D",
-      "source_url": "https://ucicinemas.it/film/supergirl/",
-      "language": "ITA"
-    },
-    {
-      "film_id": "BACKROOMS",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-02",
-      "times": [
-        "21:40"
-      ],
-      "screen": "Sala 4",
-      "source_url": "https://www.thespacecinema.it/film/backrooms",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "BACKROOMS",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-03",
-      "times": [
-        "18:35"
-      ],
-      "screen": "Sala 9",
-      "source_url": "https://www.thespacecinema.it/film/backrooms-everything-must-go-edition",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "BACKROOMS",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-03",
-      "times": [
-        "21:30"
-      ],
-      "screen": "Sala 4",
-      "source_url": "https://www.thespacecinema.it/film/backrooms-everything-must-go-edition",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "BACKROOMS",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-04",
-      "times": [
-        "17:45"
-      ],
-      "screen": "Sala 10",
-      "source_url": "https://www.thespacecinema.it/film/backrooms-everything-must-go-edition",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "BACKROOMS",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-04",
-      "times": [
-        "22:00"
-      ],
-      "screen": "Sala 11",
-      "source_url": "https://www.thespacecinema.it/film/backrooms-everything-must-go-edition",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "BACKROOMS",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-05",
-      "times": [
-        "19:00"
-      ],
-      "screen": "Sala 11",
-      "source_url": "https://www.thespacecinema.it/film/backrooms-everything-must-go-edition",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "BACKROOMS",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-05",
-      "times": [
-        "21:30"
-      ],
-      "screen": "Sala 5",
-      "source_url": "https://www.thespacecinema.it/film/backrooms-everything-must-go-edition",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "BACKROOMS",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-06",
-      "times": [
-        "18:55"
-      ],
-      "screen": "Sala 7",
-      "source_url": "https://www.thespacecinema.it/film/backrooms-everything-must-go-edition",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "BACKROOMS",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-06",
-      "times": [
-        "22:00"
-      ],
-      "screen": "Sala 5",
-      "source_url": "https://www.thespacecinema.it/film/backrooms-everything-must-go-edition",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "BACKROOMS",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-07",
-      "times": [
-        "16:10",
-        "21:50"
-      ],
-      "screen": "Sala 10",
-      "source_url": "https://www.thespacecinema.it/film/backrooms-everything-must-go-edition",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "BACKROOMS",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-07",
-      "times": [
-        "18:40"
-      ],
-      "screen": "Sala 7",
-      "source_url": "https://www.thespacecinema.it/film/backrooms-everything-must-go-edition",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "BACKROOMS",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-08",
-      "times": [
-        "18:55",
-        "22:10"
-      ],
-      "screen": "Sala 10",
-      "source_url": "https://www.thespacecinema.it/film/backrooms-everything-must-go-edition",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "BACKROOMS",
-      "cinema_slug": "uci-perugia",
-      "date": "2026-07-02",
-      "times": [
-        "22:20",
+        "15:00",
+        "16:00",
+        "17:00",
+        "18:00",
+        "19:00",
+        "20:00",
+        "21:00",
+        "22:00",
         "23:00"
       ],
       "screen": "2D",
-      "source_url": "https://ucicinemas.it/film/backrooms/",
+      "source_url": "https://ucicinemas.it/film/odissea/",
       "language": "ITA"
     },
     {
-      "film_id": "BACKROOMS",
+      "film_id": "Odissea",
       "cinema_slug": "uci-perugia",
-      "date": "2026-07-03",
+      "date": "2026-07-16",
       "times": [
-        "17:50",
-        "20:40",
-        "22:20",
-        "23:30"
+        "19:30"
       ],
       "screen": "2D",
-      "source_url": "https://ucicinemas.it/film/backrooms-everything-must-go-edition/",
-      "language": "ITA"
+      "source_url": "https://ucicinemas.it/film/odissea/",
+      "language": "ENG"
     },
     {
-      "film_id": "BACKROOMS",
+      "film_id": "Odissea",
       "cinema_slug": "uci-perugia",
-      "date": "2026-07-04",
+      "date": "2026-07-17",
       "times": [
-        "17:50",
-        "20:40",
-        "22:20",
-        "23:30"
+        "15:00",
+        "16:00",
+        "17:00",
+        "18:00",
+        "19:00",
+        "20:00",
+        "21:00",
+        "22:00",
+        "23:00"
       ],
       "screen": "2D",
-      "source_url": "https://ucicinemas.it/film/backrooms-everything-must-go-edition/",
+      "source_url": "https://ucicinemas.it/film/odissea/",
       "language": "ITA"
     },
     {
-      "film_id": "BACKROOMS",
+      "film_id": "Odissea",
       "cinema_slug": "uci-perugia",
-      "date": "2026-07-05",
+      "date": "2026-07-17",
       "times": [
-        "17:50",
-        "20:40",
-        "22:20"
+        "19:30"
       ],
       "screen": "2D",
-      "source_url": "https://ucicinemas.it/film/backrooms-everything-must-go-edition/",
-      "language": "ITA"
+      "source_url": "https://ucicinemas.it/film/odissea/",
+      "language": "ENG"
     },
     {
-      "film_id": "BACKROOMS",
+      "film_id": "Odissea",
       "cinema_slug": "uci-perugia",
-      "date": "2026-07-06",
+      "date": "2026-07-18",
       "times": [
-        "19:50",
-        "22:20"
+        "14:00",
+        "15:00",
+        "16:00",
+        "17:00",
+        "18:00",
+        "19:00",
+        "20:00",
+        "21:00",
+        "22:00",
+        "23:00"
       ],
       "screen": "2D",
-      "source_url": "https://ucicinemas.it/film/backrooms-everything-must-go-edition/",
+      "source_url": "https://ucicinemas.it/film/odissea/",
       "language": "ITA"
     },
     {
-      "film_id": "BACKROOMS",
+      "film_id": "Odissea",
       "cinema_slug": "uci-perugia",
-      "date": "2026-07-07",
+      "date": "2026-07-18",
       "times": [
-        "19:45",
-        "22:20"
+        "19:30"
       ],
       "screen": "2D",
-      "source_url": "https://ucicinemas.it/film/backrooms-everything-must-go-edition/",
-      "language": "ITA"
+      "source_url": "https://ucicinemas.it/film/odissea/",
+      "language": "ENG"
     },
     {
-      "film_id": "BACKROOMS",
+      "film_id": "Odissea",
       "cinema_slug": "uci-perugia",
-      "date": "2026-07-08",
+      "date": "2026-07-19",
       "times": [
-        "22:20"
+        "14:00",
+        "15:00",
+        "16:00",
+        "17:00",
+        "18:00",
+        "19:00",
+        "20:00",
+        "21:00",
+        "22:00",
+        "23:00"
       ],
       "screen": "2D",
-      "source_url": "https://ucicinemas.it/film/backrooms-everything-must-go-edition/",
+      "source_url": "https://ucicinemas.it/film/odissea/",
       "language": "ITA"
     },
     {
-      "film_id": "OBSESSION",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-02",
-      "times": [
-        "16:30"
-      ],
-      "screen": "Sala 11",
-      "source_url": "https://www.thespacecinema.it/film/obsession",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "OBSESSION",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-02",
-      "times": [
-        "21:15"
-      ],
-      "screen": "Sala 6",
-      "source_url": "https://www.thespacecinema.it/film/obsession",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "OBSESSION",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-03",
-      "times": [
-        "16:20",
-        "19:05"
-      ],
-      "screen": "Sala 7",
-      "source_url": "https://www.thespacecinema.it/film/obsession",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "OBSESSION",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-03",
-      "times": [
-        "22:05"
-      ],
-      "screen": "Sala 10",
-      "source_url": "https://www.thespacecinema.it/film/obsession",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "OBSESSION",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-04",
-      "times": [
-        "21:05",
-        "23:30"
-      ],
-      "screen": "Sala 4",
-      "source_url": "https://www.thespacecinema.it/film/obsession",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "OBSESSION",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-05",
-      "times": [
-        "12:20"
-      ],
-      "screen": "Sala 2",
-      "source_url": "https://www.thespacecinema.it/film/obsession",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "OBSESSION",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-05",
-      "times": [
-        "21:10"
-      ],
-      "screen": "Sala 10",
-      "source_url": "https://www.thespacecinema.it/film/obsession",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "OBSESSION",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-06",
-      "times": [
-        "16:10"
-      ],
-      "screen": "Sala 10",
-      "source_url": "https://www.thespacecinema.it/film/obsession",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "OBSESSION",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-06",
-      "times": [
-        "22:05"
-      ],
-      "screen": "Sala 4",
-      "source_url": "https://www.thespacecinema.it/film/obsession",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "OBSESSION",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-07",
-      "times": [
-        "19:10"
-      ],
-      "screen": "Sala 10",
-      "source_url": "https://www.thespacecinema.it/film/obsession",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "OBSESSION",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-07",
-      "times": [
-        "22:05"
-      ],
-      "screen": "Sala 4",
-      "source_url": "https://www.thespacecinema.it/film/obsession",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "OBSESSION",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-08",
-      "times": [
-        "19:50"
-      ],
-      "screen": "Sala 11",
-      "source_url": "https://www.thespacecinema.it/film/obsession",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "SCARY MOVIE",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-02",
-      "times": [
-        "19:55"
-      ],
-      "screen": "Sala 5",
-      "source_url": "https://www.thespacecinema.it/film/scary-movie",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "SCARY MOVIE",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-02",
-      "times": [
-        "22:25"
-      ],
-      "screen": "Sala 10",
-      "source_url": "https://www.thespacecinema.it/film/scary-movie",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "SCARY MOVIE",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-03",
-      "times": [
-        "16:05"
-      ],
-      "screen": "Sala 6",
-      "source_url": "https://www.thespacecinema.it/film/scary-movie",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "SCARY MOVIE",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-03",
-      "times": [
-        "22:15"
-      ],
-      "screen": "Sala 5",
-      "source_url": "https://www.thespacecinema.it/film/scary-movie",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "SCARY MOVIE",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-04",
-      "times": [
-        "20:45"
-      ],
-      "screen": "Sala 10",
-      "source_url": "https://www.thespacecinema.it/film/scary-movie",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "SCARY MOVIE",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-05",
-      "times": [
-        "15:05"
-      ],
-      "screen": "Sala 10",
-      "source_url": "https://www.thespacecinema.it/film/scary-movie",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "SCARY MOVIE",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-05",
-      "times": [
-        "22:10"
-      ],
-      "screen": "Sala 4",
-      "source_url": "https://www.thespacecinema.it/film/scary-movie",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "SCARY MOVIE",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-06",
-      "times": [
-        "16:05"
-      ],
-      "screen": "Sala 6",
-      "source_url": "https://www.thespacecinema.it/film/scary-movie",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "SCARY MOVIE",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-06",
-      "times": [
-        "22:10"
-      ],
-      "screen": "Sala 11",
-      "source_url": "https://www.thespacecinema.it/film/scary-movie",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "SCARY MOVIE",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-07",
-      "times": [
-        "16:00"
-      ],
-      "screen": "Sala 6",
-      "source_url": "https://www.thespacecinema.it/film/scary-movie",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "SCARY MOVIE",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-07",
-      "times": [
-        "22:15"
-      ],
-      "screen": "Sala 11",
-      "source_url": "https://www.thespacecinema.it/film/scary-movie",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "SCARY MOVIE",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-08",
-      "times": [
-        "16:05"
-      ],
-      "screen": "Sala 6",
-      "source_url": "https://www.thespacecinema.it/film/scary-movie",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "JACKASS: BEST LAST",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-02",
-      "times": [
-        "22:30"
-      ],
-      "screen": "Sala 9",
-      "source_url": "https://www.thespacecinema.it/film/jackass-best-and-last",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "JACKASS: BEST LAST",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-03",
-      "times": [
-        "22:25"
-      ],
-      "screen": "Sala 11",
-      "source_url": "https://www.thespacecinema.it/film/jackass-best-and-last",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "JACKASS: BEST LAST",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-04",
-      "times": [
-        "23:20"
-      ],
-      "screen": "Sala 3",
-      "source_url": "https://www.thespacecinema.it/film/jackass-best-and-last",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "JACKASS: BEST LAST",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-05",
-      "times": [
-        "20:10",
-        "22:20"
-      ],
-      "screen": "Sala 7",
-      "source_url": "https://www.thespacecinema.it/film/jackass-best-and-last",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "JACKASS: BEST LAST",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-06",
-      "times": [
-        "19:40"
-      ],
-      "screen": "Sala 4",
-      "source_url": "https://www.thespacecinema.it/film/jackass-best-and-last",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "JACKASS: BEST LAST",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-07",
-      "times": [
-        "19:40"
-      ],
-      "screen": "Sala 4",
-      "source_url": "https://www.thespacecinema.it/film/jackass-best-and-last",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "JACKASS: BEST LAST",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-08",
-      "times": [
-        "22:15"
-      ],
-      "screen": "Sala 11",
-      "source_url": "https://www.thespacecinema.it/film/jackass-best-and-last",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "JACKASS: BEST LAST",
+      "film_id": "Odissea",
       "cinema_slug": "uci-perugia",
-      "date": "2026-07-04",
+      "date": "2026-07-19",
       "times": [
-        "00:50"
+        "19:30"
       ],
       "screen": "2D",
-      "source_url": "https://ucicinemas.it/film/jackass-best-and-last/",
+      "source_url": "https://ucicinemas.it/film/odissea/",
+      "language": "ENG"
+    },
+    {
+      "film_id": "Odissea",
+      "cinema_slug": "uci-perugia",
+      "date": "2026-07-20",
+      "times": [
+        "16:00",
+        "17:00",
+        "18:00",
+        "19:00",
+        "20:00",
+        "21:00",
+        "22:00",
+        "23:00"
+      ],
+      "screen": "2D",
+      "source_url": "https://ucicinemas.it/film/odissea/",
       "language": "ITA"
     },
     {
-      "film_id": "RICCHI... DA MORIRE - DELITTI IN FAMIGLIA",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-04",
+      "film_id": "Odissea",
+      "cinema_slug": "uci-perugia",
+      "date": "2026-07-20",
       "times": [
-        "23:10"
+        "19:30"
       ],
-      "screen": "Sala 10",
-      "source_url": "https://www.thespacecinema.it/film/ricchi-da-morire-delitti-in-famiglia",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
+      "screen": "2D",
+      "source_url": "https://ucicinemas.it/film/odissea/",
+      "language": "ENG"
     },
     {
-      "film_id": "RICCHI... DA MORIRE - DELITTI IN FAMIGLIA",
+      "film_id": "JUMPERS - UN SALTO TRA GLI ANIMALI",
       "cinema_slug": "the-space-corciano",
-      "date": "2026-07-05",
-      "times": [
-        "11:35"
-      ],
-      "screen": "Sala 4",
-      "source_url": "https://www.thespacecinema.it/film/ricchi-da-morire-delitti-in-famiglia",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "RICCHI... DA MORIRE - DELITTI IN FAMIGLIA",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-08",
-      "times": [
-        "19:05"
-      ],
-      "screen": "Sala 5",
-      "source_url": "https://www.thespacecinema.it/film/ricchi-da-morire-delitti-in-famiglia",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "PICCOLO MIRACOLO",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-04",
-      "times": [
-        "23:10"
-      ],
-      "screen": "Sala 5",
-      "source_url": "https://www.thespacecinema.it/film/piccolo-miracolo",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "Prezzo finale 3,50€ + diritto di prevendita",
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "PICCOLO MIRACOLO",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-05",
-      "times": [
-        "12:55"
-      ],
-      "screen": "Sala 6",
-      "source_url": "https://www.thespacecinema.it/film/piccolo-miracolo",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "Prezzo finale 3,50€ + diritto di prevendita",
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "PERFECT DAYS",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-05",
+      "date": "2026-07-19",
       "times": [
         "11:10"
       ],
-      "screen": "Sala 11",
-      "source_url": "https://www.thespacecinema.it/film/perfect-days",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "PERFECT DAYS",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-06",
-      "times": [
-        "18:50"
-      ],
-      "screen": "Sala 10",
-      "source_url": "https://www.thespacecinema.it/film/perfect-days",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "Hopper Il Segreto della Marmotta",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-05",
-      "times": [
-        "11:00"
-      ],
-      "screen": "Sala 10",
-      "source_url": "https://www.thespacecinema.it/film/hopper-il-segreto-della-marmotta",
+      "screen": "Sala 5",
+      "source_url": "https://www.thespacecinema.it/film/jumpers-un-salto-tra-gli-animali",
       "language": "ITALIANO",
       "session_attributes": [
         "CINEMAPARK",
@@ -3297,199 +2476,81 @@
       ]
     },
     {
-      "film_id": "CASA - IL ROGO DEL MALE",
+      "film_id": "UN BEL GIORNO",
       "cinema_slug": "the-space-corciano",
-      "date": "2026-07-08",
+      "date": "2026-07-19",
       "times": [
-        "17:25"
+        "11:20"
       ],
-      "screen": "Sala 11",
-      "source_url": "https://www.thespacecinema.it/film/la-casa-il-rogo-del-male",
+      "screen": "Sala 10",
+      "source_url": "https://www.thespacecinema.it/film/un-bel-giorno",
       "language": "ITALIANO",
       "session_attributes": [
+        "Prezzo finale 3,50€ + diritto di prevendita",
         "ITALIANO",
         "2D"
       ]
     },
     {
-      "film_id": "CASA - IL ROGO DEL MALE",
+      "film_id": "UN BEL GIORNO",
       "cinema_slug": "the-space-corciano",
-      "date": "2026-07-08",
+      "date": "2026-07-20",
       "times": [
-        "19:30"
+        "18:50"
       ],
-      "screen": "Sala 4",
-      "source_url": "https://www.thespacecinema.it/film/la-casa-il-rogo-del-male",
+      "screen": "Sala 5",
+      "source_url": "https://www.thespacecinema.it/film/un-bel-giorno",
       "language": "ITALIANO",
       "session_attributes": [
+        "Prezzo finale 3,50€ + diritto di prevendita",
         "ITALIANO",
         "2D"
       ]
     },
     {
-      "film_id": "CASA - IL ROGO DEL MALE",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-08",
-      "times": [
-        "22:00"
-      ],
-      "screen": "Sala 1",
-      "source_url": "https://www.thespacecinema.it/film/la-casa-il-rogo-del-male",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "CASA - IL ROGO DEL MALE",
-      "cinema_slug": "the-space-corciano",
-      "date": "2026-07-09",
-      "times": [
-        "22:00"
-      ],
-      "screen": "Sala 1",
-      "source_url": "https://www.thespacecinema.it/film/la-casa-il-rogo-del-male",
-      "language": "ITALIANO",
-      "session_attributes": [
-        "ITALIANO",
-        "2D"
-      ]
-    },
-    {
-      "film_id": "CASA - IL ROGO DEL MALE",
+      "film_id": "mondo oltre",
       "cinema_slug": "uci-perugia",
-      "date": "2026-07-08",
+      "date": "2026-07-13",
       "times": [
-        "17:30",
-        "20:00",
-        "22:30",
+        "16:30",
+        "19:10"
+      ],
+      "screen": "2D",
+      "source_url": "https://ucicinemas.it/film/il-mondo-oltre/",
+      "language": "ITA"
+    },
+    {
+      "film_id": "mondo oltre",
+      "cinema_slug": "uci-perugia",
+      "date": "2026-07-14",
+      "times": [
+        "16:30",
+        "19:10"
+      ],
+      "screen": "2D",
+      "source_url": "https://ucicinemas.it/film/il-mondo-oltre/",
+      "language": "ITA"
+    },
+    {
+      "film_id": "mondo oltre",
+      "cinema_slug": "uci-perugia",
+      "date": "2026-07-15",
+      "times": [
+        "16:40"
+      ],
+      "screen": "2D",
+      "source_url": "https://ucicinemas.it/film/il-mondo-oltre/",
+      "language": "ITA"
+    },
+    {
+      "film_id": "Speak No Evil",
+      "cinema_slug": "uci-perugia",
+      "date": "2026-07-13",
+      "times": [
         "23:00"
       ],
       "screen": "2D",
-      "source_url": "https://ucicinemas.it/film/la-casa-il-rogo-del-male/",
-      "language": "ITA"
-    },
-    {
-      "film_id": "CASA - IL ROGO DEL MALE",
-      "cinema_slug": "uci-perugia",
-      "date": "2026-07-09",
-      "times": [
-        "22:40"
-      ],
-      "screen": "2D",
-      "source_url": "https://ucicinemas.it/film/la-casa-il-rogo-del-male/",
-      "language": "ITA"
-    },
-    {
-      "film_id": "Good Luck, Have Fun, Don't Die",
-      "cinema_slug": "uci-perugia",
-      "date": "2026-07-02",
-      "times": [
-        "18:30"
-      ],
-      "screen": "2D",
-      "source_url": "https://ucicinemas.it/film/good-luck-have-fun-dont-die/",
-      "language": "ITA"
-    },
-    {
-      "film_id": "Good Luck, Have Fun, Don't Die",
-      "cinema_slug": "uci-perugia",
-      "date": "2026-07-03",
-      "times": [
-        "18:30"
-      ],
-      "screen": "2D",
-      "source_url": "https://ucicinemas.it/film/good-luck-have-fun-dont-die/",
-      "language": "ITA"
-    },
-    {
-      "film_id": "Good Luck, Have Fun, Don't Die",
-      "cinema_slug": "uci-perugia",
-      "date": "2026-07-04",
-      "times": [
-        "00:05",
-        "18:30"
-      ],
-      "screen": "2D",
-      "source_url": "https://ucicinemas.it/film/good-luck-have-fun-dont-die/",
-      "language": "ITA"
-    },
-    {
-      "film_id": "Good Luck, Have Fun, Don't Die",
-      "cinema_slug": "uci-perugia",
-      "date": "2026-07-05",
-      "times": [
-        "18:30"
-      ],
-      "screen": "2D",
-      "source_url": "https://ucicinemas.it/film/good-luck-have-fun-dont-die/",
-      "language": "ITA"
-    },
-    {
-      "film_id": "Good Luck, Have Fun, Don't Die",
-      "cinema_slug": "uci-perugia",
-      "date": "2026-07-06",
-      "times": [
-        "18:30"
-      ],
-      "screen": "2D",
-      "source_url": "https://ucicinemas.it/film/good-luck-have-fun-dont-die/",
-      "language": "ITA"
-    },
-    {
-      "film_id": "Good Luck, Have Fun, Don't Die",
-      "cinema_slug": "uci-perugia",
-      "date": "2026-07-07",
-      "times": [
-        "22:35"
-      ],
-      "screen": "2D",
-      "source_url": "https://ucicinemas.it/film/good-luck-have-fun-dont-die/",
-      "language": "ITA"
-    },
-    {
-      "film_id": "L'esorcista - il credente",
-      "cinema_slug": "uci-perugia",
-      "date": "2026-07-03",
-      "times": [
-        "23:30"
-      ],
-      "screen": "2K",
-      "source_url": "https://ucicinemas.it/film/lesorcista-il-credente/",
-      "language": "ITA"
-    },
-    {
-      "film_id": "L'esorcista - il credente",
-      "cinema_slug": "uci-perugia",
-      "date": "2026-07-04",
-      "times": [
-        "00:45"
-      ],
-      "screen": "2K",
-      "source_url": "https://ucicinemas.it/film/lesorcista-il-credente/",
-      "language": "ITA"
-    },
-    {
-      "film_id": "L'esorcista - il credente",
-      "cinema_slug": "uci-perugia",
-      "date": "2026-07-06",
-      "times": [
-        "23:00"
-      ],
-      "screen": "2K",
-      "source_url": "https://ucicinemas.it/film/lesorcista-il-credente/",
-      "language": "ITA"
-    },
-    {
-      "film_id": "Masters of the Universe",
-      "cinema_slug": "uci-perugia",
-      "date": "2026-07-07",
-      "times": [
-        "21:40"
-      ],
-      "screen": "2D",
-      "source_url": "https://ucicinemas.it/film/masters-of-the-universe/",
+      "source_url": "https://ucicinemas.it/film/speak-no-evil/",
       "language": "ITA"
     }
   ]

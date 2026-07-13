@@ -1,5 +1,6 @@
 """Endpoint amministrativi — protetti da token."""
 from pathlib import Path
+import secrets
 
 from fastapi import APIRouter, Depends, Header, HTTPException, status
 from sqlalchemy import func, select
@@ -16,7 +17,9 @@ router = APIRouter(prefix="/admin", tags=["admin"])
 def _verify_admin_token(x_admin_token: str = Header(...)):
     """Dependency: verifica che l'header X-Admin-Token corrisponda a quello in .env."""
     settings = get_settings()
-    if x_admin_token != settings.admin_token:
+    # compare_digest = confronto a tempo costante: evita timing attack sul token
+    if not secrets.compare_digest(x_admin_token, settings.admin_token):
+        # 403 = "so chi sei, ma non ti autorizzo" (401 sarebbe "non so chi sei")
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN,
             detail="Token amministratore non valido",
@@ -25,7 +28,10 @@ def _verify_admin_token(x_admin_token: str = Header(...)):
 
 @router.post("/reimport", dependencies=[Depends(_verify_admin_token)])
 def reimport_json(db: Session = Depends(get_db)):
-    """Rilegge i JSON dello scraper e ripopola il database."""
+    """Rilegge i JSON dello scraper e ripopola il database.
+    Usato quando lo scraper ha aggiornato i JSON e vogliamo che il DB rifletta.
+    Idempotente: puoi chiamarlo N volte, il risultato non cambia.
+    """
     settings = get_settings()
     output_dir = Path(settings.scraper_output_dir).resolve()
 

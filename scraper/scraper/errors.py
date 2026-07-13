@@ -19,6 +19,7 @@ def make_error(
     url: str | None = None,
     detail: str | None = None,
 ) -> CinemaError:
+    """Costruisce un CinemaError dall'eccezione, con timestamp corrente."""
     return CinemaError(
         cinema=cinema,
         timestamp=datetime.now().isoformat(),
@@ -30,6 +31,7 @@ def make_error(
 
 
 def _write_atomic_errors(data: dict) -> None:
+    """Scrive errors.json con pattern tmp-then-replace: mai un file mezzo scritto su disco."""
     tmp = str(ERRORS_JSON) + ".tmp"
     with open(tmp, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
@@ -37,6 +39,12 @@ def _write_atomic_errors(data: dict) -> None:
 
 
 def write_errors(errors: list[CinemaError], today: str) -> None:
+    """Aggiorna errors.json con gli errori della run odierna.
+
+    Gli errori di run precedenti nella stessa data vengono sostituiti (non
+    accumulati); con zero errori la giornata viene ripulita e marcata con
+    `last_clean_date` — così il monitoraggio distingue "tutto ok" da "non ha girato".
+    """
     if not errors:
         if ERRORS_JSON.exists():
             try:

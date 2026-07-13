@@ -1,3 +1,4 @@
+"""Test del delta merge: history, grace period, rimozione e purge dei film."""
 from __future__ import annotations
 
 from scraper.delta import _last_removal_date, _showings_changed, merge_films

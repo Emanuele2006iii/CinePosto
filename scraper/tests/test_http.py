@@ -1,3 +1,4 @@
+"""Test di retry_request: retry con backoff, 403 non ritentato, propagazione errori."""
 from __future__ import annotations
 
 from unittest.mock import MagicMock, patch

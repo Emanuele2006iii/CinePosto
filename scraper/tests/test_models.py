@@ -1,3 +1,4 @@
+"""Test dei modelli e serializer: consolidamento showings e forma dei JSON di output."""
 from __future__ import annotations
 
 from scraper.models import CinemaError, Film, Showing, output_to_json

@@ -5,7 +5,6 @@ from pathlib import Path
 from pydantic import Field, field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
-
 # Default CORS per sviluppo locale (Expo dev server, Metro bundler, web build).
 # In produzione vengono sovrascritti da CORS_ORIGINS nel .env.
 _DEV_CORS_DEFAULTS = [
@@ -16,6 +15,13 @@ _DEV_CORS_DEFAULTS = [
 
 
 class Settings(BaseSettings):
+    """Configurazione dell'applicazione, letta da variabili d'ambiente e file .env.
+
+    Ogni campo ha un default dev-friendly: il backend parte anche senza .env.
+    In produzione i valori vanno espliciti (vedi .env.example per il formato:
+    CORS_ORIGINS deve essere un array JSON, non CSV — limite di pydantic-settings 2.6).
+    """
+
     # pydantic-settings: legge automaticamente i valori dal file .env
     model_config = SettingsConfigDict(
         env_file=".env",
@@ -43,13 +49,18 @@ class Settings(BaseSettings):
     @field_validator("scraper_output_dir", mode="after")
     @classmethod
     def _resolve_scraper_dir(cls, v: Path) -> Path:
+        """Risolve il path a assoluto al load: il seed non dipende dalla CWD di lancio."""
         return v.expanduser().resolve()
 
     @field_validator("admin_token", mode="after")
     @classmethod
     def _generate_admin_token_if_empty(cls, v: str) -> str:
-        # Blocchiamo il token noto e i placeholder di sviluppo:
-        # se e' vuoto o "change-me-before-deploy", generiamo un token robusto.
+        """Garantisce un token admin sempre presente e mai banale.
+
+        Se .env non lo imposta, o contiene il placeholder di sviluppo, viene
+        generato un token random stampato una volta ai log: gli endpoint admin
+        restano protetti anche su un'installazione non configurata.
+        """
         if not v or v == "change-me-before-deploy":
             import secrets
             generated = secrets.token_urlsafe(32)
@@ -64,4 +75,5 @@ class Settings(BaseSettings):
 
 @lru_cache
 def get_settings() -> Settings:
+    """Singleton delle Settings: il .env viene letto una volta sola per processo."""
     return Settings()

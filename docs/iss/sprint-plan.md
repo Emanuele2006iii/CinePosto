@@ -12,7 +12,7 @@ linter-yaml-title-alias: CinePosto — Piano degli Sprint e dei Rilasci
 | **Componenti** | Emanuele Ceccariglia, Elio Casciola, Andrea Cestelli, Yonas Burka |
 | **Corso**      | Ingegneria del Software — ITS Umbria Academy, a.a. 2025/2026       |
 
-> **Aggiornamento 2026-07-02**: Sprint 2 ✅ **completato** (data prevista era 01/07, chiuso il 02/07). Backend: 15 endpoint funzionanti + seed dai JSON + 26 test verdi. Scraper arricchito con `year` (P577 Wikidata) + `wikidata_id`. Sprint 3 (app + fetch reali) pronto a partire.
+> **Aggiornamento 2026-07-02**: Sprint 2 ✅ **completato** (data prevista era 01/07, chiuso il 02/07). Backend: 11 endpoint funzionanti + seed dai JSON + 26 test verdi. Scraper arricchito con `year` (P577 Wikidata) + `wikidata_id`. Sprint 3 (app + fetch reali) pronto a partire.
 
 ---
 
@@ -90,11 +90,11 @@ routers/ → services/ → repositories/ → models/
                     ↘ schemas/ (Pydantic DTO)
 ```
 - Stack: FastAPI + SQLAlchemy 2.0 sync + SQLite + Pydantic v2
-- 15 endpoint funzionanti (Swagger auto su `/docs`)
+- 11 endpoint funzionanti (Swagger auto su `/docs`)
 - 26 test verdi (unit su repositories + end-to-end su TestClient)
 - Seed dai JSON scraper con parsing `duration: "109 min"` → `runtime_minutes: 109`
 - Sicurezza config: `admin_token` auto-generato se non in `.env` (no default insicuro)
-- Nuovo doc: [`docs/frontend-integration.md`](../frontend-integration.md) per il team frontend
+- Nuovo doc: [`docs/backend/api.md`](../backend/api.md) per il team frontend
 
 ---
 
@@ -165,10 +165,10 @@ Ricerca e avviso dati obsoleti hanno priorità "media" e "bassa" nella matrice i
 
 # PARTE 2 — Piano dei Rilasci
 
-## Release 0.1 — Alpha (fine Sprint 2 · 2026-06-29)
+## Release 0.1 — Alpha (fine Sprint 2 · 2026-07-02) ✅ rilasciata
 
 **Funzionalità presenti:**
-- API REST funzionante: `/api/v1/cinema`, `/api/v1/spettacoli`, `/api/v1/films/{id}`
+- API REST funzionante: `/api/v1/cinema`, `/api/v1/showings`, `/api/v1/film/{id}`
 - Database popolato dallo scraper (3 cinema, dati aggiornati ogni 24h)
 - Documentazione Swagger auto-generata (`/docs`)
 
@@ -183,7 +183,7 @@ Solo il team di sviluppo — nessuna interfaccia utente disponibile. Verifica tr
 
 ---
 
-## Release 0.5 — Beta (fine Sprint 3 · 2026-07-13)
+## Release 0.5 — Beta (fine Sprint 3 · 2026-07-07)
 
 **Funzionalità presenti:**
 - App mobile (iOS + Android + web) con Home screen "Film oggi"
@@ -202,7 +202,7 @@ Beta tester interni (team RepCode) — distribuzione tramite Expo Go o build Tes
 
 ---
 
-## Release 1.0 — MVP (fine Sprint 4 · 2026-07-27)
+## Release 1.0 — MVP (fine Sprint 4 · 2026-07-14, giorno dell'esposizione)
 
 **Funzionalità presenti:**
 - Tutte le funzionalità della Release 0.5
@@ -220,7 +220,7 @@ Tutti gli utenti — app disponibile su iOS, Android e web. Distribuzione tramit
 
 ---
 
-## Release 1.1 (fine Sprint 5 · 2026-08-10)
+## Release 1.1 (fine Sprint 5 · data TBD, post-esposizione)
 
 **Funzionalità presenti:**
 - Tutte le funzionalità della Release 1.0

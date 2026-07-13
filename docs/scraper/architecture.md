@@ -697,6 +697,16 @@ Il deploy è gestito da `deploy/setup.sh` che installa:
 > Scelta architetturale (decisione L3): timer esterno + `--once` invece di `--schedule` interno con APScheduler.
 > Vantaggi: ogni run è un processo isolato (no memory leak nel daemon), `systemctl status` mostra l'ultima esecuzione, log distinti per run, restart granulare con `Restart=on-failure` su una singola esecuzione invece che sull'intero scheduler.
 
+### ⚠️ Miglioramento noto: reimport non automatizzato
+
+Oggi `cineposto-scraper.service` lancia solo `python -m scraper.main --once` — non chiama `POST /admin/reimport` sul backend dopo la run. Risultato: alle 3:00 lo scraper aggiorna i JSON, ma il **database resta quello vecchio finché qualcuno non chiama manualmente l'endpoint admin** (oggi va bene per le demo, non per un servizio che deve aggiornarsi da solo ogni notte).
+
+**Fix proposto**: aggiungere uno step (o una seconda unit systemd, `Type=oneshot`, `After=cineposto-scraper.service`) che, solo se lo scraper è terminato con successo, chiama:
+```bash
+curl -X POST http://localhost:8000/admin/reimport -H "X-Admin-Token: $ADMIN_TOKEN"
+```
+Non è un redesign, è un passo in più nella catena esistente.
+
 ### Logrotate: `copytruncate` vs `create`
 
 La config di logrotate usa `copytruncate` (e NON `create`):

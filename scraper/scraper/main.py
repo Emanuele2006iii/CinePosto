@@ -61,6 +61,11 @@ def _write_atomic(path, data: dict) -> None:
 
 
 def _save_cache(cinema_slug: str, films: list[Film]) -> None:
+    """Salva l'ultimo risultato buono del connettore in output/cache/<slug>.json.
+
+    È la rete di sicurezza per run future: se domani il sito è irraggiungibile,
+    si riparte da questi dati invece di perdere il cinema (vedi _load_cache).
+    """
     try:
         cache_file = CACHE_DIR / f"{cinema_slug}.json"
         data = [film_to_dict(f) for f in films]
@@ -72,6 +77,11 @@ def _save_cache(cinema_slug: str, films: list[Film]) -> None:
 
 
 def _load_cache(cinema_slug: str) -> list[Film] | None:
+    """Ricostruisce i Film dell'ultima run buona del connettore; None se cache assente/corrotta.
+
+    Usato come fallback quando un connettore fallisce anche dopo il retry:
+    meglio dati di ieri che un cinema sparito dall'app.
+    """
     try:
         cache_file = CACHE_DIR / f"{cinema_slug}.json"
         if not cache_file.exists():
@@ -117,6 +127,7 @@ def _load_cache(cinema_slug: str) -> list[Film] | None:
 
 
 def setup_logging() -> None:
+    """Configura il logging su stdout (journald in produzione) + file scraper.log."""
     logging.basicConfig(
         level=getattr(logging, LOG_LEVEL, logging.INFO),
         format=LOG_FORMAT,
@@ -128,6 +139,12 @@ def setup_logging() -> None:
 
 
 def run_scraper() -> None:
+    """Orchestrazione di una run completa: connettori → dedup → delta → Wikidata → JSON.
+
+    Politica errori: nessun connettore può far fallire la run. Chi fallisce
+    viene ritentato una volta dopo RETRY_DELAY; se fallisce ancora si usa la
+    cache dell'ultima run buona e l'errore finisce in errors.json.
+    """
     today = today_local().isoformat()
     week_dates = get_week_dates()
     logger.info("=== Cinema Scraper started (%s) ===", today)
@@ -259,6 +276,12 @@ def run_scraper() -> None:
 
 
 def _deduplicate_films(films: list[Film]) -> list[Film]:
+    """Fonde in un unico Film le copie dello stesso titolo arrivate da cinema diversi.
+
+    Match via fuzzy_match (tollera refusi e varianti). Il primo Film incontrato
+    fa da master: accumula gli showings degli altri e i metadati che gli mancano.
+    O(n²) ma n è dell'ordine delle decine: irrilevante.
+    """
     result: list[Film] = []
 
     for film in films:
@@ -286,6 +309,12 @@ def _deduplicate_films(films: list[Film]) -> list[Film]:
 
 
 def schedule() -> None:
+    """SOLO DEV: loop APScheduler ogni SCHEDULE_INTERVAL_HOURS ore.
+
+    In produzione lo scheduling è di systemd (timer + service --once, decisione
+    L3): questo flag serve solo per lasciare girare lo scraper su una macchina
+    di sviluppo. Import lazy: apscheduler è una dipendenza [dev].
+    """
     from apscheduler.schedulers.blocking import BlockingScheduler
 
     scheduler = BlockingScheduler()

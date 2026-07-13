@@ -24,23 +24,41 @@ logger = logging.getLogger(__name__)
 
 
 def _strip_html(text: str) -> str:
+    """Rimuove i tag HTML dalle descrizioni (l'API UCI le fornisce come HTML)."""
     return re.sub(r"<[^>]+>", "", html.unescape(text)).strip()
 
 
 class UCIConnector(BaseConnector):
+    """Connettore UCI Perugia — API Cloud Run non documentata (reverse-engineered).
+
+    L'endpoint programming/{date} è stato ricavato dal traffico XHR del sito:
+    può cambiare senza preavviso a ogni redeploy di UCI (rischio R-01 del risk
+    assessment). Niente fallback browser: il sito è dietro protezioni anti-bot
+    aggressive, l'API è l'unica via praticabile.
+    """
+
     @property
     def cinema_name(self) -> str:
+        """Nome pubblico del cinema (da config)."""
         return UCI_CINEMA_NAME
 
     @property
     def cinema_slug(self) -> str:
+        """Slug stabile del cinema (da config)."""
         return UCI_CINEMA_SLUG
 
     def scrape(self, today: str, dates: list[str] | None = None) -> ScrapeResult:
+        """Interroga l'API programming per ogni data richiesta."""
         target_dates = dates or [today]
         return self._scrape_via_programming(today, target_dates)
 
     def _scrape_via_programming(self, today: str, dates: list[str]) -> ScrapeResult:
+        """Una chiamata API per data; dedup dei film per titolo tra le date.
+
+        L'API ritorna l'intero catalogo del cinema: il flag `not_today` marca i
+        film senza proiezioni nella data richiesta e va filtrato. L'errore su
+        una singola data non ferma le altre.
+        """
         films: list[Film] = []
         seen_titles: dict[str, Film] = {}
         errors: list[CinemaError] = []
@@ -79,6 +97,11 @@ class UCIConnector(BaseConnector):
         return ScrapeResult(films=films, errors=errors)
 
     def _parse_programming_movie(self, data: dict, today: str) -> Film | None:
+        """Costruisce un Film dal JSON dell'API; None se senza titolo o senza showings.
+
+        L'API non fornisce regista né durata (li completa Wikidata a valle).
+        Poster accettato solo se URL assoluto.
+        """
         title = data.get("title") or ""
         if not title:
             return None
@@ -116,6 +139,13 @@ class UCIConnector(BaseConnector):
     def _build_showings_from_screens(
         self, screens: list, today: str, detail_url: str
     ) -> list[Showing]:
+        """Appiattisce la struttura annidata `screens` dell'API in Showing.
+
+        Struttura sorgente: lista di gruppi → {formato: [varianti]} → variante
+        con lingua, sala e `performances` (una per orario). Si tengono solo le
+        performance del giorno richiesto; il formato (es. "3D") finisce in
+        session_attributes quando non coincide col nome della sala.
+        """
         showings: list[Showing] = []
 
         for screen_group in screens:
@@ -166,4 +196,5 @@ class UCIConnector(BaseConnector):
         return showings
 
     def fetch_film_detail(self, film_url: str) -> dict | None:
+        """Non implementato per UCI: l'API programming contiene già la descrizione."""
         return None

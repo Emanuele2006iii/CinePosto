@@ -28,15 +28,29 @@ logger = logging.getLogger(__name__)
 
 
 class TheSpaceConnector(BaseConnector):
+    """Connettore The Space Corciano — API REST del sito, con fallback browser.
+
+    Fonte primaria: l'API microservice del sito (token guest via POST vuoto
+    all'endpoint auth, poi una chiamata films per data). Se l'API fallisce si
+    degrada allo scraping HTML via CloakBrowser, che copre il solo giorno corrente.
+    """
+
     @property
     def cinema_name(self) -> str:
+        """Nome pubblico del cinema (da config)."""
         return THE_SPACE_CINEMA_NAME
 
     @property
     def cinema_slug(self) -> str:
+        """Slug stabile del cinema (da config)."""
         return THE_SPACE_CINEMA_SLUG
 
     def scrape(self, today: str, dates: list[str] | None = None) -> ScrapeResult:
+        """Prova l'API per tutte le date; su errore ripiega sul browser (solo oggi).
+
+        Se falliscono entrambe le vie ritorna un ScrapeResult con il solo
+        errore `scrape_fallback`: la run complessiva prosegue con gli altri cinema.
+        """
         target_dates = dates or [today]
         try:
             return self._scrape_via_api(today, target_dates)
@@ -59,6 +73,12 @@ class TheSpaceConnector(BaseConnector):
                 )
 
     def _scrape_via_api(self, today: str, dates: list[str]) -> ScrapeResult:
+        """Percorso primario: una chiamata API per data, dedup dei film per titolo.
+
+        Lo stesso film appare nella risposta di ogni data in cui è programmato:
+        `seen_titles` accumula gli showings sul primo Film incontrato. Gli
+        errori di parsing del singolo film non fermano il resto della risposta.
+        """
         films: list[Film] = []
         errors: list[CinemaError] = []
         session = requests.Session()
@@ -108,6 +128,12 @@ class TheSpaceConnector(BaseConnector):
         return ScrapeResult(films=films, errors=errors)
 
     def _parse_api_film(self, data: dict, today: str) -> Film | None:
+        """Costruisce un Film dal JSON dell'API; None se manca il titolo.
+
+        I nomi dei campi hanno più varianti (filmTitle/title, posterImageSrc/
+        panelImageUrl...): si prova in ordine di affidabilità osservata.
+        URL relativi risolti contro THE_SPACE_BASE_URL.
+        """
         title = data.get("filmTitle") or data.get("title") or ""
         if not title:
             return None
@@ -147,6 +173,14 @@ class TheSpaceConnector(BaseConnector):
         )
 
     def _parse_api_showing_groups(self, film_data: dict, today: str, detail_url: str) -> list[Showing]:
+        """Converte i `showingGroups` dell'API (gruppo per data → sessions) in Showing.
+
+        Un Showing per sessione (poi consolidati per data in fase di
+        serializzazione). Date e orari arrivano ISO con timezone: vengono
+        normalizzati a YYYY-MM-DD e HH:MM. Dagli `attributes` della sessione
+        si ricavano lingua (attributeType == "Language") e varianti (3D, IMAX...).
+        Sessioni senza orario riconoscibile vengono scartate.
+        """
         showings: list[Showing] = []
         showing_groups = film_data.get("showingGroups") or []
 
@@ -209,6 +243,12 @@ class TheSpaceConnector(BaseConnector):
         return showings
 
     def _scrape_via_browser(self, today: str) -> ScrapeResult:
+        """Fallback CloakBrowser: parsa le card HTML della pagina cinema.
+
+        Copre solo il giorno corrente e meno metadati dell'API — è la modalità
+        degradata, non quella di regime. Selettori CSS multipli per resistere
+        ai piccoli restyling del sito.
+        """
         from scraper.browser import fetch_page_html
 
         html = fetch_page_html(THE_SPACE_CINEMA_URL, wait_for=".showing-listing")
@@ -263,6 +303,7 @@ class TheSpaceConnector(BaseConnector):
         return ScrapeResult(films=films, errors=errors)
 
     def fetch_film_detail(self, film_url: str) -> dict | None:
+        """Recupera la sinossi dalla pagina film: prima con requests, poi via browser."""
         session = requests.Session()
         session.headers.update({"User-Agent": DEFAULT_USER_AGENT, "Accept": "text/html"})
         try:

@@ -10,8 +10,8 @@ Uso:
 from __future__ import annotations
 
 import argparse
-import json
 from collections import defaultdict
+import json
 from pathlib import Path
 
 MOVIES_JSON = Path(__file__).resolve().parent / "output" / "movies.json"
@@ -89,7 +89,7 @@ def main() -> None:
     print(f"\n=== Report scraper — {generated_at} ===\n")
 
     # Determina date target
-    from scraper.config import get_week_dates, today_local
+    from scraper.config import today_local
     today = today_local().isoformat()
     if args.all_dates:
         target_dates = None  # tutti

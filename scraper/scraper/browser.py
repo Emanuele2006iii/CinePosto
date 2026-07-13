@@ -17,6 +17,13 @@ _page_instance = None
 
 
 def get_browser():
+    """Ritorna l'istanza CloakBrowser condivisa, lanciandola al primo uso.
+
+    Singleton: il lancio di Chromium costa secondi, riusiamo lo stesso browser
+    per tutta la run. Se l'istanza esistente è morta (il test new_page fallisce)
+    viene rilanciata. Il fingerprint è fissato da CLOAKBROWSER_FINGERPRINT_SEED
+    per avere un'identità browser stabile tra le run.
+    """
     global _browser_instance
     if _browser_instance is not None:
         try:
@@ -50,6 +57,7 @@ def get_browser():
 
 
 def new_page(browser=None):
+    """Apre una pagina con il timeout di default configurato (CLOAKBROWSER_PAGE_TIMEOUT)."""
     if browser is None:
         browser = get_browser()
     page = browser.new_page()
@@ -58,6 +66,7 @@ def new_page(browser=None):
 
 
 def close_browser():
+    """Chiude il singleton a fine run (best-effort) e azzera il riferimento."""
     global _browser_instance
     if _browser_instance is not None:
         try:
@@ -68,6 +77,12 @@ def close_browser():
 
 
 def fetch_page_html(url: str, wait_for: str = "body", timeout: int = CLOAKBROWSER_PAGE_TIMEOUT) -> str:
+    """Carica una pagina nel browser reale e ritorna l'HTML renderizzato.
+
+    Fallback per i siti che bloccano requests o renderizzano via JavaScript.
+    `wait_for` = selettore CSS che segnala "contenuto pronto"; lo sleep(1)
+    successivo lascia assestare eventuali fetch client-side residui.
+    """
     browser = get_browser()
     page = new_page(browser)
     try:

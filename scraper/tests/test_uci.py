@@ -1,3 +1,4 @@
+"""Test del connettore UCI su risposte dell'API programming registrate."""
 from __future__ import annotations
 
 import responses

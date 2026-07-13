@@ -86,8 +86,8 @@ Il sistema si compone di due parti distinte: un **client mobile** (iOS e Android
 | RF-01 Lista cinema               | MOLTO IMPORTANTE | FACILE     | **Priorità massima**       |
 | RF-02 Programmazione cinema      | MOLTO IMPORTANTE | MEDIA      | **Priorità massima**       |
 | RF-03 Mappa interattiva          | MOLTO IMPORTANTE | MEDIA      | **Priorità massima**       |
-| RF-08 Link acquisto biglietti    | MOLTO IMPORTANTE | FACILE     | **Priorità massima**       |
-| RF-09 Scraping schedulato        | MOLTO IMPORTANTE | DIFFICILE  | **Pianificazione critica** |
+| RF-07 Link acquisto biglietti    | MOLTO IMPORTANTE | FACILE     | **Priorità massima**       |
+| RF-08 Scraping schedulato        | MOLTO IMPORTANTE | DIFFICILE  | **Pianificazione critica** |
 | RF-04 Filtro per data            | MOLTO IMPORTANTE | FACILE     | **Priorità massima**       |
 | RF-06 Scheda dettaglio film      | MOLTO IMPORTANTE | MEDIA      | **Pianificazione critica** |
 | RF-09 Compliance robots.txt      | MOLTO IMPORTANTE | FACILE     | **Priorità massima**       |
