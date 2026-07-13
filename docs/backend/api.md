@@ -569,11 +569,11 @@ function FilmCard({ film }) {
 
 ---
 
-## 12. Contatti per problemi
+## 12. Responsabilità
 
-- **Backend rotto o dati sbagliati** → Emanuele
-- **CORS o deploy** → Yonas
-- **Struttura API cambia** → si aggiorna QUESTO documento + si notifica in canale team
+- **Backend e dati** → Emanuele
+- **CORS e deploy** → Yonas
+- Se cambia la struttura dell'API, si aggiorna questo documento e si avvisa il team.
 
 ---
 

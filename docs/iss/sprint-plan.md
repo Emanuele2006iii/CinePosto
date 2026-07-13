@@ -12,7 +12,7 @@ linter-yaml-title-alias: CinePosto — Piano degli Sprint e dei Rilasci
 | **Componenti** | Emanuele Ceccariglia, Elio Casciola, Andrea Cestelli, Yonas Burka |
 | **Corso**      | Ingegneria del Software — ITS Umbria Academy, a.a. 2025/2026       |
 
-> **Aggiornamento 2026-07-02**: Sprint 2 ✅ **completato** (data prevista era 01/07, chiuso il 02/07). Backend: 11 endpoint funzionanti + seed dai JSON + 26 test verdi. Scraper arricchito con `year` (P577 Wikidata) + `wikidata_id`. Sprint 3 (app + fetch reali) pronto a partire.
+> **Aggiornamento 2026-07-13**: progetto concluso per l'esposizione. Sprint 1–4 completati — scraper, backend, app integrata (Home, dettaglio, ricerca, mappa) e agganciata al backend, funzionante su web e smartphone. Dello Sprint 5 è stata anticipata la ricerca per titolo (US-09); restano fuori dall'MVP l'avviso dati obsoleti (US-10) e il deploy in cloud. Test automatici: 75 (scraper) + 26 (backend).
 
 ---
 
@@ -104,7 +104,7 @@ routers/ → services/ → repositories/ → models/
 | ------------------ | ------------------------------- |
 | **Data inizio**    | 2026-07-03                      |
 | **Data fine**      | 2026-07-07                      |
-| **Stato**          | 🔴 Non iniziato (backend pronto, si può partire) |
+| **Stato**          | ✅ Completato                    |
 
 **User stories implementate:**
 - US-02 — App mostra la programmazione del giorno corrente (Home screen "Film oggi")
@@ -125,7 +125,7 @@ La Home screen con "cosa danno stasera" è il core value dell'app — è la funz
 | ------------------ | ------------------------------- |
 | **Data inizio**    | 2026-07-08                      |
 | **Data fine**      | 2026-07-14                      |
-| **Stato**          | 🔴 Non iniziato                 |
+| **Stato**          | ✅ Completato                    |
 
 **User stories implementate:**
 - US-01 — Lista cinema con nome, indirizzo, link al sito
@@ -140,6 +140,10 @@ La mappa è il secondo pilastro dell'esperienza utente (RF-03 priorità "massima
 - Sprint 3 completato (navigazione tab e connessione al backend funzionante)
 - Coordinate cinema verificate (già presenti in `scraper/output/cinemas.json`)
 
+**Risultati:**
+- App completa e integrata: Home "Film oggi", dettaglio film con orari raggruppati per cinema, lista cinema con indirizzi, mappa dei tre cinema, ricerca per titolo (US-09, anticipata dallo Sprint 5). Funziona su web e smartphone dalla stessa codebase.
+- Nota tecnica: la mappa usa **Leaflet** dentro una WebView invece di `react-native-maps`, così ha lo stesso comportamento su web e mobile.
+
 ---
 
 ## Sprint 5 — Deploy, ricerca e rifinitura
@@ -148,7 +152,7 @@ La mappa è il secondo pilastro dell'esperienza utente (RF-03 priorità "massima
 | ------------------ | ---------------------------------------- |
 | **Data inizio**    | post 2026-07-14 (dopo esposizione)       |
 | **Data fine**      | TBD                                      |
-| **Stato**          | 🔴 Ipotetico — non critico per MVP       |
+| **Stato**          | 🟡 In parte — ricerca (US-09) fatta; avviso dati (US-10) e deploy no |
 
 **User stories implementate:**
 - US-09 — Ricerca film per titolo
