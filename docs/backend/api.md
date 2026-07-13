@@ -50,7 +50,7 @@ Su Android, se il backend gira sul PC (non sull'emulatore), invece di `localhost
 
 ## 3. Shape delle risposte (JSDoc — copia in `app/api/schemas.js`)
 
-Il progetto è **JavaScript** (`.jsx`), non TypeScript. Per avere comunque **autocomplete** e **type-checking** nell'editor (VS Code), usa JSDoc: sono commenti che VS Code capisce.
+Il progetto è **JavaScript** (`.js`), non TypeScript. Per avere comunque **autocomplete** e **type-checking** nell'editor (VS Code), si usano commenti JSDoc, che VS Code interpreta come tipi.
 
 ```js
 // app/api/schemas.js
@@ -122,11 +122,11 @@ Il progetto è **JavaScript** (`.jsx`), non TypeScript. Per avere comunque **aut
 export {};
 ```
 
-**Come usare i tipi nei tuoi file `.jsx`**:
+**Come usare i tipi nei file dell'app** (`.js`):
 
 ```jsx
-// app/(tabs)/index.jsx
-import { apiGet } from '../api/client';
+// app/src/screens/FilmsTab.js
+import { apiGet } from '../api/api';
 
 /**
  * @param {import('../api/schemas').Film[]} films
@@ -558,7 +558,7 @@ function FilmCard({ film }) {
 
 ---
 
-## 11. Cosa NON esiste ancora (non chiedeteci)
+## 11. Cosa NON esiste (fuori scope MVP)
 
 - **Autenticazione utente**: non esiste, app pubblica read-only
 - **Preferiti**: fuori scope MVP
@@ -577,14 +577,6 @@ function FilmCard({ film }) {
 
 ---
 
-## 13. Checklist per il team frontend (Andrea)
+## 13. Stato dell'integrazione
 
-- [ ] Ho copiato `app/api/schemas.js` (JSDoc types)
-- [ ] Ho creato `app/config.js` con `API_BASE_URL`
-- [ ] Ho creato `app/api/client.js` con `apiGet`
-- [ ] Sostituito `MOCK_FILMS` con `apiGet('/film/oggi')` nella Home
-- [ ] Sostituito `CINEMAS` con `apiGet('/cinema')` nella tab Cinema
-- [ ] Gestito loading state (spinner) + error state (retry)
-- [ ] Installato `react-native-maps` (per la mappa, Sprint 4)
-- [ ] Testato con backend locale
-- [ ] Testato con backend su VM Linux (endpoint remoto)
+L'integrazione dell'app con questa API è **completata**: il client sta in `app/src/api/api.js`, la base URL è configurabile via `EXPO_PUBLIC_API_BASE`, tutte le schermate leggono dal backend (niente più dati finti), con gestione di loading ed errori, e la mappa dei cinema usa Leaflet. Il dettaglio dei passaggi e dei fix è in [app/integrazione-e-fix.md](../app/integrazione-e-fix.md).

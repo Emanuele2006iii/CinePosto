@@ -12,11 +12,11 @@ Il sistema è una **pipeline in 3 stadi**: raccolta → esposizione → consumo.
 
 ```mermaid
 flowchart LR
-    SITI["🌐 Siti dei 3 cinema<br>+ Wikidata"]
-    SCRAPER["1️⃣ SCRAPER<br>Python — ogni notte alle 03:00"]
+    SITI["Siti dei 3 cinema<br>+ Wikidata"]
+    SCRAPER["Scraper<br>Python — ogni notte alle 03:00"]
     JSON[("JSON<br>cinemas · films · showings")]
-    BACKEND["2️⃣ BACKEND<br>FastAPI + SQLite"]
-    APP["3️⃣ APP<br>React Native Expo"]
+    BACKEND["Backend<br>FastAPI + SQLite"]
+    APP["App<br>React Native Expo"]
 
     SITI --> SCRAPER --> JSON -->|seed| BACKEND -->|REST /api/v1| APP
 
@@ -44,7 +44,7 @@ Ogni cinema ha il suo **connettore** (pattern Strategy: stessa interfaccia `scra
 
 Dopo la raccolta: **normalizzazione titoli** (minuscole, via accenti e punteggiatura — serve a capire che "Dune – Parte 2" e "DUNE Parte 2" sono lo stesso film), **dedup**, **arricchimento Wikidata** (SPARQL, con cache locale per non ribombardare l'endpoint), **delta tracking** (un film che sparisce dalla programmazione viene marcato "rimosso" dopo 7 giorni, non cancellato subito).
 
-- Numeri: **75 test**, 3 connettori, output attuale 3 cinema / 19 film / 239 spettacoli.
+- Numeri: **75 test**, 3 connettori; l'output copre i 3 cinema con qualche decina di film e alcune centinaia di spettacoli (i conteggi cambiano a ogni giro, perché i cinema pubblicano il palinsesto solo pochi giorni in anticipo).
 - Etica scraping: rispetto robots.txt, rate limiting, run notturna, User-Agent identificabile con contatto reale (RF-09/RNF-04).
 - Produzione: systemd timer + service `--once` su VM Linux (decisione L3 — niente scheduler interno: se il processo muore, systemd lo rilancia lui).
 
@@ -80,17 +80,16 @@ schemas/      → DTO Pydantic: il contratto JSON verso l'app (trasversale)
 
 **Compito**: interfaccia utente iOS + Android + web da un'unica codebase.
 
-- Stack: React Native + **Expo SDK 54** (vincolo: Expo Go supporta max SDK 54), routing file-based con Expo Router v6, tab navigation.
-- Stato: 2 schermate funzionanti ("Film Oggi" e "Cinema") **ancora con dati finti hardcoded** — il collegamento al backend è lo Sprint 3, in corso. La mappa (RF-03) è Sprint 4.
-- Codice in `.jsx` (JavaScript); migrazione TypeScript rimandata (decisione D5).
+- Stack: React Native + **Expo SDK 54** (vincolo: Expo Go supporta al massimo SDK 54), navigazione con React Navigation — tre tab (Film, Cerca, Località) più uno stack per il dettaglio del film.
+- Legge tutto dal backend via `fetch`: nessun dato finto. L'indirizzo dell'API è configurabile con la variabile `EXPO_PUBLIC_API_BASE`.
+- Le schermate: Home con carosello e cartellone del giorno, dettaglio con gli orari raggruppati per cinema, ricerca per titolo con debounce, mappa dei tre cinema (Leaflet).
+- Codice in JavaScript (`.js`); la migrazione a TypeScript resta rimandata (decisione D5).
 
-📂 Dettaglio: [app/overview.md](app/overview.md) · per collegare l'app: [backend/api.md](backend/api.md)
+📂 Dettaglio: [app/overview.md](app/overview.md) · [app/integrazione-e-fix.md](app/integrazione-e-fix.md)
 
-## 5. Worker (`worker/`) e deploy
+## 5. Deploy
 
-Cloudflare Pages ospiterà la **web build** dell'app (Sprint 4/5) — dettagli in [worker/overview.md](worker/overview.md).
-
-Deploy complessivo su VM Linux: scraper via systemd timer, backend via uvicorn. CI GitHub Actions (2 job: scraper + backend) in `.github/workflows/ci.yml`.
+Su VM Linux: lo scraper gira con un systemd timer (file in `scraper/deploy/`), il backend con uvicorn. L'app si distribuisce come build web statica (`npx expo export --platform web`) su un qualsiasi hosting di file statici. La CI GitHub Actions (`.github/workflows/ci.yml`) lancia due job a ogni push, uno per lo scraper e uno per il backend.
 
 ## 6. Le decisioni di design in una tabella
 
@@ -102,7 +101,7 @@ Deploy complessivo su VM Linux: scraper via systemd timer, backend via uvicorn. 
 | D1 | Wikidata-only per i metadati film | gratuito, senza API key, licenza aperta |
 | D3 | PK Film intera + UNIQUE naturale; PK Cinema = slug | titoli fragili come chiavi; slug stabili e parlanti |
 | D4 | SQLite anche in produzione | 3 cinema e letture leggere: un DB server sarebbe sovradimensionato |
-| D5 | App in `.jsx`, TS rimandato | priorità alla consegna; migrazione post-MVP |
+| D5 | App in JavaScript (`.js`), TS rimandato | priorità alla consegna; migrazione post-MVP |
 
 ## 7. Qualità
 

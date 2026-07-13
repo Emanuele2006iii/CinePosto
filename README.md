@@ -1,106 +1,68 @@
 # CinePosto
 
-Aggregatore cinema dell'Umbria — app mobile React Native + backend FastAPI + scraper Python.
+Aggregatore della programmazione dei cinema dell'Umbria. Uno scraper Python raccoglie ogni notte i film in cartellone da tre cinema — PostModernissimo, The Space Corciano, UCI Perugia — un backend FastAPI li serve via API REST e un'app React Native li mostra su web e smartphone dalla stessa codebase. Nessuna registrazione: apri e vedi cosa danno stasera.
 
-> **Stato (2026-07-02)**:
-> - **Scraper** ✅ produzione (75 test, ruff pulito, 3 connettori). Ora arricchisce anche `year` (P577 Wikidata) e `wikidata_id`.
-> - **Backend** ✅ **Sprint 2 completato**: FastAPI attiva con 11 endpoint funzionanti, seed dai JSON scraper, 26 test verdi.
-> - **App mobile** 🟡 2 schermate con dati hardcoded (Sprint 3 non iniziato — fetch al backend + mappa da aggiungere).
-> - **Worker Cloudflare** 🟡 stub (Sprint 4).
->
-> 📖 **Panoramica completa del sistema** → [`docs/panoramica.md`](docs/panoramica.md) (architettura, decisioni di design, qualità)
-> 📱 **Guida integrazione frontend** → [`docs/backend/api.md`](docs/backend/api.md) (contratto API + tipi JSDoc + esempi fetch)
+Progetto di gruppo per il corso di Ingegneria del Software (ITS Umbria Academy, a.a. 2025/2026, prof. Montecchiani). Team RepCode: Emanuele, Elio, Andrea, Yonas.
 
----
-
-## Struttura monorepo
+## Com'è fatto
 
 ```
 cineposto/
-├── scraper/     # Pipeline dati: raccoglie programmazione da 3 cinema → JSON
-├── backend/     # API FastAPI (SQLite): serve i dati all'app
-├── worker/      # Cloudflare Pages: hosting web build React Native
-└── app/         # App React Native (Expo) — mobile + web da unica codebase
+├── scraper/   pipeline Python: legge i siti dei 3 cinema → 3 file JSON
+├── backend/   API FastAPI su SQLite: importa i JSON e li espone via REST
+├── app/       app React Native (Expo): consuma l'API, gira su web e mobile
+└── docs/      documentazione tecnica e del corso
 ```
 
----
+È una pipeline in tre stadi collegati da contratti espliciti: file JSON tra scraper e backend, API REST tra backend e app. Ogni stadio è indipendente e si testa da solo — 101 test in tutto, 75 sullo scraper e 26 sul backend.
 
-## Componenti
+## Avvio rapido
 
-### `scraper/`
-Pipeline Python autonoma. Produce 4 file JSON in `scraper/output/`:
-- `movies.json` — stato interno con history (usato tra run)
-- `films.json` — tabella `films` DB-ready (ora include `year`, `wikidata_id`, `duration`)
-- `showings.json` — tabella `showings` DB-ready
-- `cinemas.json` — tabella `cinemas` DB-ready
-
-```bash
-cd scraper
-pip install -e ".[dev]"          # installa scraper + dipendenze dev
-python3 -m scraper.main --once
-```
-
-Vedi `scraper/README.md` per dettagli.
-
-### `backend/` ✅
-FastAPI + SQLite. Legge i JSON prodotti dallo scraper e li espone via REST.
-
-**Architettura layered** (Sommerville §6.3):
-```
-routers/ → services/ → repositories/ → models/
-```
+### Backend
 
 ```bash
 cd backend
-python3 -m venv venv && source venv/bin/activate
+python3.12 -m venv venv && source venv/bin/activate   # serve Python 3.12
 pip install -r requirements.txt
 cp .env.example .env
-
-# Seed DB dai JSON scraper
-python -m app.seed_from_json
-
-# Avvia API
+python -m app.seed_from_json          # popola il DB dai JSON dello scraper
 uvicorn app.main:app --reload --port 8000
 ```
 
-- Swagger UI: `http://localhost:8000/docs`
-- Test: `pytest tests/` (26 test)
+Swagger su `http://localhost:8000/docs` (11 endpoint). Test: `pytest tests/`.
 
-### `worker/`
-Cloudflare Pages — distribuisce la web build di React Native (gratis, CDN globale).
-
-### `app/`
-React Native Expo SDK 54 — navigazione tab funzionante con **2 schermate a dati hardcoded** (`MOCK_FILMS`, `CINEMAS`). Nessun fetch verso il backend, mappa interattiva (RF-03) ancora da aggiungere (`react-native-maps`). TypeScript installato ma codice in `.jsx`. Vedi `docs/backend/api.md` per il contratto API e la roadmap di collegamento.
+### App
 
 ```bash
 cd app
-npx expo start
+npm install
+# IP LAN del Mac: ipconfig getifaddr en0
+EXPO_PUBLIC_API_BASE="http://<IP-LAN>:8000/api/v1" npx expo start
 ```
 
----
+Web su `http://localhost:8081`, telefono con Expo Go sulla stessa Wi-Fi. Non usare `create-expo-app`: installa un SDK troppo recente per Expo Go.
 
-## Roadmap
+### Scraper
 
-- [x] Scraper 3 cinema funzionante (PostModernissimo, The Space, UCI)
-- [x] Arricchimento Wikidata (poster, regista, titolo originale, durata, **year, wikidata_id**)
-- [x] Output JSON separato (cinemas / films / showings)
-- [x] **Sprint 2**: backend FastAPI completo — models SQLAlchemy + schemas Pydantic + repositories CRUD + services + 11 endpoint REST + seed da JSON + 26 test
-- [x] Inizializzare app React Native (Expo SDK 54, navigazione tab, schermate mock)
-- [ ] **Sprint 3**: collegare app al backend + aggiungere mappa (RF-03)
-- [ ] **Sprint 4**: deploy web build su Cloudflare Pages + backend su VM Linux
+```bash
+cd scraper
+pip install -e ".[dev]"
+python3 -m scraper.main --once
+```
 
----
+Produce i JSON in `scraper/output/`. In produzione gira con un systemd timer (file pronti in `scraper/deploy/`).
 
 ## Documentazione
 
-Tutta la documentazione è in [`docs/`](docs/index.md), organizzata per componente.
+Tutto in [`docs/`](docs/index.md). Da dove partire:
 
-| Documento | Descrizione |
+| Documento | A cosa serve |
 |---|---|
-| [`docs/index.md`](docs/index.md) | Catalogo navigabile di tutta la documentazione |
-| [`docs/development.md`](docs/development.md) | Testing, lint, setup locale, variabili d'ambiente |
-| [`docs/backend/api.md`](docs/backend/api.md) | **Contratto API per il team frontend** (endpoint, tipi JSDoc, esempi) |
-| [`docs/scraper/architecture.md`](docs/scraper/architecture.md) | Architettura tecnica scraper |
-| [`docs/backend/architecture.md`](docs/backend/architecture.md) | Architettura tecnica backend |
-| [`docs/backend/schema-mapping.md`](docs/backend/schema-mapping.md) | Mapping JSON scraper → tabelle DB |
-| [`docs/app/overview.md`](docs/app/overview.md) | Overview app React Native |
+| [`docs/panoramica.md`](docs/panoramica.md) | Il sistema spiegato da cima a fondo |
+| [`docs/presentazione-14-luglio.md`](docs/presentazione-14-luglio.md) | Scaletta, script della demo e domande del prof per l'esposizione |
+| [`docs/development.md`](docs/development.md) | Setup, test, lint, variabili d'ambiente |
+| [`docs/backend/api.md`](docs/backend/api.md) | Contratto API completo |
+
+## Stato
+
+Scraper, backend e app sono completi e funzionano end-to-end. Fuori dallo scope dell'MVP, e quindi non realizzati per scelta: account utente, acquisto in-app, notifiche. Ricerca in-app e avviso "dati non aggiornati" sono rimandati alla Release 1.1.
