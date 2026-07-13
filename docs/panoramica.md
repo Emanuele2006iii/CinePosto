@@ -38,9 +38,9 @@ Ogni cinema ha il suo **connettore** (pattern Strategy: stessa interfaccia `scra
 
 | Connettore | Fonte | Tecnica |
 |---|---|---|
-| PostModernissimo | sito WordPress | parsing HTML con BeautifulSoup |
-| The Space Corciano | API JSON del sito | chiamate API con token |
-| UCI Perugia | API Cloud Run non documentata | chiamate API dirette (reverse-engineered dal traffico XHR) |
+| PostModernissimo | sito Next.js | parsing del payload RSC + HTML (BeautifulSoup/lxml) |
+| The Space Corciano | API REST OAuth2 | chiamate API, con fallback CloakBrowser |
+| UCI Perugia | API Cloud Run non documentata | chiamate API dirette (ricostruite dal traffico di rete) |
 
 Dopo la raccolta: **normalizzazione titoli** (minuscole, via accenti e punteggiatura — serve a capire che "Dune – Parte 2" e "DUNE Parte 2" sono lo stesso film), **dedup**, **arricchimento Wikidata** (SPARQL, con cache locale per non ribombardare l'endpoint), **delta tracking** (un film che sparisce dalla programmazione viene marcato "rimosso" dopo 7 giorni, non cancellato subito).
 
