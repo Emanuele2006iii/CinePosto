@@ -1,38 +1,20 @@
 {
-  "generated_at": "2026-07-13T13:04:57.259690+02:00",
+  "generated_at": "2026-07-14T14:37:28.158814+02:00",
   "films": [
     {
-      "id": "Principessa Mononoke",
-      "title": "Principessa Mononoke",
-      "title_normalized": "Principessa Mononoke",
-      "original_title": "Princess Mononoke",
-      "poster": "https://rest.postmodernissimo.com/wp-content/uploads/2026/06/Princess_Mononoke-1024x555.jpg",
-      "description": "Principessa Mononoke. Ottavo lungometraggio di Hayao Miyazaki, campione d’incassi nel 1997 in Giappo...",
+      "id": "Maradona di Kusturica",
+      "title": "Maradona di Kusturica",
+      "title_normalized": "Maradona di Kusturica",
+      "original_title": "Maradona by Kusturica",
+      "poster": "https://rest.postmodernissimo.com/wp-content/uploads/2026/07/AAAABbCfRAsaFhHAofRUHU7i8gaEZ0lqyRD8a4IWsTmrZLi-mTSBNyGqfdYafUNE8wLQAirCWrd5ekmNyD71P6E9hv0GibUxLarm9CPu.jpg",
+      "description": "Maradona di Kusturica. Il regista Emir Kusturica porta sul grande schermo la vita di un grande campi...",
       "genres": [
-        "Animazione"
+        "Documentario"
       ],
-      "director": "Hayao Miyazaki",
-      "duration": "133 min",
-      "year": 1997,
-      "wikidata_id": "Q186572",
-      "status": "in_programmazione",
-      "first_seen": "2026-07-13",
-      "last_seen": "2026-07-13"
-    },
-    {
-      "id": "Un Anno di Scuola",
-      "title": "Un Anno di Scuola",
-      "title_normalized": "Un Anno di Scuola",
-      "original_title": "A Year of School",
-      "poster": "https://rest.postmodernissimo.com/wp-content/uploads/2026/03/002-2-1024x683.jpg",
-      "description": "Un Anno di Scuola. Secondo lungometraggio di Laura Samani, presentato allo scorso Festival di Venezi...",
-      "genres": [
-        "Drammatico"
-      ],
-      "director": "Laura Samani",
-      "duration": "102 min",
-      "year": 2025,
-      "wikidata_id": "Q136238988",
+      "director": "Emir Kusturica",
+      "duration": "90 min",
+      "year": 2008,
+      "wikidata_id": "Q732436",
       "status": "in_programmazione",
       "first_seen": "2026-07-13",
       "last_seen": "2026-07-13"
@@ -49,24 +31,6 @@
       "duration": "99 min",
       "year": 2023,
       "wikidata_id": "Q123434450",
-      "status": "in_programmazione",
-      "first_seen": "2026-07-13",
-      "last_seen": "2026-07-13"
-    },
-    {
-      "id": "Maradona di Kusturica",
-      "title": "Maradona di Kusturica",
-      "title_normalized": "Maradona di Kusturica",
-      "original_title": "Maradona by Kusturica",
-      "poster": "https://rest.postmodernissimo.com/wp-content/uploads/2026/07/AAAABbCfRAsaFhHAofRUHU7i8gaEZ0lqyRD8a4IWsTmrZLi-mTSBNyGqfdYafUNE8wLQAirCWrd5ekmNyD71P6E9hv0GibUxLarm9CPu.jpg",
-      "description": "Maradona di Kusturica. Il regista Emir Kusturica porta sul grande schermo la vita di un grande campi...",
-      "genres": [
-        "Documentario"
-      ],
-      "director": "Emir Kusturica",
-      "duration": "90 min",
-      "year": 2008,
-      "wikidata_id": "Q732436",
       "status": "in_programmazione",
       "first_seen": "2026-07-13",
       "last_seen": "2026-07-13"
@@ -105,7 +69,7 @@
       "wikidata_id": "Q2602481",
       "status": "in_programmazione",
       "first_seen": "2026-07-13",
-      "last_seen": "2026-07-13"
+      "last_seen": "2026-07-14"
     },
     {
       "id": "Doors",
@@ -123,7 +87,7 @@
       "wikidata_id": null,
       "status": "in_programmazione",
       "first_seen": "2026-07-13",
-      "last_seen": "2026-07-13"
+      "last_seen": "2026-07-14"
     },
     {
       "id": "Hamnet - Nel nome del figlio",
@@ -177,7 +141,7 @@
       "wikidata_id": null,
       "status": "in_programmazione",
       "first_seen": "2026-06-18",
-      "last_seen": "2026-07-13"
+      "last_seen": "2026-07-14"
     },
     {
       "id": "Berlinguer. La grande ambizione",
@@ -216,6 +180,24 @@
       "last_seen": "2026-07-13"
     },
     {
+      "id": "Odissea",
+      "title": "Odissea",
+      "title_normalized": "Odissea",
+      "original_title": null,
+      "poster": "https://www.thespacecinema.it/-/media/the-space-cinema/schede-film/2026/07/odissea/locandina_odissea.jpg?rev=9a429b5cd06841b4a218c68e05dde286",
+      "description": "Odissea. Adattamento di Christopher Nolan del celebre poema epico di Omero, un film epico d’azione d...",
+      "genres": [
+        "Storico"
+      ],
+      "director": "Christopher Nolan",
+      "duration": "172 min",
+      "year": null,
+      "wikidata_id": null,
+      "status": "in_programmazione",
+      "first_seen": "2026-07-13",
+      "last_seen": "2026-07-14"
+    },
+    {
       "id": "MINIONS & MONSTERS",
       "title": "MINIONS & MONSTERS",
       "title_normalized": "MINIONS & MONSTERS",
@@ -232,7 +214,7 @@
       "wikidata_id": null,
       "status": "in_programmazione",
       "first_seen": "2026-06-24",
-      "last_seen": "2026-07-13"
+      "last_seen": "2026-07-14"
     },
     {
       "id": "CASA - IL ROGO DEL MALE",
@@ -251,7 +233,7 @@
       "wikidata_id": null,
       "status": "in_programmazione",
       "first_seen": "2026-07-02",
-      "last_seen": "2026-07-13"
+      "last_seen": "2026-07-14"
     },
     {
       "id": "Supergirl",
@@ -269,7 +251,7 @@
       "wikidata_id": null,
       "status": "in_programmazione",
       "first_seen": "2026-06-18",
-      "last_seen": "2026-07-13"
+      "last_seen": "2026-07-14"
     },
     {
       "id": "BACKROOMS - EVERYTHING MUST GO EDITION",
@@ -287,7 +269,7 @@
       "wikidata_id": null,
       "status": "in_programmazione",
       "first_seen": "2026-07-13",
-      "last_seen": "2026-07-13"
+      "last_seen": "2026-07-14"
     },
     {
       "id": "DISCLOSURE DAY",
@@ -303,7 +285,7 @@
       "wikidata_id": null,
       "status": "in_programmazione",
       "first_seen": "2026-06-18",
-      "last_seen": "2026-07-13"
+      "last_seen": "2026-07-14"
     },
     {
       "id": "ELECTION DAY",
@@ -321,7 +303,7 @@
       "wikidata_id": null,
       "status": "in_programmazione",
       "first_seen": "2026-07-13",
-      "last_seen": "2026-07-13"
+      "last_seen": "2026-07-14"
     },
     {
       "id": "OBSESSION",
@@ -337,7 +319,7 @@
       "wikidata_id": null,
       "status": "in_programmazione",
       "first_seen": "2026-06-18",
-      "last_seen": "2026-07-13"
+      "last_seen": "2026-07-14"
     },
     {
       "id": "SCARY MOVIE",
@@ -356,23 +338,7 @@
       "wikidata_id": null,
       "status": "in_programmazione",
       "first_seen": "2026-06-18",
-      "last_seen": "2026-07-13"
-    },
-    {
-      "id": "Diamanti",
-      "title": "Diamanti",
-      "title_normalized": "Diamanti",
-      "original_title": null,
-      "poster": "https://www.thespacecinema.it/-/media/the-space-cinema/schede-film/2024/12/diamanti/locandina_diamanti.jpg?rev=f94f903d55b244af925f627a77ca8b3f",
-      "description": "Diamanti, film diretto da Ferzan Özpetek, vede un regista convocare quelle che sono le sue interpreti preferite, ovvero le attrici con cui ha lavorato maggiormente o che ha finito per amare. Il cineasta ha intenzione di realizzare un film sulle donne, non rivelando altri particolari sul suo progetto. Una volta radunate le artiste, inizia a osservarle, a studiarle e a farsi ispirare da loro, finendo con la mente in un'altra epoca, nel passato, dove l'aria è riempita dal rumore delle macchine da cucire in un luogo affollato da sole donne, che qui vivono, lavorano e gestiscono il tutto.",
-      "genres": [],
-      "director": "Ferzan Ozpetek",
-      "duration": "135 min",
-      "year": null,
-      "wikidata_id": null,
-      "status": "in_programmazione",
-      "first_seen": "2026-07-13",
-      "last_seen": "2026-07-13"
+      "last_seen": "2026-07-14"
     },
     {
       "id": "LUPIN III - IL CASTELLO DI CAGLIOSTRO (RIED. 4K)",
@@ -393,26 +359,7 @@
       "wikidata_id": null,
       "status": "in_programmazione",
       "first_seen": "2026-07-13",
-      "last_seen": "2026-07-13"
-    },
-    {
-      "id": "Odissea",
-      "title": "Odissea",
-      "title_normalized": "Odissea",
-      "original_title": null,
-      "poster": "https://www.thespacecinema.it/-/media/the-space-cinema/schede-film/2026/07/odissea/locandina_odissea.jpg?rev=9a429b5cd06841b4a218c68e05dde286",
-      "description": "Odissea, film diretto da Christopher Nolan, segue l'eroe e re di Itaca Odisseo in un periglioso viaggio verso casa, dopo aver combattuto nella fazione achea nella guerra di Troia. In questo cammino, che sembra non portarlo mai verso la meta, la sua patria, l'eroe incontrerà diverse creature, tra cui il ciclope Polifemo, le Sirene e la maga Circe. ",
-      "genres": [
-        "Avventura",
-        "Dramma"
-      ],
-      "director": "Christopher Nolan",
-      "duration": "180 min",
-      "year": null,
-      "wikidata_id": null,
-      "status": "in_programmazione",
-      "first_seen": "2026-07-13",
-      "last_seen": "2026-07-13"
+      "last_seen": "2026-07-14"
     },
     {
       "id": "JUMPERS - UN SALTO TRA GLI ANIMALI",
@@ -462,26 +409,7 @@
       "wikidata_id": null,
       "status": "in_programmazione",
       "first_seen": "2026-07-13",
-      "last_seen": "2026-07-13"
-    },
-    {
-      "id": "Speak No Evil",
-      "title": "Speak No Evil",
-      "title_normalized": "Speak No Evil",
-      "original_title": "Speak No Evil",
-      "poster": "https://storage.googleapis.com/uci-infrastructure-bucket/Common/Movies/Posters/01KWYR4K6RYZX6WMMAYNVN922Q_resized_at_20260707185621.jpg",
-      "description": "Una famiglia americana, dopo aver stretto amicizia con una famiglia inglese durante un viaggio, viene invitata a passare un weekend nella loro tenuta di campagna. Quella che all’inizio sembra una vacanza da sogno, però, si trasforma presto in un incubo.Si ricorda che il film inizia circa 25 minuti dopo l’orario di inizio proiezione comunicato",
-      "genres": [
-        "Horror",
-        "Thriller"
-      ],
-      "director": "James Watkins",
-      "duration": null,
-      "year": 2024,
-      "wikidata_id": "Q119064873",
-      "status": "in_programmazione",
-      "first_seen": "2026-07-13",
-      "last_seen": "2026-07-13"
+      "last_seen": "2026-07-14"
     }
   ]
 }

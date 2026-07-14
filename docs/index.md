@@ -6,6 +6,7 @@ Aggregatore cinema Umbria: scraper Python, backend FastAPI, app React Native. Tu
 
 - [panoramica.md](panoramica.md) — il sistema da cima a fondo: flusso dei dati, componenti, decisioni di design. Il primo da leggere.
 - [presentazione-14-luglio.md](presentazione-14-luglio.md) — preparazione all'esposizione: scaletta, script della demo, piano B per la rete, domande probabili del prof.
+- [esposizione-discorsi.md](esposizione-discorsi.md) — divisione delle slide per persona, i discorsi (per ora quello backend di Emanuele) e la spiegazione test per test.
 - [development.md](development.md) — setup locale, test, lint e variabili d'ambiente di ogni componente.
 
 ## Aree tecniche
@@ -29,6 +30,7 @@ docs/
 ├── index.md                     questo indice
 ├── panoramica.md                il sistema end-to-end
 ├── presentazione-14-luglio.md   guida all'esposizione
+├── esposizione-discorsi.md      divisione, discorsi, approfondimento test
 ├── development.md               setup, test, lint
 ├── scraper/architecture.md
 ├── backend/{architecture,schema-mapping,api}.md
